@@ -2476,7 +2476,7 @@ h5 {
 
 .contact-form-wrapper {
   margin: auto;
-  color: #424242;
+  color: #071D49;
 }
 
 .title-contact h1 {
@@ -2486,7 +2486,7 @@ h5 {
 .title-contact .highlight {
   border-bottom: 3px solid #bc8d2e;
   padding-bottom: 5px;
-  color: #000;
+  color: #071D49;
 }
 
 form#frmContact .form-group {
@@ -2501,7 +2501,6 @@ form#frmContact textarea {
   border: none;
   background: #f2f2f2;
   font-size: 18px;
-  color: #333;
   outline: none;
 }
 
@@ -2520,30 +2519,29 @@ form#frmContact .form-group i {
 
 .send-footer {
   background: transparent;
-  border: 1px solid #bc8d2e;
+  border: 1px solid #071D49;
   padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
-  color: #bc8d2e;
+  color: #071D49;
   transition: 0.3s;
 }
 
 .send-footer:hover {
-  background: #bc8d2e;
+  background: #071D49;
   color: #fff;
 }
 
 .detail-contact {
   margin-top: 20px;
   font-size: 13px;
-  color: #a9a9a9;
   line-height: 22px;
 }
 
 .detail-contact hr {
   border: 0;
   height: 1px;
-  background: #bc8d2e;
+  background: #071D49;
   margin: 10px 0;
 }
 
