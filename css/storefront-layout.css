@@ -2275,7 +2275,7 @@ body {
 .billboard {
     display: block;
     font-family: var(--base-font);
-    font-size: 3.2rem;
+    font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: 1;
@@ -2473,6 +2473,93 @@ h5 {
 .footer-desktop__item-link {
   line-height: 1.6;
 }
+
+.contact-form-wrapper {
+  margin: auto;
+  color: #424242;
+}
+
+.title-contact h1 {
+  margin: 0;
+}
+
+.title-contact .highlight {
+  border-bottom: 3px solid #bc8d2e;
+  padding-bottom: 5px;
+  color: #000;
+}
+
+form#frmContact .form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+form#frmContact input,
+form#frmContact textarea {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border: none;
+  background: #f2f2f2;
+  font-size: 18px;
+  color: #333;
+  outline: none;
+}
+
+form#frmContact textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+form#frmContact .form-group i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.send-footer {
+  background: transparent;
+  border: 1px solid #bc8d2e;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #bc8d2e;
+  transition: 0.3s;
+}
+
+.send-footer:hover {
+  background: #bc8d2e;
+  color: #fff;
+}
+
+.detail-contact {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #a9a9a9;
+  line-height: 22px;
+}
+
+.detail-contact hr {
+  border: 0;
+  height: 1px;
+  background: #bc8d2e;
+  margin: 10px 0;
+}
+
+.image-with-content__block-image.cover.image-pro img {
+    height: 845px;
+}
+
+.image-with-content__info--form.info-content.image-contact {
+    padding: 0px !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
 
 
 

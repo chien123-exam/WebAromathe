@@ -1,6 +1,4 @@
-@import "./aroma.normalize.css";
-@import "./aroma.core.css";
-@import "./aroma.animate.css";
+
 @font-face {
   font-family: swiper-icons;
   font-style: normal;
@@ -5224,7 +5222,7 @@ button.swiper-pagination-bullet {
   padding-left: 8px;
 }
 .product-card__price {
-  font-size: 2rem;
+  font-size: 20px;
 }
 .product-card__price--old {
   color: var(--color-grey);
