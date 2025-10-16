@@ -1131,7 +1131,7 @@ button.swiper-pagination-bullet {
 .footer__info {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  max-width: 200px;
   padding-right: 60px;
   width: 100%;
 }
@@ -1174,7 +1174,7 @@ button.swiper-pagination-bullet {
   column-gap: 77.5px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 785px;
+  max-width: 1500px;
   row-gap: 30px;
   width: 100%;
 }
@@ -1189,8 +1189,46 @@ button.swiper-pagination-bullet {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 210px;
 }
+
+.footer__links {
+  display: flex;
+  gap: 20px; 
+}
+
+.footer__block:first-child {
+  flex: 1;           
+  max-width: 1000px; 
+}
+
+.footer__block:nth-child(2),
+.footer__block:nth-child(3) {
+  width: 250px;      
+  flex-shrink: 0;   
+}
+
+@media (min-width: 769px) {
+  .footer__block:first-child {
+    flex: 1;
+    max-width: 1000px;
+  }
+
+  .footer__block:nth-child(2),
+  .footer__block:nth-child(3) {
+    width: 250px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__block {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+
 
 
 .footer__links-title {
@@ -1538,7 +1576,6 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 768px) {
   .footer__links {
-    flex-direction: column;
     gap: 0;
   }
   .footer__links-list {
@@ -11878,7 +11915,6 @@ body #reviews-page .list-categories:last-child {
 }
 .product-buystack__option {
   margin-bottom: 16px;
-  margin-top: 16px;
   position: relative;
 }
 .product-buystack__option-label {
@@ -11920,9 +11956,6 @@ body #reviews-page .list-categories:last-child {
 .product-buystack__add-to-cart .add-to-cart-btn {
   width: 100%;
 }
-.product-buystack__icons-by-tags {
-  margin-top: 40px;
-}
 .product-buystack__add-to-cart {
   margin-bottom: 8px;
 }
@@ -11937,7 +11970,6 @@ body #reviews-page .list-categories:last-child {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 40px;
 }
 .product-buystack__link-item {
   padding-bottom: 4px;
@@ -15470,11 +15502,7 @@ body #reviews-page .list-categories:last-child {
 .accordion {
   margin-top: 40px;
 }
-@media screen and (min-width: 1023px) {
-  .accordion {
-    margin-top: 80px;
-  }
-}
+
 .accordion__item {
   cursor: var(--cursor);
 }

@@ -1540,9 +1540,7 @@ Shopify.routes.root = "/";</script>
         </div>
       <ul class="header__main-menu" x-data="desktopMenu" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.desktop-menu.js?v=76092971650667967311726048083">
         
-          
-            
-            <li class="header__main-menu-list-item">
+          <li class="header__main-menu-list-item">
               
                 <span class="header__main-menu-item link secondary base " :class="{ 'mega-menu--active': activeMegaMenu === 'mega-menu-shop' }" tabindex="0" title="Open Shop Menu" @mouseover="setActiveMenu('mega-menu-shop')">
                   Sản phẩm
@@ -2511,8 +2509,15 @@ Shopify.routes.root = "/";</script>
                             </div>
                           </a>
                         </li>
+                        <li class="header__submenu-list-item" @mouseenter.stop="openSecondLvl('About Aromatherapy Associates')">
+                          <a href="./cau-chuyen-cua-chung-toi.html" class="header__submenu-list-item--link">
+                            <div class="header__submenu-list-item--title heading1">
+                              Câu chuyện của chúng tôi
+                            </div>
+                          </a>
+                        </li>
                         <li class="header__submenu-list-item" @mouseenter.stop="openSecondLvl('Our Responsibility')">
-                          <a href="./lieu-phap-mui-huong.html" class="header__submenu-list-item--link">
+                          <a href="./trach-nhiem-cua-chung-toi.html" class="header__submenu-list-item--link">
                             <div class="header__submenu-list-item--title heading1">
                               Trách nhiệm của chúng tôi
                             </div>
@@ -2702,9 +2707,6 @@ Shopify.routes.root = "/";</script>
   
     <div class="header__mega-menus-container" :class="{ 'header__mega-menus-container--active': activeMegaMenu }">
       
-        
-
-
 
 <div x-data="{ menu: 'mega-menu-shop'}" id="mega-menu-mega-menu-shop" x-show="menu === activeMegaMenu" x-cloak="" class="mega-menu mega-menu--mega-menu-shop mega-menu--columns about-story">
     
@@ -2750,7 +2752,9 @@ Shopify.routes.root = "/";</script>
         <div class="mega-menu__column-submenu">
           <a href="./cau-chuyen-cua-Aromatherapy.html" class="mega-menu__submenu-link">Câu chuyện của Aromatherapy Associates</a>
 
-          <a href="/pages/our-story" class="mega-menu__submenu-link" title="Our Story">Trách nhiệm của chúng tôi</a>
+          <a href="./cau-chuyen-cua-chung-toi.html" class="mega-menu__submenu-link">Câu chuyện của chúng tôi</a>
+
+          <a href="./trach-nhiem-cua-chung-toi.html" class="mega-menu__submenu-link" title="Our Story">Trách nhiệm của chúng tôi</a>
         
           <a href="./lieu-phap-mui-huong.html" class="mega-menu__submenu-link" title="Our Responsibility">Liệu pháp mùi hương Aromatherapy là gì?</a>
         
@@ -2779,7 +2783,11 @@ Shopify.routes.root = "/";</script>
     <div class="header-mobile-menu__wrapper">
       <ul class="header-mobile-menu__list main active" data-menu="">
         
-       <li class="header-mobile-menu__list-item">
+          
+            
+			   
+                
+                <li class="header-mobile-menu__list-item">
                   <a href="" class="header-mobile-menu__list-item--link has-submenu" @click.stop.prevent="secondLvlOpen('Mega Menu: Shop')">
                     <div class="header-mobile-menu__list-item--title heading1">
                       Sản phẩm
@@ -3044,7 +3052,15 @@ Shopify.routes.root = "/";</script>
                             </li>
 
                             <li class="header-mobile-menu__list-item">
-                              <a href="" class="header-mobile-menu__list-item--link">
+                              <a href="./cau-chuyen-cua-chung-toi.html" class="header-mobile-menu__list-item--link">
+                                <div class="header-mobile-menu__list-item--title heading1">
+                                  Câu chuyện của chúng tôi
+                                </div>
+                              </a>
+                            </li>
+
+                            <li class="header-mobile-menu__list-item">
+                              <a href="./trach-nhiem-cua-chung-toi.html" class="header-mobile-menu__list-item--link">
                                 <div class="header-mobile-menu__list-item--title heading1">
                                   Trách nhiệm của chúng tôi 
                                 </div>
@@ -3273,12 +3289,12 @@ Shopify.routes.root = "/";</script>
 		<p class="article-title-header__content-tag"></p>
 		<h1 class="article-title-header__content-title billboard">
 			
-            How Does Aromatherapy Work?
+            Liệu pháp Hương thơm hoạt đông như thế nào?
             
 			
 		</h1>
 		<div class="article-title-header__content-description">
-			Discover how aromatherapy works to enhance daily wellbeing through your sense of smell and absorption of essential oils through your skin.
+			Khám phá cách liệu pháp hương thơm giúp tăng cường sức khỏe hàng ngày thông qua khứu giác và khả năng hấp thụ tinh dầu qua da.
         </div>
         <div class="article-title-header__img article-img">
 					
@@ -3286,7 +3302,7 @@ Shopify.routes.root = "/";</script>
 	<img src="images/model_smell_roller_ball.png" alt="How Does Aromatherapy Work?" srcset="images/model_smell_roller_ball_1.png 300w, images/model_smell_roller_ball_3.png 400w, images/model_smell_roller_ball_2.png 500w, images/model_smell_roller_ball_6.png 600w, images/model_smell_roller_ball_4.png 700w, images/model_smell_roller_ball_5.png 800w, images/model_smell_roller_ball.png 1000w" width="1000" height="750" loading="lazy">
 
         </div>
-        <span class="article-title-header__alt">How Does Aromatherapy Work?</span>
+        <span class="article-title-header__alt">Liệu pháp Hương thơm hoạt đông như thế nào?</span>
 	</div>
 </div>
 
@@ -3424,16 +3440,16 @@ Shopify.routes.root = "/";</script>
 		</div>
 	</div>
 	<div class="article-main__container">
-		<p style="text-align: center;">Aromatherapy is the practice of using essential oils to enhance our wellbeing, hence the potent concentration of essential oils blended within each and every formula of our products.</p>
-<p style="text-align: center;">How aromatherapy works can seem mysterious, but it's actually a simple concept that works on three main levels - sense of smell to trigger emotional responses,  inhalation  and absorption of essential oils through the skin.</p>
+		<p style="text-align: center;">Liệu pháp hương thơm là phương pháp sử dụng tinh dầu để tăng cường sức khỏe, do đó, nồng độ tinh dầu mạnh mẽ được pha trộn trong từng công thức sản phẩm của chúng tôi.</p>
+<p style="text-align: center;">Cách thức hoạt động của liệu pháp hương thơm có vẻ bí ẩn, nhưng thực ra nó là một khái niệm đơn giản, hoạt động trên ba cấp độ chính - khứu giác để kích hoạt phản ứng cảm xúc, hít vào và hấp thụ tinh dầu qua da.</p>
 <p style="text-align: center;">Keep scrolling to learn more...</p>
 <p> </p>
 	</div>
 </div>
 
 <script>
-	const articelContent = `<p style="text-align: center;">Aromatherapy is the practice of using essential oils to enhance our wellbeing, hence the potent concentration of essential oils blended within each and every formula of our products.</p>
-<p style="text-align: center;">How aromatherapy works can seem mysterious, but it's actually a simple concept that works on three main levels - sense of smell to trigger emotional responses,  inhalation  and absorption of essential oils through the skin.</p>
+	const articelContent = `<p style="text-align: center;">Liệu pháp hương thơm là phương pháp sử dụng tinh dầu để tăng cường sức khỏe, do đó, nồng độ tinh dầu mạnh mẽ được pha trộn trong từng công thức sản phẩm của chúng tôi.</p>
+<p style="text-align: center;">Cách thức hoạt động của liệu pháp hương thơm có vẻ bí ẩn, nhưng thực ra nó là một khái niệm đơn giản, hoạt động trên ba cấp độ chính - khứu giác để kích hoạt phản ứng cảm xúc, hít vào và hấp thụ tinh dầu qua da.</p>
 <p style="text-align: center;">Keep scrolling to learn more...</p>
 <p> </p>`;
 	if (articelContent){
@@ -3619,7 +3635,7 @@ Shopify.routes.root = "/";</script>
         
         
           <div class="inline__text-description inline__text-description--template--18368257589490__inline_text_dEMT9B">
-            <p class="text-sense">1. Sense of Smell</p>
+            <p class="text-sense">1. Khứu giác</p>
           </div>
         
         <div class="inline__text-button-wrapper">
@@ -3733,7 +3749,7 @@ Shopify.routes.root = "/";</script>
           
           
             <div class="info-content__text info-content__text--template--18368257589490__image_with_content_4GPpHX--">
-              <p>As we breathe in any aroma, it can trigger emotional and even physical responses which allow vivid memory recall of people or places.</p><p>When we breathe in aromatic molecules, they travel to the top of the nose and come in contact with specialized nerve cells called Olfactory cells.</p><p>These cells have tiny hairs, each of which will only recognize a specific aroma. This process produces nerve impulses that travel to the limbic system - the part of the brain which is most concerned with survival, instincts and emotions.</p><p>It is thought by scientists that the activity of the nerve signal passing through this region causes mood change by altering brain chemistry.</p>
+              <p>Khi chúng ta hít vào bất kỳ mùi hương nào, nó có thể kích hoạt các phản ứng cảm xúc và thậm chí cả thể chất, cho phép chúng ta nhớ lại một cách sống động ký ức về con người hoặc địa điểm nào đó.</p><p>Khi chúng ta hít vào các phân tử hương thơm, chúng di chuyển lên đỉnh mũi và tiếp xúc với các tế bào thần kinh chuyên biệt gọi là tế bào khứu giác.</p><p>Những tế bào này có những sợi lông nhỏ, mỗi sợi chỉ nhận biết một mùi hương cụ thể. Quá trình này tạo ra các xung thần kinh truyền đến hệ thống limpic - phần não bộ liên quan nhiều nhất đến sự sinh tồn, bản năng và cảm xúc.</p><p>Các nhà khoa học cho rằng hoạt động của tín hiệu thần kinh đi qua vùng này gây ra sự thay đổi tâm trạng bằng cách thay đổi các phản ứng hóa học trong não.</p>
             </div>
           
           
@@ -3823,11 +3839,11 @@ Shopify.routes.root = "/";</script>
       <div class="inline__text-content inline__text-content--template--18368257589490__inline_text_4BHaJg">
         
         <h1 class="inline__text-title inline__text-title--template--18368257589490__inline_text_4BHaJg">
-          </h1><h4>ABSORPTION THROUGH THE NOSE </h4>
+          </h1><h4>THẨM THẤU QUA DA </h4>
         
         
           <div class="inline__text-description inline__text-description--template--18368257589490__inline_text_4BHaJg">
-            <p>2. Inhalation</p>
+            <p>2. Hít vào</p>
           </div>
         
         <div class="inline__text-button-wrapper">
@@ -3862,7 +3878,7 @@ Shopify.routes.root = "/";</script>
   <div class="simple-text" style="background-color: #F9F6F4">
     
         <div class="simple-text__description">
-            <p>Through inhalation of essential oils, they are absorbed inside the body within the respiratory system.</p><p></p><p>The antibacterial and antiviral properties can make them ideal for maintaining a healthy respiratory system. </p><p></p><p>And the scent may also help to relieve symptoms of seasonal sniffles and allergies. </p>
+            <p>Thông qua việc hít tinh dầu, chúng được hấp thụ vào cơ thể thông qua hệ hô hấp.</p><p></p><p>Tính chất kháng khuẩn và kháng vi-rút của tinh dầu có thể giúp duy trì hệ hô hấp khỏe mạnh.</p><p></p><p>Và mùi hương cũng có thể giúp giảm các triệu chứng sổ mũi theo mùa và dị ứng.</p>
         </div>
     
 
@@ -3923,14 +3939,14 @@ Shopify.routes.root = "/";</script>
                     <div class="div div--template--18368257589490__inline_image_ieJ8fC two">
                         
                         <div class="inline-image__title inline-image__title--template--18368257589490__inline_image_ieJ8fC two">
-                            <p>Diffusion of Essential Oils</p>
+                            <p>Khuếch tán tinh dầu</p>
                         </div>
                         
 
 
                     
                         <div class="inline-image__description two">
-                            <p>This is the purest method of inhaling the exquisite aromas of our Pure Essential Oil Blends.</p><p>Enhance your emotional wellbeing by diffusing the bottles through our waterless diffuser <a href="/products/the-atomiser" target="_blank" title="The Atomiser"><strong>The Atomiser</strong></a> or multi-award-winning <a href="/products/atomiser-connect" target="_blank" title="Atomiser Connect"><strong>Atomiser Connect</strong></a>.</p>
+                            <p>Đây là phương pháp tinh khiết nhất để hít hà hương thơm tinh tế của các loại tinh dầu hỗn hợp nguyên chất của chúng tôi.</p><p>Nâng cao sức khỏe tinh thần của bạn bằng cách khuếch tán các chai tinh dầu qua máy khuếch tán không dùng nước The Atomiser hoặc thiết bị Atomiser Connect đã đạt nhiều giải thưởng của chúng tôi.</p>
                         </div>
                     
 
@@ -3955,14 +3971,14 @@ Shopify.routes.root = "/";</script>
                     <div class="div div--template--18368257589490__inline_image_ieJ8fC two">
                         
                         <div class="inline-image__title inline-image__title--template--18368257589490__inline_image_ieJ8fC two">
-                            <p>Spritz our Sleep Mist</p>
+                            <p>Xịt sương hỗ trợ giấc ngủ</p>
                         </div>
                         
 
 
                     
                         <div class="inline-image__description two">
-                            <p>This mist packs a punch with just a few spritz of a herbal, woody and earthy scent, formulated with our bestselling Deep Relax essential oil blend.</p><p>This can be applied to your clothes, bed linen and pillows for you to deeply inhale and drift off to undisturbed sleep.</p>
+                            <p>Chỉ cần xịt một vài lần, sản phẩm này sẽ mang đến hương thơm thảo mộc, gỗ và đất, được điều chế từ hỗn hợp tinh dầu Deep Relax bán chạy nhất của chúng tôi.</p><p>Bạn có thể xịt lên quần áo, ga trải giường và gối để hít thở sâu và hỗ trợ cho giấc ngủ ngon.</p>
                         </div>
                     
 
@@ -3987,14 +4003,14 @@ Shopify.routes.root = "/";</script>
                     <div class="div div--template--18368257589490__inline_image_ieJ8fC two">
                         
                         <div class="inline-image__title inline-image__title--template--18368257589490__inline_image_ieJ8fC two">
-                            <p>Light a Candle</p>
+                            <p>Thắp nến</p>
                         </div>
                         
 
 
                     
                         <div class="inline-image__description two">
-                            <p>Bring a glow to your heart and home. </p><p>Formulated with two 10ml bottles of pure essential oil blends within the vegan wax, expect an unparalleled scent-throw of nature's botanical aromas for up to 40 hours per candle.</p>
+                            <p>Mang ánh sáng ấm áp đến trái tim và ngôi nhà của bạn. </p><p>Được pha chế với hai chai tinh dầu nguyên chất 10ml trong sáp thuần chay, bạn sẽ được tận hưởng hương thơm thảo mộc tự nhiên tuyệt vời, lưu hương lên đến 40 giờ mỗi cây nến.</p>
                         </div>
                     
 
@@ -4019,14 +4035,14 @@ Shopify.routes.root = "/";</script>
                     <div class="div div--template--18368257589490__inline_image_ieJ8fC two">
                         
                         <div class="inline-image__title inline-image__title--template--18368257589490__inline_image_ieJ8fC two">
-                            <p>Swipe our Roller Balls </p>
+                            <p>Sử dụng  Tinh dầu dạng lăn của chúng tôi</p>
                         </div>
                         
 
 
                     
                         <div class="inline-image__description two">
-                            <p>Experience the wellbeing benefits of aromatherapy even when you're on-the-go.</p><p>Swipe our Roller Balls over pulse points for a scent refresh, and inhale the fragrance to boost your mood anywhere, any time.</p>
+                            <p>Trải nghiệm những lợi ích sức khỏe của liệu pháp hương thơm ngay cả khi bạn đang di chuyển.</p><p>Lăn bi lăn của chúng tôi lên các điểm mạch để tận hưởng hương thơm tươi mát, và hít hà hương thơm để cải thiện tâm trạng của bạn mọi lúc, mọi nơi.</p>
                         </div>
                     
 
@@ -4129,7 +4145,7 @@ Shopify.routes.root = "/";</script>
         
         
           <div class="inline__text-description inline__text-description--template--18368257589490__inline_text_4cRyNn">
-            <p>3. Application on the body</p>
+            <p>3. Ứng dụng trên cơ thể</p>
           </div>
         
         <div class="inline__text-button-wrapper">
@@ -4243,7 +4259,7 @@ Shopify.routes.root = "/";</script>
           
           
             <div class="info-content__text info-content__text--template--18368257589490__image_with_content_kAUNVA--">
-              <p>The molecules in the essential oils are small enough to allow them to penetrate through the skin.</p><p>Travelling through the epidermis (the top layer of skin) and reaching the dermis (a deeper layer of skin) and to the blood vessels, this allows the essential oil molecules to circulate through to all body areas through the blood stream.</p><p>Most essential oils have antibacterial properties; some are antiviral, anti-fungal and/or anti-inflammatory. Essential oils also contain antioxidants which help to prevent cell damage and protect against the build up of toxic waste in skin cells, thereby helping reduce signs of aging.</p><p>The majority of essential oil constituents leave the body within hours, mainly through excretion via the kidneys, although their effects can last much longer within the tissues.</p>
+              <p>Các phân tử trong tinh dầu đủ nhỏ để thẩm thấu qua da, đi qua lớp biểu bì (lớp trên cùng của da) đến lớp hạ bì (lớp sâu hơn của da) và đến các mạch máu, điều này cho phép các phân tử tinh dầu lưu thông đến tất cả các vùng trên cơ thể thông qua dòng máu.</p><p>Hầu hết các loại tinh dầu đều có đặc tính kháng khuẩn; một số có đặc tính kháng vi-rút, kháng nấm và/hoặc kháng viêm. Tinh dầu cũng chứa các chất chống oxy hóa giúp ngăn ngừa tổn thương tế bào và bảo vệ chống lại sự tích tụ chất thải độc hại trong tế bào da, do đó giúp giảm các dấu hiệu lão hóa.</p><p>Phần lớn các thành phần của tinh dầu được đào thải khỏi cơ thể trong vòng vài giờ, chủ yếu thông qua bài tiết qua thận, mặc dù tác dụng của chúng có thể kéo dài hơn nhiều trong các mô.</p>
             </div>
           
           
@@ -4311,13 +4327,13 @@ Shopify.routes.root = "/";</script>
                     <div class="div div--template--18368257589490__inline_image_kFjx8R">
                         
                         <div class="inline-image__title2 inline-image__title2--template--18368257589490__inline_image_kFjx8R">
-                            <p>Spa Treatment</p>
+                            <p>Liệu trình Trị liệu Spa</p>
                         </div>
                         
                         
                         
                             <div class="inline-image__description">
-                                <p>Located in 225 spas around the world, our treatments and facials deliver rejuvenating benefits of aromatherapy through carefully designed massages by our specialist therapists, applying our essential oil infused products all over your body.</p>
+                                <p>Có mặt tại 225 spa cao cấp trên toàn thế giới, các liệu trình chăm sóc cơ thể và da mặt của chúng tôi mang đến những lợi ích trẻ hóa của liệu pháp hương thơm thông qua các bài massage được thiết kế tỉ mỉ bởi các chuyên gia trị liệu, thoa các sản phẩm tinh dầu của chúng tôi lên khắp cơ thể bạn.</p>
                             </div>
                         
 
@@ -4346,13 +4362,13 @@ Shopify.routes.root = "/";</script>
                     <div class="div div--template--18368257589490__inline_image_kFjx8R">
                         
                         <div class="inline-image__title2 inline-image__title2--template--18368257589490__inline_image_kFjx8R">
-                            <p>Bath & Body Care</p>
+                            <p>Chăm sóc cơ thể</p>
                         </div>
                         
                         
                         
                             <div class="inline-image__description">
-                                <p>All our bath and body products are formulated with a well-balanced ratio of essential oils to nourish and support your skin.</p><p>Whether it's an unwinding soak with our <a href="/collections/bath-oils" target="_blank" title="Bath Oil Treatments"><strong>Bath & Shower Oils</strong></a>, or a layering <a href="/collections/body-care" target="_blank" title="Body Care"><strong>Body Care</strong></a> ritual, we provide multiple methods for essential oils to be absorbed on your body.</p>
+                                <p>Tất cả các sản phẩm tắm và chăm sóc cơ thể của chúng tôi đều được điều chế với tỷ lệ tinh dầu cân bằng để nuôi dưỡng và hỗ trợ làn da của bạn.</p><p>Cho dù đó là ngâm mình thư giãn với Dầu Bath & Body Oils, hay liệu trình Chăm sóc Cơ thể nhiều lớp, chúng tôi cung cấp nhiều phương pháp khác nhau để tinh dầu thẩm thấu vào cơ thể bạn.</p>
                             </div>
                         
 
@@ -4381,13 +4397,13 @@ Shopify.routes.root = "/";</script>
                     <div class="div div--template--18368257589490__inline_image_kFjx8R">
                         
                         <div class="inline-image__title2 inline-image__title2--template--18368257589490__inline_image_kFjx8R">
-                            <p>Skincare</p>
+                            <p>Chăm sóc da</p>
                         </div>
                         
                         
                         
                             <div class="inline-image__description">
-                                <p>In skincare products, by penetrating into the deeper layers of the skin, essential oils can optimise the cellular renewal process, enhancing blood circulation and addressing problems such as acne, eczema and aging skin.</p>
+                                <p>Trong các sản phẩm chăm sóc da, bằng cách thẩm thấu vào các lớp sâu hơn của da, tinh dầu có thể tối ưu hóa quá trình tái tạo tế bào, tăng cường lưu thông máu và giải quyết các vấn đề như mụn trứng cá, chàm và lão hóa da.</p>
                             </div>
                         
 

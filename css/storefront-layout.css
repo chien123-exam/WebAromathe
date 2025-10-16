@@ -2335,13 +2335,13 @@ a {
 .heading1,
 h1 {
   font-family: var(--base-font);
-  font-size: 3.2rem;
+  font-size: 32px;
   font-style: normal;
   font-weight: 400;
   line-height: 1;
 
   @media screen and (min-width: 1024px) {
-    font-size: 4rem;
+    font-size: 40px;
   }
 }
 
@@ -2557,8 +2557,37 @@ form#frmContact .form-group i {
   box-sizing: border-box;
 }
 
+.footer__subscribe.subscribe {
+    display: none;
+}
 
+.mobile-only,
+.touch-only, #yotpo-star-rating-reviews-summary, .yotpo-product-points-inner-wrapper {
+  display: none !important;
+}
 
+.btn.secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-navy);
+  color: var(--color-navy);
+}
+
+.btn.secondary:hover {
+  cursor: var(--cursor);
+}
+
+.btn.secondary:active,
+.btn.secondary:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.btn.secondary.disabled,
+.btn.secondary:disabled {
+  background-color: transparent;
+  border: 1px solid var(--color-disable-text);
+  color: var(--color-disable-text);
+}
 
 
 

@@ -1546,7 +1546,7 @@ Shopify.routes.root = "/";</script>
         
           
             
-            <li class="header__main-menu-list-item">
+          <li class="header__main-menu-list-item">
               
                 <span class="header__main-menu-item link secondary base " :class="{ 'mega-menu--active': activeMegaMenu === 'mega-menu-shop' }" tabindex="0" title="Open Shop Menu" @mouseover="setActiveMenu('mega-menu-shop')">
                   Sản phẩm
@@ -2476,7 +2476,7 @@ Shopify.routes.root = "/";</script>
 
             <li class="header__main-menu-list-item">
               
-               <a href="./lien-he.html" class="header__main-menu-item link secondary base " role="button" title="Liên hệ" @mouseover="setActiveMenu('mega-menu-bath-body-shower')">
+                <a href="./lien-he.html" class="header__main-menu-item link secondary base " role="button" title="Liên hệ" @mouseover="setActiveMenu('mega-menu-bath-body-shower')">
                   Liên hệ
                 </a>
               
@@ -2515,8 +2515,15 @@ Shopify.routes.root = "/";</script>
                             </div>
                           </a>
                         </li>
+                        <li class="header__submenu-list-item" @mouseenter.stop="openSecondLvl('About Aromatherapy Associates')">
+                          <a href="./cau-chuyen-cua-chung-toi.html" class="header__submenu-list-item--link">
+                            <div class="header__submenu-list-item--title heading1">
+                              Câu chuyện của chúng tôi
+                            </div>
+                          </a>
+                        </li>
                         <li class="header__submenu-list-item" @mouseenter.stop="openSecondLvl('Our Responsibility')">
-                          <a href="./lieu-phap-mui-huong.html" class="header__submenu-list-item--link">
+                          <a href="./trach-nhiem-cua-chung-toi.html" class="header__submenu-list-item--link">
                             <div class="header__submenu-list-item--title heading1">
                               Trách nhiệm của chúng tôi
                             </div>
@@ -2542,7 +2549,6 @@ Shopify.routes.root = "/";</script>
                 </div>
               </div>
             </li>
-
 
       </ul>
     </nav>
@@ -2707,6 +2713,7 @@ Shopify.routes.root = "/";</script>
   
     <div class="header__mega-menus-container" :class="{ 'header__mega-menus-container--active': activeMegaMenu }">
       
+
 <div x-data="{ menu: 'mega-menu-shop'}" id="mega-menu-mega-menu-shop" x-show="menu === activeMegaMenu" x-cloak="" class="mega-menu mega-menu--mega-menu-shop mega-menu--columns about-story">
     
     
@@ -2751,7 +2758,9 @@ Shopify.routes.root = "/";</script>
         <div class="mega-menu__column-submenu">
           <a href="./cau-chuyen-cua-Aromatherapy.html" class="mega-menu__submenu-link">Câu chuyện của Aromatherapy Associates</a>
 
-          <a href="/pages/our-story" class="mega-menu__submenu-link" title="Our Story">Trách nhiệm của chúng tôi</a>
+          <a href="./cau-chuyen-cua-chung-toi.html" class="mega-menu__submenu-link">Câu chuyện của chúng tôi</a>
+
+          <a href="./trach-nhiem-cua-chung-toi.html" class="mega-menu__submenu-link" title="Our Story">Trách nhiệm của chúng tôi</a>
         
           <a href="./lieu-phap-mui-huong.html" class="mega-menu__submenu-link" title="Our Responsibility">Liệu pháp mùi hương Aromatherapy là gì?</a>
         
@@ -2780,7 +2789,11 @@ Shopify.routes.root = "/";</script>
     <div class="header-mobile-menu__wrapper">
       <ul class="header-mobile-menu__list main active" data-menu="">
         
-        <li class="header-mobile-menu__list-item">
+          
+            
+			   
+                
+                <li class="header-mobile-menu__list-item">
                   <a href="" class="header-mobile-menu__list-item--link has-submenu" @click.stop.prevent="secondLvlOpen('Mega Menu: Shop')">
                     <div class="header-mobile-menu__list-item--title heading1">
                       Sản phẩm
@@ -3045,7 +3058,15 @@ Shopify.routes.root = "/";</script>
                             </li>
 
                             <li class="header-mobile-menu__list-item">
-                              <a href="" class="header-mobile-menu__list-item--link">
+                              <a href="./cau-chuyen-cua-chung-toi.html" class="header-mobile-menu__list-item--link">
+                                <div class="header-mobile-menu__list-item--title heading1">
+                                  Câu chuyện của chúng tôi
+                                </div>
+                              </a>
+                            </li>
+
+                            <li class="header-mobile-menu__list-item">
+                              <a href="./trach-nhiem-cua-chung-toi.html" class="header-mobile-menu__list-item--link">
                                 <div class="header-mobile-menu__list-item--title heading1">
                                   Trách nhiệm của chúng tôi 
                                 </div>
