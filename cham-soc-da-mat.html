@@ -945,7 +945,7 @@ Shopify.routes.root = "/";</script>
   							<% if(dataLocal.inStock && dataLocal.inStock != "yes") { %>
   								<%=helper.render('quickProductStock', scope, data, dataLocal) %>
   							<% } else { %>
-  							Quick Buy
+  							Tìm hiểu thêm
   							<% } %>
   						</span>
   						<div class="spinner" x-show="loadingQuickBuy"></div>
@@ -958,7 +958,7 @@ Shopify.routes.root = "/";</script>
   								<% if(dataLocal.inStock && dataLocal.inStock != "yes") { %>
   									<%=helper.render('quickProductStock', scope, data, dataLocal) %>
   								<% } else { %>
-  								Quick Buy
+  								Tìm hiểu thêm
   								<% } %>
   							</span>
   							<div class="spinner" x-show="loadingQuickBuy"></div>
@@ -3916,14 +3916,14 @@ Shopify.routes.root = "/";</script>
       
       
         <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           25% off when you buy 2+
+          Giảm 25% khi mua 2 sản phẩm trở lên
         </div>
       
       
       <div class="product-card__metafields eyebrow">
-        Balance Mind & Skin
+        Cân bằng tâm trí & Làn da
       </div>
-      <h5 class="product-card__title">Pro Barrier Boost Face Oil</h5>
+      <h5 class="product-card__title">Dầu dưỡng Pro Barrier Boost Face Oil</h5>
       
       <div class="product-card__ratings">
   <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7903638225138" data-product-models="7903638225138" data-name="Pro Barrier Boost Face Oil" data-url="https://www.aromatherapyassociates.com/products/pro-barrier-boost-face-oil-15ml" data-image-url="files/RN233015_main_14f72e5f-4152-410c-b683-d6dc227a7857.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 25% off when you buy 2+;daily;dry skin;face oil;full size skincare;mature skin;skincare;subscription;"> </div>
@@ -3932,13 +3932,13 @@ Shopify.routes.root = "/";</script>
       
         
           <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="8400"></span>
+            <span class="product-card__price">VND 2,299,000</span>
             
               <span class="product-card__size"> / 15ml </span>
             
           </div>
         
-        <a href="/products/pro-barrier-boost-face-oil-15ml" class="product-card__main__link"></a>
+        <a href="./pro-barrier-boost-face-oil-skincare.html" class="product-card__main__link"></a>
       
     </div>
   </div>
@@ -3947,7 +3947,7 @@ Shopify.routes.root = "/";</script>
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
           
-Quick Buy 
+Tìm hiểu thêm 
             
           
         </span>
@@ -4042,14 +4042,14 @@ Quick Buy
       
       
         <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           25% Off when you buy 2+
+           Giảm 25% khi mua 2 sản phẩm trở lên
         </div>
       
       
       <div class="product-card__metafields eyebrow">
-        Balance Mind & Skin
+        Cân bằng tâm trí & Làn da
       </div>
-      <h5 class="product-card__title">Intensive Rich Cream</h5>
+      <h5 class="product-card__title">Kem dưỡng Intensive Rich Cream</h5>
       
       <div class="product-card__ratings">
   <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7903622758642" data-product-models="7903622758642" data-name="Intensive Rich Cream" data-url="https://www.aromatherapyassociates.com/products/intensive-rich-cream-50ml" data-image-url="files/RN231050_main_1a13f02a-49cf-4d53-b21a-de206f8f02c5.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 25% Off when you buy 2+;daily;dry skin;full size skincare;mature skin;sensitive skin;skincare;subscription;">
@@ -4059,13 +4059,13 @@ Quick Buy
       
         
           <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="7200"></span>
+            <span class="product-card__price">VND 1,914,000</span>
             
               <span class="product-card__size"> / 50ml </span>
             
           </div>
         
-        <a href="/products/intensive-rich-cream-50ml" class="product-card__main__link"></a>
+        <a href="./intensive-rich-cream-skincare.html" class="product-card__main__link"></a>
       
     </div>
   </div>
@@ -4074,7 +4074,7 @@ Quick Buy
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
           
-Quick Buy 
+Tìm hiểu thêm 
             
           
         </span>
@@ -4126,249 +4126,16 @@ Quick Buy
   }
 </style>
 
-<div class="collection__product-card collection__product-card--3 product-card--" data-position="3" @hide-all-popup.window="quickBuyPopup = false">
-   
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'pro-glow-face-oil'; collection_handle = " diffusers";="" handle="pro-glow-face-oil-15ml" ;="" }"="">
-  
-    
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'pro-glow-face-oil-15ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
-  <div class="product-card__content">
-    <a href="/products/pro-glow-face-oil-15ml" data-item_position="3" data-item_id="7903622725874" data-item_name="Pro Glow Face Oil" data-item_brand="Aromatherapy Associates" data-item_category="Face Oil" data-item_variant="" data-price="84,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-      <div class="product-card__image-wrapper">
-        <div class="product-card__image base-img" x-show="baseImage === true" x-transition.duration.500ms="">
-          
 
-	<img src="images/RN231015_main_1.png" alt="Pro Glow Face Oil"  width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 25vw, 50vw">
-
-        </div>
-        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
-          <img src="images/WEEK34_SKINCARE_INGREDIENTS_ASSETS_PRO_GLOW_FACE_OIL_3000x3000_e12a38ed-d372-431f-975f-8c00fa4551e3.jpg" width="600" height="600" loading="lazy" alt="Pro Glow Face Oil Rollover Image">
-        </div>
-      </div>
-    </a>
-    <div class="product-card__main">
-      
-      
-      
-      
-      
-      
-        <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           25% Off when you buy 2+
-        </div>
-      
-      
-      <div class="product-card__metafields eyebrow">
-        Balance Mind & Skin
-      </div>
-      <h5 class="product-card__title">Pro Glow Face Oil</h5>
-      
-      <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7903622725874" data-product-models="7903622725874" data-name="Pro Glow Face Oil" data-url="https://www.aromatherapyassociates.com/products/pro-glow-face-oil-15ml" data-image-url="files/RN231015_main_1.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 25% Off when you buy 2+;dehydrated skin;dry skin;dryness;dullness;face oil;full size skincare;skincare;">
-  </div>
-</div>
-      
-      
-        
-          <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="8400"></span>
-            
-              <span class="product-card__size"> / 15ml </span>
-            
-          </div>
-        
-        <a href="/products/pro-glow-face-oil-15ml" class="product-card__main__link"></a>
-      
-    </div>
-  </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
-  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
-		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
-		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
-			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
-				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-			</div>
-			<h5 class="collection__quick-buy-popup--title">
-				Pro Glow Face Oil
-			</h5>
-			<div class="collection__quick-buy-popup--list">
-				<template x-for="product in products"> 
-					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
-					
-				</button>
-				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€84,00' " @click="quickAddToCart" :disabled="disableQuick">
-				Add To Bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
-			</button>
-		</div>
-	</div>
-</div>
-
-
-  <script type="text/javascript">
-	if (typeof klevuProducts == 'undefined') {
-			var klevuProducts = new Array();
-	}
-	klevuProducts.push(7903622725874);
-</script>
-</div>
 
               
-            
-              
-              
+                   
                 <style data-shopify="">
   .collection__product-card--4 {
     order: 4;
   }
 </style>
 
-<div class="collection__product-card collection__product-card--4 product-card--" data-position="4" @hide-all-popup.window="quickBuyPopup = false">
-   
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'radiance-boost-serum '; collection_handle = " diffusers";="" handle="radiance-boost-serum-30ml" ;="" }"="">
-  
-    
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'radiance-boost-serum-30ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
-  <div class="product-card__content">
-    <a href="/products/radiance-boost-serum-30ml" data-item_position="4" data-item_id="7903622791410" data-item_name="Radiance Boost Serum" data-item_brand="Aromatherapy Associates" data-item_category="Serum" data-item_variant="" data-price="76,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-      <div class="product-card__image-wrapper">
-        <div class="product-card__image base-img" x-show="baseImage === true" x-transition.duration.500ms="">
-          
-<img src="images/RN234030_main_dca67783-d902-4571-a326-a4c374a01480.png" alt="Radiance Boost Serum" width="1000" height="1000" loading="lazy" sizes="(min-width: 768px) 25vw, 50vw">
-
-	
-        </div>
-        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
-          <img src="images/WEEK34_SKINCARE_INGREDIENTS_ASSETS_RADIANCE_BOOST_SERUM_3000x3000_1.jpg" width="600" height="600" loading="lazy" alt="Radiance Boost Serum Rollover Image">
-        </div>
-      </div>
-    </a>
-    <div class="product-card__main">
-      
-      
-      
-      
-      
-      
-        <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           25% off when you buy 2+
-        </div>
-      
-      
-      <div class="product-card__metafields eyebrow">
-        Balance Mind & Skin
-      </div>
-      <h5 class="product-card__title">Radiance Boost Serum</h5>
-      
-      <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7903622791410" data-product-models="7903622791410" data-name="Radiance Boost Serum" data-url="https://www.aromatherapyassociates.com/products/radiance-boost-serum-30ml" data-image-url="files/RN234030_main_dca67783-d902-4571-a326-a4c374a01480.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 25% off when you buy 2+;breakouts;combination skin;daily;dehydrated skin;dry skin;dullness;full size skincare;mature skin;oily skin;pores;sensitive skin;skincare;subscription;">
-  </div>
-</div>
-      
-      
-        
-          <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="7600"></span>
-            
-              <span class="product-card__size"> / 30ml </span>
-            
-          </div>
-        
-        <a href="/products/radiance-boost-serum-30ml" class="product-card__main__link"></a>
-      
-    </div>
-  </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
-  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
-		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
-		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
-			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
-				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-			</div>
-			<h5 class="collection__quick-buy-popup--title">
-				Radiance Boost Serum
-			</h5>
-			<div class="collection__quick-buy-popup--list">
-				<template x-for="product in products"> 
-					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
-					
-				</button>
-				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€76,00' " @click="quickAddToCart" :disabled="disableQuick">
-				Add To Bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
-			</button>
-		</div>
-	</div>
-</div>
-
-
-  <script type="text/javascript">
-	if (typeof klevuProducts == 'undefined') {
-			var klevuProducts = new Array();
-	}
-	klevuProducts.push(7903622791410);
-</script>
-</div>
 
               
             
@@ -4423,14 +4190,14 @@ Quick Buy
       
       
         <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           25% Off when you buy 2+
+           Giảm giá 25% khi mua 2 sản phẩm trở lên
         </div>
       
       
       <div class="product-card__metafields eyebrow">
-        Balance Mind & Skin
+        Cân bằng tâm trí & Làn da
       </div>
-      <h5 class="product-card__title">Hydrating Gel Mask</h5>
+      <h5 class="product-card__title">Mặt nạ Hydrating Gel Mask</h5>
       
       <div class="product-card__ratings">
   <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7903622824178" data-product-models="7903622824178" data-name="Hydrating Gel Mask" data-url="https://www.aromatherapyassociates.com/products/hydrating-gel-mask-50ml" data-image-url="files/RN233050_main_3.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 25% Off when you buy 2+;combination skin;dehydrated skin;dry skin;dullness;full size skincare;mature skin;oily skin;pores;sensitive skin;skincare;">
@@ -4440,13 +4207,13 @@ Quick Buy
       
         
           <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="5900"></span>
+            <span class="product-card__price">VND 1,595,000</span>
             
               <span class="product-card__size"> / 50ml </span>
             
           </div>
         
-        <a href="/products/hydrating-gel-mask-50ml" class="product-card__main__link"></a>
+        <a href="./hydrating-gel-mask-skincare.html" class="product-card__main__link"></a>
       
     </div>
   </div>
@@ -4455,7 +4222,7 @@ Quick Buy
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
           
-Quick Buy 
+Tìm hiểu thêm 
             
           
         </span>
@@ -4550,12 +4317,12 @@ Quick Buy
       
       
         <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           25% Off when you buy 2+
+           Giảm 25% khi mua 2 sản phẩm trở lên
         </div>
       
       
       <div class="product-card__metafields eyebrow">
-        Balance Mind & Skin
+        Cân bằng tâm trí & Làn da
       </div>
       <h5 class="product-card__title">Oil to Foam Cleanser</h5>
       
@@ -4567,13 +4334,13 @@ Quick Buy
       
         
           <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="6300"></span>
+            <span class="product-card__price">VND 1,735,000</span>
             
               <span class="product-card__size"> / 140ml </span>
             
           </div>
         
-        <a href="/products/oil-to-foam-cleanser-140ml" class="product-card__main__link"></a>
+        <a href="./oil-foam-cleanser-skincare.html" class="product-card__main__link"></a>
       
     </div>
   </div>
@@ -4582,7 +4349,7 @@ Quick Buy
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
           
-Quick Buy 
+Tìm hiểu thêm 
             
           
         </span>
@@ -4677,14 +4444,14 @@ Quick Buy
       
       
         <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           25% Off when you buy 2+
+           Giảm giá 25% khi mua 2 sản phẩm trở lên
         </div>
       
       
       <div class="product-card__metafields eyebrow">
-        Balance Mind & Skin
+        Cân bằng tâm trí & Làn da
       </div>
-      <h5 class="product-card__title">Hydration Boost Mist</h5>
+      <h5 class="product-card__title">Xịt cấp ẩm Hydration Boost Mist</h5>
       
       <div class="product-card__ratings">
    <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7903622988018" data-product-models="7903622988018" data-name="Hydration Boost Mist" data-url="https://www.aromatherapyassociates.com/products/hydration-boost-mist-100ml" data-image-url="files/RN232100_main_1.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 25% Off when you buy 2+;breakouts;combination skin;daily;dehydrated skin;dry skin;dullness;full size skincare;mature skin;oily skin;pores;sensitive skin;skincare;subscription;">
@@ -4693,13 +4460,13 @@ Quick Buy
       
         
           <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="4500"></span>
+            <span class="product-card__price">VND 1,407,000</span>
             
               <span class="product-card__size"> / 100ml </span>
             
           </div>
         
-        <a href="/products/hydration-boost-mist-100ml" class="product-card__main__link"></a>
+        <a href="./hidration-bost-mist-skincare.html" class="product-card__main__link"></a>
       
     </div>
   </div>
@@ -4708,7 +4475,7 @@ Quick Buy
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
           
-Quick Buy 
+Tìm hiểu thêm 
             
           
         </span>
@@ -4803,14 +4570,14 @@ Quick Buy
       
       
         <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           25% Off when you buy 2+
+           Giảm 25% khi mua 2 sản phẩm trở lên
         </div>
       
       
       <div class="product-card__metafields eyebrow">
-        Balance Mind & Skin
+        Cân bằng tâm trí & Làn da
       </div>
-      <h5 class="product-card__title">Pro Calm Face Oil</h5>
+      <h5 class="product-card__title">Dầu dưỡng Pro Calm Face Oil</h5>
       
       <div class="product-card__ratings">
   <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7903622922482" data-product-models="7903622922482" data-name="Pro Calm Face Oil" data-url="https://www.aromatherapyassociates.com/products/pro-calm-face-oil-15ml" data-image-url="files/RN232015_main.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 25% Off when you buy 2+;breakouts;combination skin;daily;face oil;full size skincare;oily skin;pores;sensitive skin;skincare;">
@@ -4820,13 +4587,13 @@ Quick Buy
       
         
           <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="8400"></span>
+            <span class="product-card__price">VND 2,299,000</span>
             
               <span class="product-card__size"> / 15ml </span>
             
           </div>
         
-        <a href="/products/pro-calm-face-oil-15ml" class="product-card__main__link"></a>
+        <a href="./pro-calm-face-oil-skincare.html" class="product-card__main__link"></a>
       
     </div>
   </div>
@@ -4835,7 +4602,7 @@ Quick Buy
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
           
-Quick Buy 
+Tìm hiểu thêm 
             
           
         </span>
@@ -4887,128 +4654,10 @@ Quick Buy
   }
 </style>
 
-<div class="collection__product-card collection__product-card--9 product-card--" data-position="9" @hide-all-popup.window="quickBuyPopup = false">
-   
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'pro-dry-skin-facial-duo'; collection_handle = " diffusers";="" handle="radiance-repair-duo" ;="" }"="">
-  
-    
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'radiance-repair-duo'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
-  <div class="product-card__content">
-    <a href="/products/radiance-repair-duo" data-item_position="9" data-item_id="7912823521522" data-item_name="Radiance & Repair Facial Duo" data-item_brand="Aromatherapy Associates" data-item_category="Skincare Set" data-item_variant="" data-price="112,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-      <div class="product-card__image-wrapper">
-        <div class="product-card__image base-img" x-show="baseImage === true" x-transition.duration.500ms="">
-          
-
-	<img src="images/WEEK37_WEB_IMAGES_SKINCARE_DUO_5_3000x3000_1.png" alt="Radiance & Repair Facial Duo" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 25vw, 50vw">
-
-        </div>
-        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
-          <img src="images/WEEK34_SKINCARE_INGREDIENTS_ASSETS_BOOST_FACE_OIL__3000x3000_89599f42-ad4b-4886-8770-9474c401edc8.jpg" width="600" height="600" loading="lazy" alt="Radiance & Repair Facial Duo Rollover Image">
-        </div>
-      </div>
-    </a>
-    <div class="product-card__main">
-      
-        <div class="product-card__badge">
-          
-          30% SAVINGS
-        </div>
-      
-      
-      
-      
-      
-      
-      
-      <div class="product-card__metafields eyebrow">
-        Balance Mind & Skin
-      </div>
-      <h5 class="product-card__title">Radiance & Repair Facial Duo</h5>
-      
-      <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7912823521522" data-product-models="7912823521522" data-name="Radiance & Repair Facial Duo" data-url="https://www.aromatherapyassociates.com/products/radiance-repair-duo" data-image-url="files/WEEK37_WEB_IMAGES_SKINCARE_DUO_5_3000x3000_1.png" data-bread-crumbs="breakouts;combination skin;daily;dehydrated skin;dry skin;dullness;face oil;mature skin;oily skin;pores;sensitive skin;skincare;">
-  </div>
-</div>
-      
-      
-        
-          <div class="product-card__price-compare">
-            <div class="product-card__price-container font-secondary">
-              <div class="product-card__price--old" x-price="16000"></div>
-              <div class="product-card__price" x-price="11200"></div>
-              
-            </div>
-          </div>
-        
-        <a href="/products/radiance-repair-duo" class="product-card__main__link"></a>
-      
-    </div>
-  </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
-  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
-		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
-		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
-			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
-				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-			</div>
-			<h5 class="collection__quick-buy-popup--title">
-				Radiance & Repair Facial Duo
-			</h5>
-			<div class="collection__quick-buy-popup--list">
-				<template x-for="product in products"> 
-					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
-					
-				</button>
-				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€112,00' " @click="quickAddToCart" :disabled="disableQuick">
-				Add To Bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
-			</button>
-		</div>
-	</div>
-</div>
-
-
-  <script type="text/javascript">
-	if (typeof klevuProducts == 'undefined') {
-			var klevuProducts = new Array();
-	}
-	klevuProducts.push(7912823521522);
-</script>
-</div>
 
               
             
-              
+          
               
                 <style data-shopify="">
   .collection__product-card--10 {
@@ -5016,140 +4665,12 @@ Quick Buy
   }
 </style>
 
-<div class="collection__product-card collection__product-card--10 product-card--" data-position="10" @hide-all-popup.window="quickBuyPopup = false">
-   
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'hydration-super-boost-facial-duo'; collection_handle = " diffusers";="" handle="hydration-super-boost-facial-duo" ;="" }"="">
-  
-    
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'hydration-super-boost-facial-duo'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
-  <div class="product-card__content">
-    <a href="/products/hydration-super-boost-facial-duo" data-item_position="10" data-item_id="7912829944050" data-item_name="Hydration Super Boost Facial Kit" data-item_brand="Aromatherapy Associates" data-item_category="Skincare Set" data-item_variant="" data-price="73,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-      <div class="product-card__image-wrapper">
-        <div class="product-card__image base-img" x-show="baseImage === true" x-transition.duration.500ms="">
-          
 
-	<img src="images/Hydration_super_Boost_DUO_1_3000x3000_3.png" alt="Hydration Super Boost Facial Kit" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 25vw, 50vw">
-
-        </div>
-        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
-          <img src="images/Boost_FEATURES_3000x3000_v2_1.jpg" width="600" height="600" loading="lazy" alt="Hydration Super Boost Facial Kit Rollover Image">
-        </div>
-      </div>
-    </a>
-    <div class="product-card__main">
-      
-        <div class="product-card__badge">
-          
-          30% SAVINGS
-        </div>
-      
-      
-      
-      
-      
-      
-      
-      <div class="product-card__metafields eyebrow">
-        Balance Mind & Skin
-      </div>
-      <h5 class="product-card__title">Hydration Super Boost Facial Kit</h5>
-      
-      <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7912829944050" data-product-models="7912829944050" data-name="Hydration Super Boost Facial Kit" data-url="https://www.aromatherapyassociates.com/products/hydration-super-boost-facial-duo" data-image-url="files/Hydration_super_Boost_DUO_1_3000x3000_3.png" data-bread-crumbs="breakouts;combination skin;daily;dehydrated skin;dry skin;dullness;mature skin;oily skin;pores;sensitive skin;skincare;">
-  </div>
-</div>
-      
-        
-          <div class="product-card__price-compare">
-            <div class="product-card__price-container font-secondary">
-              <div class="product-card__price--old" x-price="10400"></div>
-              <div class="product-card__price" x-price="7300"></div>
-              
-            </div>
-          </div>
-        
-        <a href="/products/hydration-super-boost-facial-duo" class="product-card__main__link"></a>
-      
-    </div>
-  </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
-  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
-		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
-		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
-			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
-				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-			</div>
-			<h5 class="collection__quick-buy-popup--title">
-				Hydration Super Boost Facial Kit
-			</h5>
-			<div class="collection__quick-buy-popup--list">
-				<template x-for="product in products"> 
-					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
-					
-				</button>
-				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€73,00' " @click="quickAddToCart" :disabled="disableQuick">
-				Add To Bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
-			</button>
-		</div>
-	</div>
-</div>
-
-
-  <script type="text/javascript">
-	if (typeof klevuProducts == 'undefined') {
-			var klevuProducts = new Array();
-	}
-	klevuProducts.push(7912829944050);
-</script>
-</div>
 
               
             
           
         </div>
-      
-      <div class="collection__pagination-container">
-        <p class="collection__pagination-info small">
-          <span class="collection__pagination-current" x-text="productsPerPage"></span>
-          of
-          <span class="collection__pagination-total" x-text="prodCount"></span>
-          products viewed
-        </p>
-        <div class="collection__load-more btn secondary" x-show="showLoadMore" @click="loadMore(48)">
-          Load More
-        </div>
-      </div>
     </div>
   </div>
   
