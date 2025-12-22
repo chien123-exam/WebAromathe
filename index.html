@@ -946,7 +946,7 @@ Shopify.routes.root = "/";</script>
   							<% if(dataLocal.inStock && dataLocal.inStock != "yes") { %>
   								<%=helper.render('quickProductStock', scope, data, dataLocal) %>
   							<% } else { %>
-  							Tìm hiểu thêm
+  							mua ngay
   							<% } %>
   						</span>
   						<div class="spinner" x-show="loadingQuickBuy"></div>
@@ -959,7 +959,7 @@ Shopify.routes.root = "/";</script>
   								<% if(dataLocal.inStock && dataLocal.inStock != "yes") { %>
   									<%=helper.render('quickProductStock', scope, data, dataLocal) %>
   								<% } else { %>
-  								Tìm hiểu thêm
+  								mua ngay
   								<% } %>
   							</span>
   							<div class="spinner" x-show="loadingQuickBuy"></div>
@@ -2453,13 +2453,7 @@ Shopify.routes.root = "/";</script>
           
             
             
-            <li class="header__main-menu-list-item">
-              
-                <a href="/collections/bath-body-shower" class="header__main-menu-item link secondary base " role="button" title="View Bath, Body & Shower" @mouseover="setActiveMenu('mega-menu-bath-body-shower')">
-                  Giới thiệu
-                </a>
-              
-            </li>
+           
           
         
           
@@ -2506,13 +2500,7 @@ Shopify.routes.root = "/";</script>
 
                     <div class="header__submenu-wrapper--inner">
                       <ul class="header__submenu-list">
-                        <li class="header__submenu-list-item" @mouseenter.stop="openSecondLvl('About Aromatherapy Associates')">
-                          <a href="./cau-chuyen-cua-Aromatherapy.html" class="header__submenu-list-item--link">
-                            <div class="header__submenu-list-item--title heading1">
-                              Câu chuyện của Aromatherapy Associates
-                            </div>
-                          </a>
-                        </li>
+                        
                         <li class="header__submenu-list-item" @mouseenter.stop="openSecondLvl('About Aromatherapy Associates')">
                           <a href="./cau-chuyen-cua-chung-toi.html" class="header__submenu-list-item--link">
                             <div class="header__submenu-list-item--title heading1">
@@ -2737,7 +2725,7 @@ Shopify.routes.root = "/";</script>
 
               <a href="./cham-soc-da-mat.html" class="mega-menu__submenu-link" title="Our Community">Chăm sóc da mặt</a>
 
-              <a href="./tinh-dau-nep-thom.html" class="mega-menu__submenu-link" title="Our Community">Tinh dầu & nếp thơm</a>
+              <a href="./tinh-dau-nep-thom.html" class="mega-menu__submenu-link" title="Our Community">Tinh dầu & Nến thơm</a>
           </div>
         
       </div>
@@ -2765,7 +2753,6 @@ Shopify.routes.root = "/";</script>
     
       <div class="mega-menu__column mega-menu__menu mega-menu__menu--1 menu-about">
         <div class="mega-menu__column-submenu">
-          <a href="./cau-chuyen-cua-Aromatherapy.html" class="mega-menu__submenu-link">Câu chuyện của Aromatherapy Associates</a>
 
           <a href="./cau-chuyen-cua-chung-toi.html" class="mega-menu__submenu-link">Câu chuyện của chúng tôi</a>
 
@@ -2897,7 +2884,7 @@ Shopify.routes.root = "/";</script>
                             <li class="header-mobile-menu__list-item">
                               <a href="./tinh-dau-nep-thom.html" class="header-mobile-menu__list-item--link">
                                 <div class="header-mobile-menu__list-item--title heading1">
-                                  Tinh dầu & nến thơm
+                                  Tinh dầu & Nến thơm
                                 </div>
                               </a>
                               
@@ -2917,13 +2904,7 @@ Shopify.routes.root = "/";</script>
         
           
             
-              <li class="header-mobile-menu__list-item">
-                <a href="/collections/new-arrivals" class="header-mobile-menu__list-item--link">
-                  <div class="header-mobile-menu__list-item--title heading1">
-                    Giới thiệu
-                  </div>
-                </a>
-              </li>
+             
             
           
         
@@ -3057,14 +3038,6 @@ Shopify.routes.root = "/";</script>
 
                           
                           
-                          
-                            <li class="header-mobile-menu__list-item">
-                              <a href="./cau-chuyen-cua-Aromatherapy.html" class="header-mobile-menu__list-item--link">
-                                <div class="header-mobile-menu__list-item--title heading1">
-                                  Câu chuyện của Aromatherapy Associates 
-                                </div>
-                              </a>
-                            </li>
 
                             <li class="header-mobile-menu__list-item">
                               <a href="./cau-chuyen-cua-chung-toi.html" class="header-mobile-menu__list-item--link">
@@ -3899,7 +3872,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -4011,7 +3984,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -4121,7 +4094,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -4231,7 +4204,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -4339,7 +4312,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -4446,7 +4419,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -4761,7 +4734,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -4869,7 +4842,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -4979,7 +4952,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -5087,7 +5060,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -5195,7 +5168,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -5311,7 +5284,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -5427,7 +5400,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -5534,7 +5507,7 @@ Shopify.routes.root = "/";</script>
     
       <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
         <span x-show="!loading">
-           Tìm hiểu thêm 
+           mua ngay 
         </span>
         <div class="spinner" x-show="loading"></div>
       </button>
@@ -7264,9 +7237,7 @@ Shopify.routes.root = "/";</script>
                 <li class="footer-desktop__item">
                   <a class="footer-desktop__item-link link" href="/pages/our-community">Blog</a>
                 </li>
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="/blogs/our-journal/how-does-aromatherapy-work">Giới thiệu</a>
-                </li>
+               
                 <li class="footer-desktop__item">
                   <a class="footer-desktop__item-link link" href="/pages/our-blends">Liên hệ</a>
                 </li>
@@ -7278,9 +7249,7 @@ Shopify.routes.root = "/";</script>
                 <li class="footer-desktop__item">
                   <a class="footer-desktop__item-link link" href="/pages/special-offers">Tìm kiếm</a>
                 </li>
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="/pages/loyalty">Giới thiệu</a>
-                </li>
+                
                 <li class="footer-desktop__item">
                   <a class="footer-desktop__item-link link" href="./chinh-sach-doi-tra.html">Chính sách đổi trả</a>
                 </li>
