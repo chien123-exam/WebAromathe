@@ -1170,13 +1170,18 @@ button.swiper-pagination-bullet {
 }
 .footer__links {
   align-items: flex-start;
-  -moz-column-gap: 77.5px;
-  column-gap: 77.5px;
   display: flex;
   flex-wrap: wrap;
   max-width: 1500px;
-  row-gap: 30px;
+  gap: 0px;
   width: 100%;
+}
+.footer__block {
+  padding-right: 77.5px;
+}
+
+.footer__block:last-child {
+  padding-right: 0;
 }
 @media screen and (max-width: 1350px) {
   .footer__links {
@@ -1189,11 +1194,6 @@ button.swiper-pagination-bullet {
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-.footer__links {
-  display: flex;
-  gap: 20px; 
 }
 
 .footer__block:first-child {

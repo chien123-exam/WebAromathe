@@ -3358,11 +3358,11 @@ Shopify.routes.root = "/";</script>
 	<div class="plp-default-banner__container ">
 		
 		<h1 class="plp-default-banner__title">
-			New Arrivals
+			Sản phẩm mới
 		</h1>
 		
 		<div class="plp-default-banner__description-wrapper">
-			<span class="plp-default-banner__description-data" data-text="" x-ref="description"><p style="text-align: center;">Discover the latest product launches and exclusive limited-edition collections. Be the first to experience the freshest innovations in self-care - crafted just for you.</p></span>
+			<span class="plp-default-banner__description-data" data-text="" x-ref="description"><p style="text-align: center;">Khám phá những sản phẩm mới nhất và các bộ sưu tập phiên bản giới hạn. Hãy là người đầu tiên trải nghiệm những cải tiến mới nhất trong lĩnh vực chăm sóc da!</p></span>
 		</div>
 		
 	</div>
@@ -3398,134 +3398,6 @@ Shopify.routes.root = "/";</script>
 
 <div class="collection" x-data="collectionMain">
   <div class="collection_inner">
-    <div class="collection__top-bar" x-data="collectionBar" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.collection-bar.js?v=181738565580921825411740496174" x-ref="collectionTopBar" x-init="productCount= '12'; productLabel =  'Items', collectionTitle = 'New Arrivals'" @update-counter.window="updateProductCounter" @update-load-more-counter.window="updateLoadMoreCounter(48)" :class="{sticky: sticky === true, stickyscroll: stickyOnScroll === true}">
-      <div class="collection-topbar">
-  <div class="collection-topbar__inner">
-    <div class="collection-topbar__text-wrapper">
-      <p class="collection-topbar__quantity" x-text="barHeading"></p>
-    </div>
-    <div class="collection-topbar__buttons">
-      <div class="collection-topbar__buttons-main">
-        <button class="collection-topbar__buttons--filter" @click="showPopup = 'collection-filters'">
-          <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M18 2H7.94999C7.71836 0.85888 6.70948 0 5.5 0C4.29052 0 3.28164 0.85888 3.05001 2H0V3H3.05001C3.28164 4.14112 4.29052 5 5.5 5C6.70948 5 7.71836 4.14112 7.94999 3H18V2Z" fill="#071D49"></path>
-			<path d="M18 9H14.95C14.7184 7.85888 13.7095 7 12.5 7C11.2905 7 10.2816 7.85888 10.05 9H0V10H10.05C10.2816 11.1411 11.2905 12 12.5 12C13.7095 12 14.7184 11.1411 14.95 10H18V9Z" fill="#071D49"></path>
-		</svg>
-          Filter
-        </button>
-        <div class="collection-topbar__buttons--sort-container">
-          <button class="collection-topbar__buttons--sort" @click="showSort = !showSort">
-            Sort
-            <div class="collection-topbar__buttons--sort-icon" :class="{active: showSort === true }">
-              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M6 7L6.38845e-07 0.8167L0.792491 -9.84658e-07L6 5.3666L11.2075 -7.41483e-08L12 0.816701L6 7Z" fill="#071D49"></path>
-		</svg>
-            </div>
-          </button>
-          <div class="collection-topbar__buttons--sort-items-wrapper" @click.outside="showSort = false " x-show="showSort === true" x-transition="">
-            <template x-if="filters">
-              <div class="collection-sort">
-                <div class="collection-sort__list">
-                  
-                    
-                      
-                      <div class="collection-sort__item">
-                        <div class="collection-sort__checkbox-wrapper">
-                          <div class="collection-sort__checkbox" x-show="filters['Sort by'].activeValue === 'best-selling' " x-transition="">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M13.0373 3.6781C13.2151 3.80915 13.2531 4.05956 13.122 4.2374L7.52201 11.8374C7.45505 11.9283 7.35281 11.9866 7.24051 11.9981C7.12821 12.0095 7.01631 11.973 6.93241 11.8974L2.93241 8.29744C2.7682 8.14966 2.75489 7.89674 2.90267 7.73254C3.05046 7.56833 3.30337 7.55502 3.46758 7.70281L7.13966 11.0077L12.478 3.76284C12.609 3.585 12.8594 3.54706 13.0373 3.6781Z" fill="#F9F6F4"></path>
-		</svg>
-                          </div>
-                        </div>
-                        <span class="collection-sort__item-text basetext" @click="selectSort('best-selling')">
-                          Best Selling</span>
-                      </div>
-                    
-                  
-                    
-                      
-                      <div class="collection-sort__item">
-                        <div class="collection-sort__checkbox-wrapper">
-                          <div class="collection-sort__checkbox" x-show="filters['Sort by'].activeValue === 'created-descending' " x-transition="">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M13.0373 3.6781C13.2151 3.80915 13.2531 4.05956 13.122 4.2374L7.52201 11.8374C7.45505 11.9283 7.35281 11.9866 7.24051 11.9981C7.12821 12.0095 7.01631 11.973 6.93241 11.8974L2.93241 8.29744C2.7682 8.14966 2.75489 7.89674 2.90267 7.73254C3.05046 7.56833 3.30337 7.55502 3.46758 7.70281L7.13966 11.0077L12.478 3.76284C12.609 3.585 12.8594 3.54706 13.0373 3.6781Z" fill="#F9F6F4"></path>
-		</svg>
-                          </div>
-                        </div>
-                        <span class="collection-sort__item-text basetext" @click="selectSort('created-descending')">
-                          New Arrivals</span>
-                      </div>
-                    
-                  
-                    
-                      
-                      <div class="collection-sort__item">
-                        <div class="collection-sort__checkbox-wrapper">
-                          <div class="collection-sort__checkbox" x-show="filters['Sort by'].activeValue === 'price-descending' " x-transition="">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M13.0373 3.6781C13.2151 3.80915 13.2531 4.05956 13.122 4.2374L7.52201 11.8374C7.45505 11.9283 7.35281 11.9866 7.24051 11.9981C7.12821 12.0095 7.01631 11.973 6.93241 11.8974L2.93241 8.29744C2.7682 8.14966 2.75489 7.89674 2.90267 7.73254C3.05046 7.56833 3.30337 7.55502 3.46758 7.70281L7.13966 11.0077L12.478 3.76284C12.609 3.585 12.8594 3.54706 13.0373 3.6781Z" fill="#F9F6F4"></path>
-		</svg>
-                          </div>
-                        </div>
-                        <span class="collection-sort__item-text basetext" @click="selectSort('price-descending')">
-                          Price High to Low</span>
-                      </div>
-                    
-                  
-                    
-                      
-                      <div class="collection-sort__item">
-                        <div class="collection-sort__checkbox-wrapper">
-                          <div class="collection-sort__checkbox" x-show="filters['Sort by'].activeValue === 'price-ascending' " x-transition="">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M13.0373 3.6781C13.2151 3.80915 13.2531 4.05956 13.122 4.2374L7.52201 11.8374C7.45505 11.9283 7.35281 11.9866 7.24051 11.9981C7.12821 12.0095 7.01631 11.973 6.93241 11.8974L2.93241 8.29744C2.7682 8.14966 2.75489 7.89674 2.90267 7.73254C3.05046 7.56833 3.30337 7.55502 3.46758 7.70281L7.13966 11.0077L12.478 3.76284C12.609 3.585 12.8594 3.54706 13.0373 3.6781Z" fill="#F9F6F4"></path>
-		</svg>
-                          </div>
-                        </div>
-                        <span class="collection-sort__item-text basetext" @click="selectSort('price-ascending')">
-                          Price Low to High</span>
-                      </div>
-                    
-                  
-                </div>
-              </div>
-            </template>
-          </div>
-        </div>
-      </div>
-      <div class="collection-topbar__view-wrapper">
-        <div class="collection-topbar__view-wrapper--one-item" @click="grid = 1">
-          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M19.8958 1H1.89575V19H19.8958V1ZM0.895752 0V20H20.8958V0H0.895752Z" fill="#A39161"></path>
-		</svg>
-        </div>
-        <div class="collection-topbar__view-wrapper--two-item" @click="grid = 2">
-          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<mask id="path-1-inside-1_2338_84758" fill="white">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M22.8958 2H2.89575V22H22.8958V2ZM21.8958 3H13.3958V11.5H21.8958V3ZM21.8958 12.5H13.3958V21H21.8958V12.5ZM12.3958 11.5V3H3.89575V11.5H12.3958ZM3.89575 12.5H12.3958V21H3.89575V12.5Z"></path>
-			</mask>
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M22.8958 2H2.89575V22H22.8958V2ZM21.8958 3H13.3958V11.5H21.8958V3ZM21.8958 12.5H13.3958V21H21.8958V12.5ZM12.3958 11.5V3H3.89575V11.5H12.3958ZM3.89575 12.5H12.3958V21H3.89575V12.5Z" fill="#A39161"></path>
-			<path d="M13.3958 3V2H12.3958V3H13.3958ZM21.8958 3H22.8958V2H21.8958V3ZM13.3958 11.5H12.3958V12.5H13.3958V11.5ZM21.8958 11.5V12.5H22.8958V11.5H21.8958ZM22.8958 2H23.8958V1H22.8958V2ZM2.89575 2V1H1.89575V2H2.89575ZM2.89575 22H1.89575V23H2.89575V22ZM22.8958 22V23H23.8958V22H22.8958ZM21.8958 12.5H22.8958V11.5H21.8958V12.5ZM13.3958 12.5V11.5H12.3958V12.5H13.3958ZM13.3958 21H12.3958V22H13.3958V21ZM21.8958 21V22H22.8958V21H21.8958ZM12.3958 3H13.3958V2H12.3958V3ZM12.3958 11.5V12.5H13.3958V11.5H12.3958ZM3.89575 3V2H2.89575V3H3.89575ZM3.89575 11.5H2.89575V12.5H3.89575V11.5ZM12.3958 12.5H13.3958V11.5H12.3958V12.5ZM3.89575 12.5V11.5H2.89575V12.5H3.89575ZM12.3958 21V22H13.3958V21H12.3958ZM3.89575 21H2.89575V22H3.89575V21ZM13.3958 4H21.8958V2H13.3958V4ZM14.3958 11.5V3H12.3958V11.5H14.3958ZM13.3958 12.5H21.8958V10.5H13.3958V12.5ZM20.8958 3V11.5H22.8958V3H20.8958ZM21.8958 11.5H13.3958V13.5H21.8958V11.5ZM14.3958 21V12.5H12.3958V21H14.3958ZM21.8958 20H13.3958V22H21.8958V20ZM20.8958 12.5V21H22.8958V12.5H20.8958ZM11.3958 3V11.5H13.3958V3H11.3958ZM3.89575 4H12.3958V2H3.89575V4ZM4.89575 11.5V3H2.89575V11.5H4.89575ZM3.89575 12.5H12.3958V10.5H3.89575V12.5ZM12.3958 11.5H3.89575V13.5H12.3958V11.5ZM11.3958 12.5V21H13.3958V12.5H11.3958ZM12.3958 20H3.89575V22H12.3958V20ZM4.89575 21V12.5H2.89575V21H4.89575ZM21.8958 2V22H23.8958V2H21.8958ZM2.89575 3H22.8958V1H2.89575V3ZM3.89575 22V2H1.89575V22H3.89575ZM22.8958 21H2.89575V23H22.8958V21Z" fill="#A39161" mask="url(#path-1-inside-1_2338_84758)"></path>
-		</svg>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="collection-topbar__add-to-bag" style="background-color: #071D49; display: none;" @show-add-to-bag-message.window="showMessage()" @click.outside="message = false" x-show="message === true" x-transition="">
-    <div class="collection-topbar__add-to-bag--inner">
-      <h4 class="collection-topbar__add-to-bag--message">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M13.0373 3.6781C13.2151 3.80915 13.2531 4.05956 13.122 4.2374L7.52201 11.8374C7.45505 11.9283 7.35281 11.9866 7.24051 11.9981C7.12821 12.0095 7.01631 11.973 6.93241 11.8974L2.93241 8.29744C2.7682 8.14966 2.75489 7.89674 2.90267 7.73254C3.05046 7.56833 3.30337 7.55502 3.46758 7.70281L7.13966 11.0077L12.478 3.76284C12.609 3.585 12.8594 3.54706 13.0373 3.6781Z" fill="#F9F6F4"></path>
-		</svg>
-        Added to your bag
-      </h4>
-      <a href="/cart" class="collection-topbar__add-to-bag--link link">View Bag</a>
-    </div>
-  </div>
-
-</div>
-
-    </div>
     <div class="collection__applied-filters" x-show="appliedFilters.length !== 0" x-transition="">
       <template x-if="filters">
         <div class="collection__applied-filters--inner">
@@ -4304,18 +4176,6 @@ Shopify.routes.root = "/";</script>
 
 
         </div>
-      
-      <div class="collection__pagination-container">
-        <p class="collection__pagination-info small">
-          <span class="collection__pagination-current" x-text="productsPerPage"></span>
-          of
-          <span class="collection__pagination-total" x-text="prodCount"></span>
-          products viewed
-        </p>
-        <div class="collection__load-more btn secondary" x-show="showLoadMore" @click="loadMore(48)">
-          Load More
-        </div>
-      </div>
     </div>
   </div>
   
