@@ -1602,100 +1602,7 @@ Shopify.routes.root = "/";</script>
 
     <a class="skip-to-content-link" href="#main-content"> Skip to content </a>
 
-    <div id="shopify-section-announcement-bar" class="shopify-section">
-
-
-  
-
-  
-
-  
-    <div class="swiper mySwiper announcement-bar" id="announcement-bar" x-show="visible" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.announcement-bar.js?v=155946344749828507431726048084" x-data="announcementBar">
-      <div class="swiper-wrapper">
-        
-          
-            
-              
-                <div class="swiper-slide announcement-bar__container" style="background-color: #071d49;">
-                
-                  <a href="/collections/de-stress">
-                    <div class="announcement-bar__message basetext micro" style="color: #f9f6f4;"><p>Reset this September with 20% off our De-Stress collections, valid until Sunday 14th!</p></div>
-                  </a>
-                  
-              </div>
-              
-            
-        
-          
-            
-              
-            
-        
-          
-            
-              
-                <div class="swiper-slide announcement-bar__container" style="background-color: #071d49;">
-                
-                  <a href="/collections/wellbeing-concern">
-                    <div class="announcement-bar__message basetext micro" style="color: #f9f6f4;"><p>3 FREE samples with EVERY order</p></div>
-                  </a>
-                  
-              </div>
-              
-            
-        
-          
-            
-              
-                <div class="swiper-slide announcement-bar__container" style="background-color: #071d49;">
-                
-                  <a href="/collections/body-wash-lotions">
-                    <div class="announcement-bar__message basetext micro" style="color: #f9f6f4;"><p>NEW Body Wash & Lotions, discover now!</p></div>
-                  </a>
-                  
-              </div>
-              
-            
-        
-          
-            
-              
-                <div class="swiper-slide announcement-bar__container" style="background-color: #071d49;">
-                
-                  <a href="/collections/last-chance">
-                    <div class="announcement-bar__message basetext micro" style="color: #f9f6f4;"><p>Last Chance to shop 40% off products nearing the end of their journey!</p></div>
-                  </a>
-                  
-              </div>
-              
-            
-        
-          
-            
-              
-                <div class="swiper-slide announcement-bar__container" style="background-color: #071d49;">
-                
-                  <a href="/products/bath-body-bundle">
-                    <div class="announcement-bar__message basetext micro" style="color: #f9f6f4;"><p>Build your own Bath & Body Bundle & save 20% </p></div>
-                  </a>
-                  
-              </div>
-              
-            
-        
-      </div>
-    </div>
-    <div class="announcement-bar__close" id="slider-close">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-    </div>
-
-  
-
-
-
-</div>
+    
     <div id="shopify-section-header" class="shopify-section">
 
 <style data-shopify="">
@@ -1739,9 +1646,10 @@ Shopify.routes.root = "/";</script>
       <ul class="header__main-menu" x-data="desktopMenu" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.desktop-menu.js?v=76092971650667967311726048083">
         
           
-          <li class="header__main-menu-list-item">
+            
+            <li class="header__main-menu-list-item">
               
-                <span class="header__main-menu-item link secondary base " :class="{ 'mega-menu--active': activeMegaMenu === 'mega-menu-shop' }" tabindex="0" title="Open Shop Menu" @mouseover="setActiveMenu('mega-menu-shop')">
+                <span class="header__main-menu-item link secondary base " :class="{ 'mega-menu--active': activeMegaMenu === 'mega-menu-shop' }" tabindex="0" title="Sản phẩm" @mouseover="setActiveMenu('mega-menu-shop')">
                   Sản phẩm
                 </span>
                 <div class="header__submenu" :class="{active: menu === 'mega-menu-shop'}" x-show="windowWidth > 1023">
@@ -2649,9 +2557,13 @@ Shopify.routes.root = "/";</script>
             
             
            
+          
+        
+          
+            
             <li class="header__main-menu-list-item">
               
-                <a href="/collections/home-fragrance" class="header__main-menu-item link secondary base " role="button" title="View Home Fragrance" @mouseover="setActiveMenu('mega-menu-home-fragrance')">
+                <a class="header__main-menu-item link secondary base " role="button" title="Dịch vụ" @mouseover="setActiveMenu('mega-menu-home-fragrance')">
                   Dịch vụ
                 </a>
               
@@ -2672,7 +2584,7 @@ Shopify.routes.root = "/";</script>
               <span class="header__main-menu-item link secondary base"
                     :class="{ 'mega-menu--active': activeMegaMenu === 'mega-menu-about' }"
                     tabindex="0"
-                    title="Open About Us Menu"
+                    title="Về chúng tôi"
                     @mouseover="setActiveMenu('mega-menu-about')">
                 Về chúng tôi
               </span>
@@ -2713,13 +2625,7 @@ Shopify.routes.root = "/";</script>
                             </div>
                           </a>
                         </li>
-                        <li class="header__submenu-list-item" @mouseenter.stop="openSecondLvl('Our Journey')">
-                          <a href="./hanh-trinh-chung-toi.html" class="header__submenu-list-item--link">
-                            <div class="header__submenu-list-item--title heading1">
-                              Hành trình của chúng tôi (Trang Blog)
-                            </div>
-                          </a>
-                        </li>
+    
                       </ul>
                     </div>
                   </div>
@@ -2727,6 +2633,14 @@ Shopify.routes.root = "/";</script>
               </div>
             </li>
 
+          
+        
+          
+        
+          
+        
+          
+        
       </ul>
     </nav>
     <div class="header__logo">
@@ -2798,94 +2712,6 @@ Shopify.routes.root = "/";</script>
         </a>
       </div>
     </div>
-    <div class="header__right">
-      <div class="header__right-menu" x-data="desktopMenu" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.desktop-menu.js?v=76092971650667967311726048083">
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </div>
-      <div class="header__icons">
-        
-<div class="header__icon search" @click="$dispatch('open-search')">
-    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M12.6272 6.81464C12.6272 10.0261 10.0243 12.6293 6.81362 12.6293C3.60299 12.6293 1 10.0261 1 6.81464C1 3.60316 3.60299 1 6.81362 1C10.0243 1 12.6272 3.60316 12.6272 6.81464ZM11.2652 11.9739C10.0712 13.0054 8.51525 13.6293 6.81362 13.6293C3.05056 13.6293 0 10.5783 0 6.81464C0 3.05102 3.05056 0 6.81362 0C10.5767 0 13.6272 3.05102 13.6272 6.81464C13.6272 8.51643 13.0035 10.0725 11.9723 11.2667L15.9998 15.2949L15.2927 16.0019L11.2652 11.9739Z" fill="#071D49"></path>
-		</svg>
-    <p class="header__icon--tooltip small">
-      Search
-    </p>
-</div>
-
-<div class="header__icon account">
-  
-    <a href="/account/register">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M11.4992 4.5C11.4992 6.433 9.9322 8 7.99921 8C6.06621 8 4.49921 6.433 4.49921 4.5C4.49921 2.567 6.06621 1 7.99921 1C9.9322 1 11.4992 2.567 11.4992 4.5ZM9.71496 8.66135C11.3491 7.98683 12.4992 6.37772 12.4992 4.5C12.4992 2.01472 10.4845 0 7.99921 0C5.51393 0 3.49921 2.01472 3.49921 4.5C3.49921 6.37791 4.64952 7.98716 6.28396 8.66156C4.01229 9.11176 2.55999 10.4408 1.66322 11.8576C0.578782 13.5709 0.299988 15.4156 0.299988 16H1.29999C1.29999 15.5844 1.53548 13.9291 2.50818 12.3924C3.46058 10.8878 5.11274 9.5 7.99999 9.5C10.8872 9.5 12.5394 10.8878 13.4918 12.3924C14.4645 13.9291 14.7 15.5844 14.7 16H15.7C15.7 15.4156 15.4212 13.5709 14.3368 11.8576C13.4398 10.4406 11.9872 9.11135 9.71496 8.66135Z" fill="#071D49"></path>
-		</svg>
-    </a>
-    <p class="header__icon--tooltip small">
-      Account
-    </p>
-  
-</div>
-
-
-  <div class="header__icon wishlist-i" :class="{ full: wishlistCount > 0, show: wishlistCount != null }" @wishlist-update-count.window="swymUpdate" @wishlist-update-counts.window="swymUpdate" @update-wishlist.window="wishlistUpdate">
-    <a href="#swym-wishlist" class="wishlist-icon wishlist-empty" x-show="wishlistCount == 0" aria-label="Wishlist">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path fill-rule="evenodd" clip-rule="evenodd" d="M19.4146 5.28806C17.7009 3.57054 14.9222 3.57055 13.2084 5.28806L11.95 6.54927L10.6915 5.28811C8.97775 3.5706 6.19913 3.5706 4.48534 5.28811C2.77154 7.00563 2.77154 9.79027 4.48534 11.5078L5.74377 12.7689L5.73248 12.7803L11.9387 18.9999L19.4146 11.5077C21.1284 9.79022 21.1284 7.00557 19.4146 5.28806Z"></path>
-		</svg>
-    </a>
-    <a href="#swym-wishlist" class="wishlist-icon wishlist-full" x-show="wishlistCount > 0" aria-label="WishlistRemove">
-      <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M16.4152 1.28814C14.7013 -0.429378 11.9226 -0.42938 10.2088 1.28814L8.95026 2.54935L7.6918 1.28819C5.97795 -0.429321 3.19924 -0.429321 1.48539 1.28819C-0.228467 3.00571 -0.228466 5.79035 1.48539 7.50787L2.74385 8.76902L2.73256 8.78033L8.93897 15L16.4152 7.50781C18.129 5.79029 18.129 3.00565 16.4152 1.28814Z" fill="#071D49"></path>
-		</svg>
-    </a>
-    <span class="header__icon--count" x-text="wishlistCount" x-show="wishlistCount > 0"></span>
-    <p class="header__icon--tooltip small">
-      Wishlist
-    </p>
-  </div>
-
-<div :class="{ 'full': cart.item_count }" class="header__icon cart">
-  <a x-show="!cart.item_count" href="/cart">
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M4.22855 3.7002H11.7714C11.146 1.9718 9.71488 1 8 1C6.28512 1 4.85397 1.9718 4.22855 3.7002ZM12.8234 3.7002H15H16V4.7002V12.7002C16 14.357 14.6569 15.7002 13 15.7002H3C1.34315 15.7002 0 14.357 0 12.7002V4.7002V3.7002H1H3.17659C3.86153 1.39999 5.71642 0 8 0C10.2836 0 12.1385 1.39999 12.8234 3.7002ZM1 12.7002V4.7002H15V12.7002C15 13.8048 14.1046 14.7002 13 14.7002H3C1.89543 14.7002 1 13.8048 1 12.7002Z" fill="#071D49"></path>
-		</svg>
-  </a>
-  <a x-show="cart.item_count" href="#" @click.prevent="$dispatch('show-ajax-cart-popup')" style="display: none;">
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M4.22855 3.7002H11.7714C11.146 1.9718 9.71488 1 8 1C6.28512 1 4.85397 1.9718 4.22855 3.7002ZM12.8234 3.7002H16V12.7002C16 14.357 14.6569 15.7002 13 15.7002H3C1.34315 15.7002 0 14.357 0 12.7002V3.7002H3.17659C3.86153 1.39999 5.71642 0 8 0C10.2836 0 12.1385 1.39999 12.8234 3.7002Z" fill="#071D49"></path>
-		</svg>
-  </a>
-  <span class="header__icon--count" x-show="cart.item_count" x-text="cart.item_count"></span>
-  <p class="header__icon--tooltip small cart">
-    Bag
-  </p>
-</div>
-      </div>
-    </div>
   </div>
   
   
@@ -2943,7 +2769,7 @@ Shopify.routes.root = "/";</script>
         
           <a href="./lieu-phap-mui-huong.html" class="mega-menu__submenu-link" title="Our Responsibility">Liệu pháp mùi hương Aromatherapy là gì?</a>
         
-          <a href="./hanh-trinh-chung-toi.html" class="mega-menu__submenu-link" title="Our Community">Hành trình của chúng tôi</a>
+         
 
         </div>
         
@@ -3242,15 +3068,7 @@ Shopify.routes.root = "/";</script>
                               </a>
                             </li>
 
-                            <li class="header-mobile-menu__list-item">
-                              <a href="./hanh-trinh-chung-toi.html" class="header-mobile-menu__list-item--link">
-                                <div class="header-mobile-menu__list-item--title heading1">
-                                  Hành trình của chúng tôi  
-                                </div>
-                              </a>
-                            </li>
-                          
-                        
+                           
                       </div>
                     </ul>
                   
@@ -3653,22 +3471,7 @@ Shopify.routes.root = "/";</script>
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'atomiser-connect'; collection_handle = " diffusers";="" handle="atomiser-connect" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'atomiser-connect'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+   
   <div class="product-card__content">
     <a href="/products/atomiser-connect" data-item_position="1" data-item_id="7934334304498" data-item_name="Atomiser Connect" data-item_brand="Aromatherapy Associates" data-item_category="Diffuser" data-item_variant="" data-price="235,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -3692,12 +3495,7 @@ Shopify.routes.root = "/";</script>
       
       
       
-        <div class="product-card__badge fake">
-          <span>xx</span>
-          SAVINGS
-          <span x-price="23500"></span>
-        </div>
-      
+       
       <div class="product-card__metafields eyebrow">
         
       </div>
@@ -3719,20 +3517,7 @@ Shopify.routes.root = "/";</script>
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+  
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -3781,22 +3566,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'the-atomiser'; collection_handle = " diffusers";="" handle="the-atomiser" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'the-atomiser'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+   
   <div class="product-card__content">
     <a href="/products/the-atomiser" data-item_position="2" data-item_id="7794509021426" data-item_name="The Atomiser" data-item_brand="Aromatherapy Associates" data-item_category="Diffuser" data-item_variant="" data-price="165,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -3819,11 +3589,6 @@ Quick Buy
       
       
       
-        <div class="product-card__badge fake">
-          <span>xx</span>
-          SAVINGS
-          <span x-price="16500"></span>
-        </div>
       
       <div class="product-card__metafields eyebrow">
         Home
@@ -3846,19 +3611,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
+ 
 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
@@ -3908,22 +3661,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'essential-oil-blends-collection'; collection_handle = " diffusers";="" handle="essential-oil-blends-collection" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'essential-oil-blends-collection'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+
   <div class="product-card__content">
     <a href="/products/essential-oil-blends-collection" data-item_position="3" data-item_id="8568955994354" data-item_name="Essential Oil Blends Collection" data-item_brand="Aromatherapy Associates" data-item_category="Essential Oil" data-item_variant="" data-price="87,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -3946,12 +3684,7 @@ Quick Buy
       
       
       
-        <div class="product-card__badge fake">
-          <span>xx</span>
-          SAVINGS
-          <span x-price="8700"></span>
-        </div>
-      
+     
       <div class="product-card__metafields eyebrow">
         gifting
       </div>
@@ -3973,19 +3706,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
+ 
 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
@@ -4035,22 +3756,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'forest-therapy-pure-essential-oil-blend'; collection_handle = " diffusers";="" handle="forest-therapy-pure-essential-oil-blend" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'forest-therapy-pure-essential-oil-blend'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
     
-  
   <div class="product-card__content">
     <a href="/products/forest-therapy-pure-essential-oil-blend" data-item_position="4" data-item_id="7794508136690" data-item_name="Forest Therapy Pure Essential Oil Blend" data-item_brand="Aromatherapy Associates" data-item_category="Diffuser Oil" data-item_variant="" data-price="38,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -4072,10 +3778,7 @@ Quick Buy
       
       
       
-        <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           3 FOR 2
-        </div>
-      
+        
       
       <div class="product-card__metafields eyebrow">
         GROUND & RESTORE
@@ -4100,19 +3803,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
+
 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
@@ -4162,21 +3853,6 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'deep-relax-pure-essential-oil-blend'; collection_handle = " diffusers";="" handle="deep-relax-pure-essential-oil-blend" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'deep-relax-pure-essential-oil-blend'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
   
   <div class="product-card__content">
     <a href="/products/deep-relax-pure-essential-oil-blend" data-item_position="5" data-item_id="7794506006770" data-item_name="Deep Relax Pure Essential Oil Blend" data-item_brand="Aromatherapy Associates" data-item_category="Diffuser Oil" data-item_variant="" data-price="38,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
@@ -4199,10 +3875,7 @@ Quick Buy
       
       
       
-        <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           3 for 2
-        </div>
-      
+        
       
       <div class="product-card__metafields eyebrow">
         SLEEP & TRANQUILITY
@@ -4227,19 +3900,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
+
 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
@@ -4289,22 +3950,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'revive-pure-essential-oil-blend'; collection_handle = " diffusers";="" handle="revive-pure-essential-oil-blend" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'revive-pure-essential-oil-blend'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
     
-  
   <div class="product-card__content">
     <a href="/products/revive-pure-essential-oil-blend" data-item_position="6" data-item_id="7794507022578" data-item_name="Revive Pure Essential Oil Blend" data-item_brand="Aromatherapy Associates" data-item_category="Diffuser Oil" data-item_variant="" data-price="38,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -4326,9 +3972,7 @@ Quick Buy
       
       
       
-        <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           3 for 2
-        </div>
+     
       
       
       <div class="product-card__metafields eyebrow">
@@ -4354,19 +3998,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
+ 
 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
@@ -4416,22 +4048,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'breathe-pure-essential-oil-blend'; collection_handle = " diffusers";="" handle="breathe-pure-essential-oil-blend" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'breathe-pure-essential-oil-blend'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+     
   <div class="product-card__content">
     <a href="/products/breathe-pure-essential-oil-blend" data-item_position="7" data-item_id="7794508529906" data-item_name="Support Breathe Pure Essential Oil Blend" data-item_brand="Aromatherapy Associates" data-item_category="Diffuser Oil" data-item_variant="" data-price="38,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -4453,11 +4070,7 @@ Quick Buy
       
       
       
-        <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           3 for 2
-        </div>
-      
-      
+     
       <div class="product-card__metafields eyebrow">
         CLEAR & PROTECT
       </div>
@@ -4481,20 +4094,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+ 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -4543,22 +4143,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'rose-pure-essential-oil-blend'; collection_handle = " diffusers";="" handle="rose-pure-essential-oil-blend" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'rose-pure-essential-oil-blend'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+   
   <div class="product-card__content">
     <a href="/products/rose-pure-essential-oil-blend" data-item_position="8" data-item_id="7794507972850" data-item_name="Rose Pure Essential Oil Blend" data-item_brand="Aromatherapy Associates" data-item_category="Diffuser Oil" data-item_variant="" data-price="38,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -4580,10 +4165,7 @@ Quick Buy
       
       
       
-        <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           3 FOR 2
-        </div>
-      
+     
       
       <div class="product-card__metafields eyebrow">
         ENRICH & UPLIFT
@@ -4608,20 +4190,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+  
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -4670,20 +4239,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'de-stress-pure-essential-oil-blend'; collection_handle = " diffusers";="" handle="de-stress-pure-essential-oil-blend" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'de-stress-pure-essential-oil-blend'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
+     
     
   
   <div class="product-card__content">
@@ -4707,11 +4263,7 @@ Quick Buy
       
       
       
-        <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           20% OFF WITH CODE DESTRESS20
-        </div>
-      
-      
+  
       <div class="product-card__metafields eyebrow">
         CALM & FOCUS
       </div>
@@ -4735,20 +4287,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+  
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -4797,22 +4336,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'deep-relax-candle'; collection_handle = " diffusers";="" handle="deep-relax-candle-200g" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'deep-relax-candle-200g'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+     
   <div class="product-card__content">
     <a href="/products/deep-relax-candle-200g" data-item_position="10" data-item_id="7794505974002" data-item_name="Deep Relax Candle" data-item_brand="Aromatherapy Associates" data-item_category="Candle" data-item_variant="" data-price="41,40" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -4829,10 +4353,7 @@ Quick Buy
     </a>
     <div class="product-card__main">
       
-        <div class="product-card__badge">
-          
-          40% SAVINGS
-        </div>
+        
       
       
       
@@ -4864,19 +4385,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
+  
 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
@@ -4926,22 +4435,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'rose-candle'; collection_handle = " diffusers";="" handle="rose-candle-200g" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'rose-candle-200g'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
     
-  
   <div class="product-card__content">
     <a href="/products/rose-candle-200g" data-item_position="11" data-item_id="7794507841778" data-item_name="Rose Candle" data-item_brand="Aromatherapy Associates" data-item_category="Candle" data-item_variant="" data-price="41,40" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -4958,11 +4452,7 @@ Quick Buy
     </a>
     <div class="product-card__main">
       
-        <div class="product-card__badge">
-          
-          40% SAVINGS
-        </div>
-      
+        
       
       
       
@@ -4993,19 +4483,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
+  
 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
@@ -5055,22 +4533,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'revive-candle'; collection_handle = " diffusers";="" handle="revive-candle-200g" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'revive-candle-200g'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+ 
   <div class="product-card__content">
     <a href="/products/revive-candle-200g" data-item_position="12" data-item_id="7794506989810" data-item_name="Revive Candle" data-item_brand="Aromatherapy Associates" data-item_category="Candle" data-item_variant="" data-price="41,40" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -5087,10 +4550,7 @@ Quick Buy
     </a>
     <div class="product-card__main">
       
-        <div class="product-card__badge">
-          
-          40% SAVINGS
-        </div>
+     
       
       
       
@@ -5122,20 +4582,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+ 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5184,22 +4631,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'de-stress-candle'; collection_handle = " diffusers";="" handle="de-stress-candle-200g" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'de-stress-candle-200g'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+   
   <div class="product-card__content">
     <a href="/products/de-stress-candle-200g" data-item_position="13" data-item_id="7794506236146" data-item_name="De-Stress Candle" data-item_brand="Aromatherapy Associates" data-item_category="Candle" data-item_variant="" data-price="41,40" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -5216,10 +4648,6 @@ Quick Buy
     </a>
     <div class="product-card__main">
       
-        <div class="product-card__badge">
-          
-          40% SAVINGS
-        </div>
       
       
       
@@ -5251,20 +4679,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+ 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5313,21 +4728,6 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'deep-relax-sleep-mist'; collection_handle = " diffusers";="" handle="sleep-mist-deep-relax-50ml" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'sleep-mist-deep-relax-50ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
   
   <div class="product-card__content">
     <a href="/products/sleep-mist-deep-relax-50ml" data-item_position="14" data-item_id="7948848726258" data-item_name="Deep Relax Sleep Mist" data-item_brand="Aromatherapy Associates" data-item_category="Sleep Mist" data-item_variant="" data-price="46,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
@@ -5351,11 +4751,7 @@ Quick Buy
       
       
       
-        <div class="product-card__badge fake">
-          <span>xx</span>
-          SAVINGS
-          <span x-price="4600"></span>
-        </div>
+       
       
       <div class="product-card__metafields eyebrow">
         Sleep & Tranquility
@@ -5380,20 +4776,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+  
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5442,20 +4825,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'deep-relax-diffuser-kit'; collection_handle = " diffusers";="" handle="deep-relax-essential-oil-diffuser-edit" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'deep-relax-essential-oil-diffuser-edit'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
+     
     
   
   <div class="product-card__content">
@@ -5474,10 +4844,7 @@ Quick Buy
     </a>
     <div class="product-card__main">
       
-        <div class="product-card__badge">
-          
-          19% SAVINGS
-        </div>
+      
       
       
       
@@ -5509,20 +4876,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+ 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5571,22 +4925,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'our-scent-icons-home-fragrance-kit'; collection_handle = " diffusers";="" handle="day-to-night-home-fragrance-kit" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'day-to-night-home-fragrance-kit'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
     
-  
   <div class="product-card__content">
     <a href="/products/day-to-night-home-fragrance-kit" data-item_position="16" data-item_id="7805363421426" data-item_name="Day to Night Home Fragrance Collection" data-item_brand="Aromatherapy Associates" data-item_category="Sets" data-item_variant="" data-price="202,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -5602,11 +4941,6 @@ Quick Buy
       </div>
     </a>
     <div class="product-card__main">
-      
-        <div class="product-card__badge">
-          
-          20% SAVINGS
-        </div>
       
       
       
@@ -5638,20 +4972,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+  
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5700,21 +5021,6 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'destress-diffuser-kit'; collection_handle = " diffusers";="" handle="de-stress-essential-oil-diffuser-edit" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'de-stress-essential-oil-diffuser-edit'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
   
   <div class="product-card__content">
     <a href="/products/de-stress-essential-oil-diffuser-edit" data-item_position="17" data-item_id="7891990184178" data-item_name="De-Stress Home Fragrance Duo" data-item_brand="Aromatherapy Associates" data-item_category="Sets" data-item_variant="" data-price="165,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
@@ -5731,12 +5037,6 @@ Quick Buy
       </div>
     </a>
     <div class="product-card__main">
-      
-        <div class="product-card__badge">
-          
-          19% SAVINGS
-        </div>
-      
       
       
       
@@ -5767,20 +5067,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+ 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5829,21 +5116,6 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'scent-of-christmas-home-fragrance-kit'; collection_handle = " diffusers";="" handle="scent-of-christmas-home-fragrance-kit" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'scent-of-christmas-home-fragrance-kit'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
   
   <div class="product-card__content">
     <a href="/products/scent-of-christmas-home-fragrance-kit" data-item_position="18" data-item_id="7805363454194" data-item_name="Winter Wellbeing Home Fragrance Duo" data-item_brand="Aromatherapy Associates" data-item_category="Sets" data-item_variant="" data-price="165,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
@@ -5860,15 +5132,6 @@ Quick Buy
       </div>
     </a>
     <div class="product-card__main">
-      
-        <div class="product-card__badge">
-          
-          19% SAVINGS
-        </div>
-      
-      
-      
-      
       
       
       
@@ -5896,20 +5159,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+  
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5958,21 +5208,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'rose-diffuser-kit '; collection_handle = " diffusers";="" handle="rose-diffuser-kit" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'rose-diffuser-kit'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
+
   
   <div class="product-card__content">
     <a href="/products/rose-diffuser-kit" data-item_position="19" data-item_id="7863441391858" data-item_name="Rose Home Fragrance Duo" data-item_brand="Aromatherapy Associates" data-item_category="Sets" data-item_variant="" data-price="165,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
@@ -5990,17 +5226,7 @@ Quick Buy
     </a>
     <div class="product-card__main">
       
-        <div class="product-card__badge">
-          
-          19% SAVINGS
-        </div>
-      
-      
-      
-      
-      
-      
-      
+     
       <div class="product-card__metafields eyebrow">
         Enrich & Uplift
       </div>
@@ -6025,20 +5251,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+ 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -6087,22 +5300,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'revive-candle'; collection_handle = " diffusers";="" handle="revive-candle-85g" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'revive-candle-85g'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+   
   <div class="product-card__content">
     <a href="/products/revive-candle-85g" data-item_position="20" data-item_id="7794507251954" data-item_name="Travel Revive Candle" data-item_brand="Aromatherapy Associates" data-item_category="Candle" data-item_variant="" data-price="21,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -6118,16 +5316,6 @@ Quick Buy
       </div>
     </a>
     <div class="product-card__main">
-      
-        <div class="product-card__badge">
-          
-          40% SAVINGS
-        </div>
-      
-      
-      
-      
-      
       
       
       <div class="product-card__metafields eyebrow">
@@ -6154,20 +5342,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+  
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -6216,21 +5391,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'home-diffuser'; collection_handle = " diffusers";="" handle="home-fragrancer-u-s" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'home-fragrancer-u-s'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
+  
   
   <div class="product-card__content">
     <a href="/products/home-fragrancer-u-s" data-item_position="21" data-item_id="8063367315698" data-item_name="Home Fragrancer U.S" data-item_brand="Aromatherapy Associates" data-item_category="Diffuser" data-item_variant="" data-price="41,40" onclick="rxTrackProductClick(this)" class="header__product-card--link">
@@ -6248,16 +5409,7 @@ Quick Buy
     </a>
     <div class="product-card__main">
       
-        <div class="product-card__badge">
-          
-          40% SAVINGS
-        </div>
-      
-      
-      
-      
-      
-      
+    
       
       <div class="product-card__metafields eyebrow">
         Home
@@ -6283,20 +5435,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+  
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -6345,21 +5484,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'diffuser-head'; collection_handle = " diffusers";="" handle="atomiser-connect-diffusion-head" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'atomiser-connect-diffusion-head'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
+  
   
   <div class="product-card__content">
     <a href="/products/atomiser-connect-diffusion-head" data-item_position="22" data-item_id="7934334337266" data-item_name="Atomiser Connect Diffuser Head" data-item_brand="Aromatherapy Associates" data-item_category="Diffuser" data-item_variant="" data-price="21,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
@@ -6383,11 +5508,7 @@ Quick Buy
       
       
       
-        <div class="product-card__badge fake">
-          <span>xx</span>
-          SAVINGS
-          <span x-price="2100"></span>
-        </div>
+      
       
       <div class="product-card__metafields eyebrow">
         Home
@@ -6410,20 +5531,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+ 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -6472,22 +5580,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'home-diffuser'; collection_handle = " diffusers";="" handle="home-diffuser" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'home-diffuser'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+   
   <div class="product-card__content">
     <a href="/products/home-diffuser" data-item_position="23" data-item_id="7794508988658" data-item_name="Home Fragrancer U.K" data-item_brand="Aromatherapy Associates" data-item_category="Diffuser" data-item_variant="" data-price="41,40" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -6503,15 +5596,6 @@ Quick Buy
       </div>
     </a>
     <div class="product-card__main">
-      
-        <div class="product-card__badge">
-          
-          40% SAVINGS
-        </div>
-      
-      
-      
-      
       
       
       
@@ -6539,20 +5623,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+  
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -6601,20 +5672,6 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'diffuser-head'; collection_handle = " diffusers";="" handle="diffuser-head" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'diffuser-head'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
     
   
   <div class="product-card__content">
@@ -6639,11 +5696,6 @@ Quick Buy
       
       
       
-        <div class="product-card__badge fake">
-          <span>xx</span>
-          SAVINGS
-          <span x-price="2400"></span>
-        </div>
       
       <div class="product-card__metafields eyebrow">
         Home
@@ -6666,20 +5718,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
+  
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -6728,22 +5767,7 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=70984706700130642511750940473" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'deep-relax-sleep-mist'; collection_handle = " diffusers";="" handle="travel-deep-relax-sleep-mist-10ml" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'travel-deep-relax-sleep-mist-10ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
     
-  
   <div class="product-card__content">
     <a href="/products/travel-deep-relax-sleep-mist-10ml" data-item_position="25" data-item_id="7948848759026" data-item_name="Travel Deep Relax Sleep Mist" data-item_brand="Aromatherapy Associates" data-item_category="Sleep Mist" data-item_variant="" data-price="37,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
@@ -6766,11 +5790,6 @@ Quick Buy
       
       
       
-        <div class="product-card__badge fake">
-          <span>xx</span>
-          SAVINGS
-          <span x-price="3700"></span>
-        </div>
       
       <div class="product-card__metafields eyebrow">
         Sleep & Tranquility
@@ -6795,19 +5814,7 @@ Quick Buy
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click="window.location.href='index.html'" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
+  
 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
@@ -8929,27 +7936,19 @@ if (typeof klevuSendCategoryData == 'function') {
               <h5 class="footer__links-title font-secondary text-uppercase">Về chúng tôi</h5>
               <ul class="footer__links-list">
                 <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="/pages/our-story">Trang chủ</a>
+                  <a class="footer-desktop__item-link link" href="./cau-chuyen-cua-chung-toi.html">Trang chủ</a>
                 </li>
                 <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="/pages/our-responsibility">Sản phẩm</a>
+                  <a class="footer-desktop__item-link link" href="./our-responsibility.html">Sản phẩm</a>
                 </li>
                 <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="/pages/our-community">Blog</a>
-                </li>
-                
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="/pages/our-blends">Liên hệ</a>
+                  <a class="footer-desktop__item-link link" href="./lien-he.html">Liên hệ</a>
                 </li>
               </ul>
             </div>
             <div class="footer__block">
               <h5 class="footer__links-title font-secondary text-uppercase">Dịch vụ khách hàng</h5>
               <ul class="footer__links-list">
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="/pages/special-offers">Tìm kiếm</a>
-                </li>
-               
                 <li class="footer-desktop__item">
                   <a class="footer-desktop__item-link link" href="./chinh-sach-doi-tra.html">Chính sách đổi trả</a>
                 </li>
@@ -8958,9 +7957,6 @@ if (typeof klevuSendCategoryData == 'function') {
                 </li>
                 <li class="footer-desktop__item">
                   <a class="footer-desktop__item-link link" href="./dieu-khoan-dich-vu.html">Điều khoản dịch vụ</a>
-                </li>
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="./hinh-thuc-thanh-toan.html">Hình thức thanh toán</a>
                 </li>
                 <li class="footer-desktop__item">
                   <a class="footer-desktop__item-link link" href="./chinh-sach-kiem-hang.html">Chính sách kiểm hàng</a>
@@ -8972,13 +7968,11 @@ if (typeof klevuSendCategoryData == 'function') {
       <div class="footer__country country__footer">
         <div class="country__footer-container" @click.prevent="showPopup =  'country-selector' ">
           <p class="country__footer-text">
-            <a href="#" class="country__footer-link link">
-              NL | EUR
-            </a>
+            
           </p>
-          <div class="country__footer-icon"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7 6L0.8167 12L-4.89896e-07 11.2075L5.3666 6L-3.46409e-08 0.79249L0.816701 -2.70281e-07L7 6Z" fill="#071D49"></path>
-		</svg></div>
+          <div class="country__footer-icon">
+            
+    </div>
         </div>
         <div class="country__footer-icons">
           
@@ -9027,104 +8021,12 @@ if (typeof klevuSendCategoryData == 'function') {
         </div>
       </div>
     </div>
-    <div class="footer__payment-icons payment-icons">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/american_express-12858714bc10cdf384b62b8f41d20f56d8c32c1b8fed98b662f2bfc158dcbcf0.svg" alt="" srcset="images/american_express-12858714bc10cdf384b62b8f41d20f56d8c32c1b8fed98b662f2bfc158dcbcf0.svg 44w" width="44" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/206684_visa_method_card_payment_icon_1.svg" alt="" srcset="images/206684_visa_method_card_payment_icon_1.svg 45w" width="45" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/1156750_finance_mastercard_payment_icon_2509f595-30c4-4008-a4c6-044194b0442e.svg" alt="" srcset="images/1156750_finance_mastercard_payment_icon_2509f595-30c4-4008-a4c6-044194b0442e.svg 28w" width="28" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/4373195_card_credit_discover_logo_logos_icon_9362bcf8-4052-400f-a409-d9213bd63351.svg" alt="" srcset="images/4373195_card_credit_discover_logo_logos_icon_9362bcf8-4052-400f-a409-d9213bd63351.svg 28w" width="28" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/1156735_finance_logo_maestro_payment_icon_24283ed8-b56c-4ac3-96f1-d70ec12cfb78.svg" alt="" srcset="images/1156735_finance_logo_maestro_payment_icon_24283ed8-b56c-4ac3-96f1-d70ec12cfb78.svg 28w" width="28" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/Apple_Pay_Mark_RGB_041619.svg" alt="" srcset="images/Apple_Pay_Mark_RGB_041619.svg 44w" width="44" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/google-pay-mark.png" alt="" srcset="images/google-pay-mark.png 53w" width="53" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <a href="/pages/what-is-klarna" target="_blank" class="footer__payment-link">
-                <img src="images/Klarna_Payment_Badge.svg" alt="" srcset="images/Klarna_Payment_Badge.svg 50w" width="50" height="28" loading="lazy">
-              </a>
-            
-          </div>
-        
-      
-    </div>
+    
     <div class="footer__down">
       <div class="footer__down-links">
-        <ul class="footer__down-ul">
-          
-            <li class="footer__down-li">
-              <a class="footer__down-link link" href="/pages/terms-conditions">
-                TERMS
-              </a>
-            </li>
-          
-            <li class="footer__down-li">
-              <a class="footer__down-link link" href="/pages/privacy-policy">
-                PRIVACY
-              </a>
-            </li>
-          
-        </ul>
+
       </div>
-      <div class="footer__down-richtext"><p>Proud to be part of The Boots Group.</p><p>© 2025 Aromatherapy Associates. All Rights Reserved.</p></div>
+      <div class="footer__down-richtext"><p>© 2025 Shuei Trading Vietnam. All Rights Reserved.</p></div>
     </div>
   </div>
 </footer>

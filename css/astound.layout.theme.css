@@ -5394,7 +5394,7 @@ button.swiper-pagination-bullet {
   display: flex;
   gap: 42px;
   justify-content: space-between;
-  margin-top: 72px;
+  margin-top: 74px;
 }
 @media screen and (max-width: 1023px) {
   .product__carousel .product__slider-progress {

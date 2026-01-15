@@ -1493,100 +1493,6 @@ Shopify.routes.root = "/";</script>
 
     <a class="skip-to-content-link" href="#main-content"> Skip to content </a>
 
-    <div id="shopify-section-announcement-bar" class="shopify-section">
-
-
-  
-
-  
-
-  
-    <div class="swiper mySwiper announcement-bar" id="announcement-bar" x-show="visible" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.announcement-bar.js?v=155946344749828507431726048084" x-data="announcementBar">
-      <div class="swiper-wrapper">
-        
-          
-            
-              
-                <div class="swiper-slide announcement-bar__container" style="background-color: #071d49;">
-                
-                  <a href="/collections/de-stress">
-                    <div class="announcement-bar__message basetext micro" style="color: #f9f6f4;"><p>Enjoy 20% off our De-Stress collections, now extended until Sunday 21st September</p></div>
-                  </a>
-                  
-              </div>
-              
-            
-        
-          
-            
-              
-            
-        
-          
-            
-              
-                <div class="swiper-slide announcement-bar__container" style="background-color: #071d49;">
-                
-                  <a href="/collections/wellbeing-concern">
-                    <div class="announcement-bar__message basetext micro" style="color: #f9f6f4;"><p>3 FREE samples with EVERY order</p></div>
-                  </a>
-                  
-              </div>
-              
-            
-        
-          
-            
-              
-                <div class="swiper-slide announcement-bar__container" style="background-color: #071d49;">
-                
-                  <a href="/collections/body-wash-lotions">
-                    <div class="announcement-bar__message basetext micro" style="color: #f9f6f4;"><p>NEW Body Wash & Lotions, discover now!</p></div>
-                  </a>
-                  
-              </div>
-              
-            
-        
-          
-            
-              
-                <div class="swiper-slide announcement-bar__container" style="background-color: #071d49;">
-                
-                  <a href="/collections/last-chance">
-                    <div class="announcement-bar__message basetext micro" style="color: #f9f6f4;"><p>Last Chance to shop 40% off products nearing the end of their journey!</p></div>
-                  </a>
-                  
-              </div>
-              
-            
-        
-          
-            
-              
-                <div class="swiper-slide announcement-bar__container" style="background-color: #071d49;">
-                
-                  <a href="/products/bath-body-bundle">
-                    <div class="announcement-bar__message basetext micro" style="color: #f9f6f4;"><p>Build your own Bath & Body Bundle & save 20% </p></div>
-                  </a>
-                  
-              </div>
-              
-            
-        
-      </div>
-    </div>
-    <div class="announcement-bar__close" id="slider-close">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-    </div>
-
-  
-
-
-
-</div>
     <div id="shopify-section-header" class="shopify-section">
 
 <style data-shopify="">
@@ -1629,9 +1535,11 @@ Shopify.routes.root = "/";</script>
         </div>
       <ul class="header__main-menu" x-data="desktopMenu" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.desktop-menu.js?v=76092971650667967311726048083">
         
-       <li class="header__main-menu-list-item">
+          
+            
+            <li class="header__main-menu-list-item">
               
-                <span class="header__main-menu-item link secondary base " :class="{ 'mega-menu--active': activeMegaMenu === 'mega-menu-shop' }" tabindex="0" title="Open Shop Menu" @mouseover="setActiveMenu('mega-menu-shop')">
+                <span class="header__main-menu-item link secondary base " :class="{ 'mega-menu--active': activeMegaMenu === 'mega-menu-shop' }" tabindex="0" title="Sản phẩm" @mouseover="setActiveMenu('mega-menu-shop')">
                   Sản phẩm
                 </span>
                 <div class="header__submenu" :class="{active: menu === 'mega-menu-shop'}" x-show="windowWidth > 1023">
@@ -2545,7 +2453,7 @@ Shopify.routes.root = "/";</script>
             
             <li class="header__main-menu-list-item">
               
-                <a href="/collections/home-fragrance" class="header__main-menu-item link secondary base " role="button" title="View Home Fragrance" @mouseover="setActiveMenu('mega-menu-home-fragrance')">
+                <a class="header__main-menu-item link secondary base " role="button" title="Dịch vụ" @mouseover="setActiveMenu('mega-menu-home-fragrance')">
                   Dịch vụ
                 </a>
               
@@ -2566,7 +2474,7 @@ Shopify.routes.root = "/";</script>
               <span class="header__main-menu-item link secondary base"
                     :class="{ 'mega-menu--active': activeMegaMenu === 'mega-menu-about' }"
                     tabindex="0"
-                    title="Open About Us Menu"
+                    title="Về chúng tôi"
                     @mouseover="setActiveMenu('mega-menu-about')">
                 Về chúng tôi
               </span>
@@ -2607,13 +2515,7 @@ Shopify.routes.root = "/";</script>
                             </div>
                           </a>
                         </li>
-                        <li class="header__submenu-list-item" @mouseenter.stop="openSecondLvl('Our Journey')">
-                          <a href="./hanh-trinh-chung-toi.html" class="header__submenu-list-item--link">
-                            <div class="header__submenu-list-item--title heading1">
-                              Hành trình của chúng tôi (Trang Blog)
-                            </div>
-                          </a>
-                        </li>
+    
                       </ul>
                     </div>
                   </div>
@@ -2621,6 +2523,14 @@ Shopify.routes.root = "/";</script>
               </div>
             </li>
 
+          
+        
+          
+        
+          
+        
+          
+        
       </ul>
     </nav>
     <div class="header__logo">
@@ -2692,94 +2602,6 @@ Shopify.routes.root = "/";</script>
         </a>
       </div>
     </div>
-    <div class="header__right">
-      <div class="header__right-menu" x-data="desktopMenu" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.desktop-menu.js?v=76092971650667967311726048083">
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </div>
-      <div class="header__icons">
-        
-<div class="header__icon search" @click="$dispatch('open-search')">
-    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M12.6272 6.81464C12.6272 10.0261 10.0243 12.6293 6.81362 12.6293C3.60299 12.6293 1 10.0261 1 6.81464C1 3.60316 3.60299 1 6.81362 1C10.0243 1 12.6272 3.60316 12.6272 6.81464ZM11.2652 11.9739C10.0712 13.0054 8.51525 13.6293 6.81362 13.6293C3.05056 13.6293 0 10.5783 0 6.81464C0 3.05102 3.05056 0 6.81362 0C10.5767 0 13.6272 3.05102 13.6272 6.81464C13.6272 8.51643 13.0035 10.0725 11.9723 11.2667L15.9998 15.2949L15.2927 16.0019L11.2652 11.9739Z" fill="#071D49"></path>
-		</svg>
-    <p class="header__icon--tooltip small">
-      Search
-    </p>
-</div>
-
-<div class="header__icon account">
-  
-    <a href="/account/register">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M11.4992 4.5C11.4992 6.433 9.9322 8 7.99921 8C6.06621 8 4.49921 6.433 4.49921 4.5C4.49921 2.567 6.06621 1 7.99921 1C9.9322 1 11.4992 2.567 11.4992 4.5ZM9.71496 8.66135C11.3491 7.98683 12.4992 6.37772 12.4992 4.5C12.4992 2.01472 10.4845 0 7.99921 0C5.51393 0 3.49921 2.01472 3.49921 4.5C3.49921 6.37791 4.64952 7.98716 6.28396 8.66156C4.01229 9.11176 2.55999 10.4408 1.66322 11.8576C0.578782 13.5709 0.299988 15.4156 0.299988 16H1.29999C1.29999 15.5844 1.53548 13.9291 2.50818 12.3924C3.46058 10.8878 5.11274 9.5 7.99999 9.5C10.8872 9.5 12.5394 10.8878 13.4918 12.3924C14.4645 13.9291 14.7 15.5844 14.7 16H15.7C15.7 15.4156 15.4212 13.5709 14.3368 11.8576C13.4398 10.4406 11.9872 9.11135 9.71496 8.66135Z" fill="#071D49"></path>
-		</svg>
-    </a>
-    <p class="header__icon--tooltip small">
-      Account
-    </p>
-  
-</div>
-
-
-  <div class="header__icon wishlist-i" :class="{ full: wishlistCount > 0, show: wishlistCount != null }" @wishlist-update-count.window="swymUpdate" @wishlist-update-counts.window="swymUpdate" @update-wishlist.window="wishlistUpdate">
-    <a href="#swym-wishlist" class="wishlist-icon wishlist-empty" x-show="wishlistCount == 0" aria-label="Wishlist">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path fill-rule="evenodd" clip-rule="evenodd" d="M19.4146 5.28806C17.7009 3.57054 14.9222 3.57055 13.2084 5.28806L11.95 6.54927L10.6915 5.28811C8.97775 3.5706 6.19913 3.5706 4.48534 5.28811C2.77154 7.00563 2.77154 9.79027 4.48534 11.5078L5.74377 12.7689L5.73248 12.7803L11.9387 18.9999L19.4146 11.5077C21.1284 9.79022 21.1284 7.00557 19.4146 5.28806Z"></path>
-		</svg>
-    </a>
-    <a href="#swym-wishlist" class="wishlist-icon wishlist-full" x-show="wishlistCount > 0" aria-label="WishlistRemove">
-      <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M16.4152 1.28814C14.7013 -0.429378 11.9226 -0.42938 10.2088 1.28814L8.95026 2.54935L7.6918 1.28819C5.97795 -0.429321 3.19924 -0.429321 1.48539 1.28819C-0.228467 3.00571 -0.228466 5.79035 1.48539 7.50787L2.74385 8.76902L2.73256 8.78033L8.93897 15L16.4152 7.50781C18.129 5.79029 18.129 3.00565 16.4152 1.28814Z" fill="#071D49"></path>
-		</svg>
-    </a>
-    <span class="header__icon--count" x-text="wishlistCount" x-show="wishlistCount > 0"></span>
-    <p class="header__icon--tooltip small">
-      Wishlist
-    </p>
-  </div>
-
-<div :class="{ 'full': cart.item_count }" class="header__icon cart">
-  <a x-show="!cart.item_count" href="/cart">
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M4.22855 3.7002H11.7714C11.146 1.9718 9.71488 1 8 1C6.28512 1 4.85397 1.9718 4.22855 3.7002ZM12.8234 3.7002H15H16V4.7002V12.7002C16 14.357 14.6569 15.7002 13 15.7002H3C1.34315 15.7002 0 14.357 0 12.7002V4.7002V3.7002H1H3.17659C3.86153 1.39999 5.71642 0 8 0C10.2836 0 12.1385 1.39999 12.8234 3.7002ZM1 12.7002V4.7002H15V12.7002C15 13.8048 14.1046 14.7002 13 14.7002H3C1.89543 14.7002 1 13.8048 1 12.7002Z" fill="#071D49"></path>
-		</svg>
-  </a>
-  <a x-show="cart.item_count" href="#" @click.prevent="$dispatch('show-ajax-cart-popup')" style="display: none;">
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M4.22855 3.7002H11.7714C11.146 1.9718 9.71488 1 8 1C6.28512 1 4.85397 1.9718 4.22855 3.7002ZM12.8234 3.7002H16V12.7002C16 14.357 14.6569 15.7002 13 15.7002H3C1.34315 15.7002 0 14.357 0 12.7002V3.7002H3.17659C3.86153 1.39999 5.71642 0 8 0C10.2836 0 12.1385 1.39999 12.8234 3.7002Z" fill="#071D49"></path>
-		</svg>
-  </a>
-  <span class="header__icon--count" x-show="cart.item_count" x-text="cart.item_count"></span>
-  <p class="header__icon--tooltip small cart">
-    Bag
-  </p>
-</div>
-      </div>
-    </div>
   </div>
   
   
@@ -2837,7 +2659,7 @@ Shopify.routes.root = "/";</script>
         
           <a href="./lieu-phap-mui-huong.html" class="mega-menu__submenu-link" title="Our Responsibility">Liệu pháp mùi hương Aromatherapy là gì?</a>
         
-          <a href="./hanh-trinh-chung-toi.html" class="mega-menu__submenu-link" title="Our Community">Hành trình của chúng tôi</a>
+         
 
         </div>
         
@@ -3142,15 +2964,7 @@ Shopify.routes.root = "/";</script>
                               </a>
                             </li>
 
-                            <li class="header-mobile-menu__list-item">
-                              <a href="./hanh-trinh-chung-toi.html" class="header-mobile-menu__list-item--link">
-                                <div class="header-mobile-menu__list-item--title heading1">
-                                  Hành trình của chúng tôi  
-                                </div>
-                              </a>
-                            </li>
                           
-                        
                       </div>
                     </ul>
                   
@@ -3835,21 +3649,7 @@ Shopify.routes.root = "/";</script>
         Dầu tắm Deep Relax Bath & Shower Oil
       </h1>
       
-        <div class="product-buystack__wishlist-btn  colored " :class="{show: addedToWishList !== null}" x-data="wishlistButton" x-init="()=>{handle = 'deep-relax-bath-shower-oil-55ml'}" @wishlist.window="getWishlist">
-          <!-- Swym Wishlist Plus EPI Button -->
-          <button class="product-buystack__wishlist-btn--empty" x-show="addedToWishList === false" @click.stop="add">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path fill-rule="evenodd" clip-rule="evenodd" d="M19.4146 5.28806C17.7009 3.57054 14.9222 3.57055 13.2084 5.28806L11.95 6.54927L10.6915 5.28811C8.97775 3.5706 6.19913 3.5706 4.48534 5.28811C2.77154 7.00563 2.77154 9.79027 4.48534 11.5078L5.74377 12.7689L5.73248 12.7803L11.9387 18.9999L19.4146 11.5077C21.1284 9.79022 21.1284 7.00557 19.4146 5.28806Z"></path>
-		</svg>
-          </button>
-          <button class="product-buystack__wishlist-btn--full" x-show="addedToWishList === true" @click.stop="remove">
-            <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M16.4152 1.28814C14.7013 -0.429378 11.9226 -0.42938 10.2088 1.28814L8.95026 2.54935L7.6918 1.28819C5.97795 -0.429321 3.19924 -0.429321 1.48539 1.28819C-0.228467 3.00571 -0.228466 5.79035 1.48539 7.50787L2.74385 8.76902L2.73256 8.78033L8.93897 15L16.4152 7.50781C18.129 5.79029 18.129 3.00565 16.4152 1.28814Z" fill="#071D49"></path>
-		</svg>
-          </button>
-          <!-- Swym Wishlist Plus EPI Button -->
-        </div>
-      
+       
     </div>
 
     <div class="product-buystack__product-rating with-margin">
@@ -3960,7 +3760,7 @@ Shopify.routes.root = "/";</script>
 			},
 		})" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-add-to-cart.js?v=40419312932251021511751385844" data-price="€77,00">
 		
-			thêm vào giỏ hàng - <span>VND 2,193,000</span>
+			<span>VND 2,193,000</span>
 		
 	</button>
 
@@ -4213,7 +4013,7 @@ new Application();
 			},
 		})" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-add-to-cart.js?v=40419312932251021511751385844" data-price="€77,00">
 		
-			Thêm vào giỏ hàng - <span>VND 2,193,000</span>
+			<span>VND 2,193,000</span>
 		
 	</button>
 
@@ -5082,24 +4882,8 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'forest-therapy-bath-shower-oil'; collection_handle = " diffusers";="" handle="forest-therapy-bath-shower-oil-55ml" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'forest-therapy-bath-shower-oil-55ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
   <div class="product-card__content">
-    <a href="/products/forest-therapy-bath-shower-oil-55ml" data-item_position="" data-item_id="7794508005618" data-item_name="Forest Therapy Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/forest-therapy-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794508005618" data-item_name="Forest Therapy Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
         <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
@@ -5145,22 +4929,9 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
             
           </div>
         
-        <a href="/products/forest-therapy-bath-shower-oil-55ml" class="product-card__main__link"></a>
+        <a href="/forest-therapy-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
       
     </div>
-  </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click.stop.prevent="quickBuyHandler" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
   </div>
 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
@@ -5194,24 +4965,8 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'revive-morning-bath-shower-oil'; collection_handle = " diffusers";="" handle="revive-morning-bath-shower-oil-55ml" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'revive-morning-bath-shower-oil-55ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
   <div class="product-card__content">
-    <a href="/products/revive-morning-bath-shower-oil-55ml" data-item_position="" data-item_id="7794506498290" data-item_name="Revive Morning Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/revive-morning-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794506498290" data-item_name="Revive Morning Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
         <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
@@ -5257,24 +5012,10 @@ Quick Buy
             
           </div>
         
-        <a href="/products/revive-morning-bath-shower-oil-55ml" class="product-card__main__link"></a>
+        <a href="/revive-morning-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click.stop.prevent="quickBuyHandler" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5306,24 +5047,9 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'Ultimate-bath-and-shower-collection'; collection_handle = " diffusers";="" handle="ultimate-bath-shower-oil-collection" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'ultimate-bath-shower-oil-collection'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
     
-  
   <div class="product-card__content">
-    <a href="/products/ultimate-bath-shower-oil-collection" data-item_position="" data-item_id="8568955896050" data-item_name="Ultimate Bath & Shower Oil Collection" data-item_brand="Aromatherapy Associates" data-item_category="Gifting" data-item_variant="" data-price="101,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/ultimate-bath-shower-oil-collection.html" data-item_position="" data-item_id="8568955896050" data-item_name="Ultimate Bath & Shower Oil Collection" data-item_brand="Aromatherapy Associates" data-item_category="Gifting" data-item_variant="" data-price="101,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
         <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
@@ -5367,22 +5093,9 @@ Quick Buy
             
           </div>
         
-        <a href="/products/ultimate-bath-shower-oil-collection" class="product-card__main__link"></a>
+        <a href="/ultimate-bath-shower-oil-collection.html" class="product-card__main__link"></a>
       
     </div>
-  </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click.stop.prevent="quickBuyHandler" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
   </div>
 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
@@ -5416,24 +5129,9 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'de-stress-mind-bath-shower-oil'; collection_handle = " diffusers";="" handle="de-stress-mind-bath-shower-oil-55ml" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'de-stress-mind-bath-shower-oil-55ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
     
-  
   <div class="product-card__content">
-    <a href="/products/de-stress-mind-bath-shower-oil-55ml" data-item_position="" data-item_id="7794506039538" data-item_name="De-Stress Mind Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/de-stress-mind-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794506039538" data-item_name="De-Stress Mind Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
         <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
@@ -5453,9 +5151,6 @@ Quick Buy
       
       
       
-        <div class="product-card__badge custom" style="color:  #f9f6f4; background-color:  #071D49;">
-           20% OFF WITH CODE DESTRESS20
-        </div>
       
       
       <div class="product-card__metafields eyebrow">
@@ -5477,24 +5172,10 @@ Quick Buy
             
           </div>
         
-        <a href="/products/de-stress-mind-bath-shower-oil-55ml" class="product-card__main__link"></a>
+        <a href="/de-stress-mind-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click.stop.prevent="quickBuyHandler" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5526,24 +5207,9 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'support-equilibrium-bath-shower-oil'; collection_handle = " diffusers";="" handle="support-equilibrium-bath-shower-oil-55ml" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'support-equilibrium-bath-shower-oil-55ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+      
   <div class="product-card__content">
-    <a href="/products/support-equilibrium-bath-shower-oil-55ml" data-item_position="" data-item_id="7794508300530" data-item_name="Support Equilibrium Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/support-equilibrium-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794508300530" data-item_name="Support Equilibrium Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
         <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
@@ -5589,24 +5255,10 @@ Quick Buy
             
           </div>
         
-        <a href="/products/support-equilibrium-bath-shower-oil-55ml" class="product-card__main__link"></a>
+        <a href="/support-equilibrium-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click.stop.prevent="quickBuyHandler" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5638,24 +5290,9 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'Discovery Bath and Shower Oil Collection'; collection_handle = " diffusers";="" handle="discovery-bath-shower-oil-collection" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'discovery-bath-shower-oil-collection'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+     
   <div class="product-card__content">
-    <a href="/products/discovery-bath-shower-oil-collection" data-item_position="" data-item_id="8568955830514" data-item_name="Discovery Bath & Shower Oil Collection" data-item_brand="Aromatherapy Associates" data-item_category="Gifting" data-item_variant="" data-price="63,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/discovery-bath-shower-oil-collection.html" data-item_position="" data-item_id="8568955830514" data-item_name="Discovery Bath & Shower Oil Collection" data-item_brand="Aromatherapy Associates" data-item_category="Gifting" data-item_variant="" data-price="63,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
         <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
@@ -5699,24 +5336,10 @@ Quick Buy
             
           </div>
         
-        <a href="/products/discovery-bath-shower-oil-collection" class="product-card__main__link"></a>
+        <a href="/discovery-bath-shower-oil-collection.html" class="product-card__main__link"></a>
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click.stop.prevent="quickBuyHandler" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5748,29 +5371,14 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'light-relax-bath-shower-oil'; collection_handle = " diffusers";="" handle="light-relax-bath-shower-oil-9ml" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'light-relax-bath-shower-oil-9ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+     
   <div class="product-card__content">
-    <a href="/products/light-relax-bath-shower-oil-9ml" data-item_position="" data-item_id="7794505810162" data-item_name="Travel Light Relax Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="19,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/support-breathe-bath-shower-oil-9ml.html" data-item_position="" data-item_id="7794505810162" data-item_name="Travel Light Relax Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="19,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
         <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
 
-	<img src="images/MN230009_main.png" alt="Light Relax Bath & Shower Oil 9ml Aromatherapy Associates" srcset="images/MN230009_main_6.png 300w, images/MN230009_main_4.png 400w, images/MN230009_main_5.png 500w, images/MN230009_main_9.png 600w, images/MN230009_main_3.png 700w, images/MN230009_main_1.png 800w, images/MN230009_main_10.png 1000w, images/MN230009_main_8.png 1200w, images/MN230009_main_7.png 1400w, images/MN230009_main_11.png 1600w, images/MN230009_main_12.png 1800w, images/MN230009_main_2.png 2000w, images/MN230009_main_13.png 2400w, images/MN230009_main_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 25vw, 50vw">
+	<img src="images/MN210009_main.png" alt="Support Breathe Bath &amp; Shower Oil 9ml Aromatherapy Associates" srcset="images/MN210009_main_1.png 300w, images/MN210009_main_2.png 400w, images/MN210009_main_4.png 500w, images/MN210009_main_3.png 600w, images/MN210009_main_5.png 700w, images/MN210009_main_8.png 800w, images/MN210009_main_9.png 1000w, images/MN210009_main_6.png 1200w, images/MN210009_main_11.png 1400w, images/MN210009_main_10.png 1600w, images/MN210009_main_12.png 1800w, images/MN210009_main_13.png 2000w, images/MN210009_main_14.png 2400w, images/MN210009_main_7.png 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
 
         </div>
         <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
@@ -5793,13 +5401,13 @@ Quick Buy
         </div>
       
       <div class="product-card__metafields eyebrow">
-        Relax & Unwind
+        clear & protect
       </div>
-      <h5 class="product-card__title">Travel Light Relax Bath & Shower Oil</h5>
+      <h5 class="product-card__title">Travel Support Breathe Bath & Shower Oil</h5>
       
       
       <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794505810162" data-product-models="7794505810162" data-name="Travel Light Relax Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/light-relax-bath-shower-oil-9ml" data-image-url="products/MN230009_main.png"  data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;light relax;travel;">
+  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794505810162" data-product-models="7794505810162" data-name="Travel Light Relax Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/support-breathe-bath-shower-oil-9ml" data-image-url="products/MN230009_main.png"  data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;light relax;travel;">
   </div>
 </div>
       
@@ -5811,24 +5419,10 @@ Quick Buy
             
           </div>
         
-        <a href="/products/light-relax-bath-shower-oil-9ml" class="product-card__main__link"></a>
+        <a href="/support-breathe-bath-shower-oil-9ml.html" class="product-card__main__link"></a>
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click.stop.prevent="quickBuyHandler" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5860,29 +5454,14 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'deep-relax-bath-shower-oil'; collection_handle = " diffusers";="" handle="travel-deep-relax-bath-shower-oil-9ml" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'travel-deep-relax-bath-shower-oil-9ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
     
-  
   <div class="product-card__content">
-    <a href="/products/travel-deep-relax-bath-shower-oil-9ml" data-item_position="" data-item_id="7918384349426" data-item_name="Travel Deep Relax Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="19,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/revive-evening-bath-shower-oil-9ml.html" data-item_position="" data-item_id="7918384349426" data-item_name="Travel Deep Relax Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="19,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
         <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
 
-	<img src="images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a.png" alt="Travel Deep Relax Bath & Shower Oil" srcset="images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_1.png 300w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_2.png 400w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_5.png 500w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_3.png 600w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_6.png 700w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_4.png 800w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_8.png 1000w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_7.png 1200w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_9.png 1400w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_10.png 1600w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_11.png 1800w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_12.png 2000w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_13.png 2400w, images/MN220009_main_a7452096-4cc1-4e5f-90fd-008e8d96835a_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 25vw, 50vw">
+	<img src="images/MN250009_main.png" alt="Revive Evening Bath &amp; Shower Oil 9ml Aromatherapy Associates" srcset="images/MN250009_main_2.png 300w, images/MN250009_main_4.png 400w, images/MN250009_main_3.png 500w, images/MN250009_main_1.png 600w, images/MN250009_main_7.png 700w, images/MN250009_main_11.png 800w, images/MN250009_main_10.png 1000w, images/MN250009_main_5.png 1200w, images/MN250009_main_8.png 1400w, images/MN250009_main_13.png 1600w, images/MN250009_main_12.png 1800w, images/MN250009_main_9.png 2000w, images/MN250009_main_14.png 2400w, images/MN250009_main_6.png 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
 
         </div>
         <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
@@ -5905,9 +5484,9 @@ Quick Buy
         </div>
       
       <div class="product-card__metafields eyebrow">
-        Sleep & Tranquility
+       Energise & Awaken
       </div>
-      <h5 class="product-card__title">Travel Deep Relax Bath & Shower Oil</h5>
+      <h5 class="product-card__title">Travel Revive Evening Bath & Shower Oil</h5>
       
       
       <div class="product-card__ratings">
@@ -5923,24 +5502,10 @@ Quick Buy
             
           </div>
         
-        <a href="/products/travel-deep-relax-bath-shower-oil-9ml" class="product-card__main__link"></a>
+        <a href="/revive-evening-bath-shower-oil-9ml.html" class="product-card__main__link"></a>
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click.stop.prevent="quickBuyHandler" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5972,29 +5537,14 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'inner-strength-bath-shower-oil'; collection_handle = " diffusers";="" handle="inner-strength-bath-shower-oil-9ml" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'inner-strength-bath-shower-oil-9ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+     
   <div class="product-card__content">
-    <a href="/products/inner-strength-bath-shower-oil-9ml" data-item_position="" data-item_id="7794507514098" data-item_name="Travel Inner Strength Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="19,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/support-breathe-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794507514098" data-item_name="Travel Inner Strength Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="19,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
         <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
 
-	<img src="images/MN280009_main.png" alt="Inner Strength Bath & Shower Oil 9ml Aromatherapy Associates" srcset="images/MN280009_main_2.png 300w, images/MN280009_main_1.png 400w, images/MN280009_main_3.png 500w, images/MN280009_main_8.png 600w, images/MN280009_main_4.png 700w, images/MN280009_main_5.png 800w, images/MN280009_main_7.png 1000w, images/MN280009_main_9.png 1200w, images/MN280009_main_6.png 1400w, images/MN280009_main_10.png 1600w, images/MN280009_main_12.png 1800w, images/MN280009_main_11.png 2000w, images/MN280009_main_13.png 2400w, images/MN280009_main_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 25vw, 50vw">
+	<img src="images/RN521055R_main.png" alt="" srcset="images/RN521055R_main_3.png 300w, images/RN521055R_main_7.png 400w, images/RN521055R_main_6.png 500w, images/RN521055R_main_4.png 600w, images/RN521055R_main_1.png 700w, images/RN521055R_main_2.png 800w, images/RN521055R_main_5.png 1000w, images/RN521055R_main_8.png 1200w, images/RN521055R_main_9.png 1400w, images/RN521055R_main_10.png 1600w, images/RN521055R_main_11.png 1800w, images/RN521055R_main_12.png 2000w, images/RN521055R_main_13.png 2400w, images/RN521055R_main_14.png 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
 
         </div>
         <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
@@ -6017,9 +5567,9 @@ Quick Buy
         </div>
       
       <div class="product-card__metafields eyebrow">
-        Confidence & Fortitude
+        Clear & Protect
       </div>
-      <h5 class="product-card__title">Travel Inner Strength Bath & Shower Oil</h5>
+      <h5 class="product-card__title">Support Breathe Bath & Shower Oil</h5>
       
       
       <div class="product-card__ratings">
@@ -6031,28 +5581,14 @@ Quick Buy
           <div class="product-card__price-container font-secondary">
             <span class="product-card__price" x-price="1900"></span>
             
-              <span class="product-card__size"> / 9ml </span>
+              <span class="product-card__size"> / 55ml </span>
             
           </div>
         
-        <a href="/products/inner-strength-bath-shower-oil-9ml" class="product-card__main__link"></a>
+        <a href="/support-breathe-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click.stop.prevent="quickBuyHandler" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -6084,29 +5620,14 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'inner-strength-bath-shower-oil'; collection_handle = " diffusers";="" handle="inner-strength-bath-shower-oil-55ml" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'inner-strength-bath-shower-oil-55ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
     
-  
   <div class="product-card__content">
-    <a href="/products/inner-strength-bath-shower-oil-55ml" data-item_position="" data-item_id="7794507317490" data-item_name="Inner Strength Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/dau-tam-de-stress-muscle.html" data-item_position="" data-item_id="7794507317490" data-item_name="Inner Strength Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
         <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
 
-	<img src="images/RN522055R_main.png" alt="Inner Strength Bath & Shower Oil 55ml Aromatherapy Associates" srcset="images/RN522055R_main_4.png 300w, images/RN522055R_main_8.png 400w, images/RN522055R_main_5.png 500w, images/RN522055R_main_1.png 600w, images/RN522055R_main_6.png 700w, images/RN522055R_main_3.png 800w, images/RN522055R_main_2.png 1000w, images/RN522055R_main_9.png 1200w, images/RN522055R_main_10.png 1400w, images/RN522055R_main_7.png 1600w, images/RN522055R_main_12.png 1800w, images/RN522055R_main_11.png 2000w, images/RN522055R_main_13.png 2400w, images/RN522055R_main_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 25vw, 50vw">
+	<img src="images/RN511055R_main.png" alt="De-Stress Muscle Bath &amp; Shower Oil 55ml Aromatherapy Associates" srcset="images/RN511055R_main_4.png 300w, images/RN511055R_main_5.png 400w, images/RN511055R_main_6.png 500w, images/RN511055R_main_1.png 600w, images/RN511055R_main_9.png 700w, images/RN511055R_main_3.png 800w, images/RN511055R_main_2.png 1000w, images/RN511055R_main_10.png 1200w, images/RN511055R_main_12.png 1400w, images/RN511055R_main_13.png 1600w, images/RN511055R_main_7.png 1800w, images/RN511055R_main_14.png 2000w, images/RN511055R_main_8.png 2400w, images/RN511055R_main_11.png 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
 
         </div>
         <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
@@ -6129,9 +5650,9 @@ Quick Buy
         </div>
       
       <div class="product-card__metafields eyebrow">
-        Confidence & Fortitude
+        Phục hồi & Thoải mái
       </div>
-      <h5 class="product-card__title">Inner Strength Bath & Shower Oil</h5>
+      <h5 class="product-card__title">Dầu tắm De-Stress Muscle Bath & Shower Oil</h5>
       
       <div class="product-card__ratings">
   <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794507317490" data-product-models="7794507317490" data-name="Inner Strength Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/inner-strength-bath-shower-oil-55ml" data-image-url="products/RN522055R_main.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;full size;full size bath & shower oil;inner strength;subscription;">
@@ -6147,24 +5668,10 @@ Quick Buy
             
           </div>
         
-        <a href="/products/inner-strength-bath-shower-oil-55ml" class="product-card__main__link"></a>
+        <a href="/dau-tam-de-stress-muscle.html" class="product-card__main__link"></a>
       
     </div>
   </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click.stop.prevent="quickBuyHandler" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
-  </div>
-
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -6196,30 +5703,14 @@ Quick Buy
 <div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'light-relax-bath-shower-oil'; collection_handle = " diffusers";="" handle="light-relax-bath-shower-oil-55ml" ;="" }"="">
   
     
-      <div class="product-card__wishlist" :class="{show: addedToWishList !== null}" x-data="wishlistButton" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.wishlist-btn.js?v=33606870002455744171726048083" x-init="()=>{handle = 'light-relax-bath-shower-oil-55ml'}" @wishlist.window="getWishlist">
-        <!-- Swym Wishlist Plus EPI Button -->
-        <button class="product-card__wishlist-btn empty" x-show="addedToWishList === false" @click.stop="add" aria-label="Wishlist">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396ZM7.99999 12.9556C9.52441 11.8607 11.2255 10.5367 12.5918 9.07105C14.1309 7.41999 15.1273 5.7136 15.1273 4.05273C15.1273 2.61255 13.8084 0.84 11.7073 0.84C11.2018 0.84 10.6856 1.0325 10.1533 1.39017C9.6197 1.74874 9.12025 2.2398 8.66468 2.75499L8.00008 3.50656L7.33548 2.75499C6.87993 2.23982 6.38044 1.74876 5.84679 1.39018C5.31448 1.0325 4.79826 0.84 4.29265 0.84C2.19156 0.84 0.872727 2.61241 0.872727 4.05273C0.872727 5.7138 1.86916 7.42024 3.40825 9.07124C4.7745 10.5368 6.4756 11.8607 7.99999 12.9556Z" fill="#171717"></path>
-		</svg>
-        </button>
-        <button class="product-card__wishlist-btn full" x-show="addedToWishList === true" @click.stop="remove" aria-label="WishlistRemove">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.40862 1.58396C6.54533 0.735212 5.48909 0 4.29265 0C1.63241 0 0 2.22641 0 4.05273C0 8.00156 4.6898 11.6668 8 14C11.3103 11.6666 16 8.00117 16 4.05273C16 2.22656 14.3675 0 11.7073 0C10.5109 0 9.45479 0.735207 8.59153 1.58395C8.38287 1.78911 8.18547 2.0009 8.00008 2.21055C7.8147 2.0009 7.6173 1.78911 7.40862 1.58396Z" fill="#071D49"></path>
-		</svg>
-        </button>
-        <!-- Swym Wishlist Plus EPI Button -->
-      </div>
-    
-  
+   
   <div class="product-card__content">
-    <a href="/products/light-relax-bath-shower-oil-55ml" data-item_position="" data-item_id="7794505580786" data-item_name="Light Relax Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/support-lavender-peppermint-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794505580786" data-item_name="Light Relax Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
         <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
 
-	<img src="images/RN515055R_main.png" alt="Light Relax Bath & Shower Oil 55ml Aromatherapy Associates" srcset="images/RN515055R_main_1.png 300w, images/RN515055R_main_13.png 400w, images/RN515055R_main_8.png 500w, images/RN515055R_main_7.png 600w, images/RN515055R_main_4.png 700w, images/RN515055R_main_5.png 800w, images/RN515055R_main_12.png 1000w, images/RN515055R_main_9.png 1200w, images/RN515055R_main_3.png 1400w, images/RN515055R_main_11.png 1600w, images/RN515055R_main_2.png 1800w, images/RN515055R_main_6.png 2000w, images/RN515055R_main_14.png 2400w, images/RN515055R_main_10.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 25vw, 50vw">
-
+	<img src="images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282.png" alt="Support Lavender &amp; Peppermint Bath &amp; Shower Oil 55ml by Aromatherapy Associates" srcset="images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_1.png 300w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_6.png 400w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_2.png 500w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_4.png 600w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_5.png 700w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_3.png 800w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_9.png 1000w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_7.png 1200w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_8.png 1400w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_10.png 1600w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_11.png 1800w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_12.png 2000w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_13.png 2400w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_14.png 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
         </div>
         <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
           <img src="images/LightRelaxBathOil_Ingredients.png" width="600" height="600" loading="lazy" alt="Light Relax Bath & Shower Oil Rollover Image">
@@ -6241,9 +5732,9 @@ Quick Buy
         </div>
       
       <div class="product-card__metafields eyebrow">
-        Relax & Unwind
+        Soothe & Relieve
       </div>
-      <h5 class="product-card__title">Light Relax Bath & Shower Oil</h5>
+      <h5 class="product-card__title">Support Lavender & Peppermint Bath & Shower Oil</h5>
       
       
       <div class="product-card__ratings">
@@ -6259,22 +5750,9 @@ Quick Buy
             
           </div>
         
-        <a href="/products/light-relax-bath-shower-oil-55ml" class="product-card__main__link"></a>
+        <a href="/support-lavender-peppermint-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
       
     </div>
-  </div>
-  <div class="product-card__button  free-space ">
-    
-      <button class="product-card__btn btn primary-white" :class="{disable:disable === true, btnLoading:loading === true}" @click.stop.prevent="quickBuyHandler" :disabled="disable">
-        <span x-show="!loading">
-          
-Quick Buy 
-            
-          
-        </span>
-        <div class="spinner" x-show="loading"></div>
-      </button>
-    
   </div>
 
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
@@ -6307,10 +5785,10 @@ Quick Buy
             <div class="product__slider-progress">
                 <div class="product__slider-progressbar product__slider-progressbar--template--18368255033586__1663157710b8f4956f swiper-pagination-progressbar swiper-pagination-progressbar--template--18368255033586__1663157710b8f4956f"></div>
                 <div class="product__slider-nav">
-                    <div class="product__slider-prev swiper-button-prev" disabled=""><svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="product__slider-prev product__slider-prev--template--18368255033586__1663157710b8f4956f swiper-button-prev" disabled=""><svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M13 25L0.999999 13L13 0.999998" stroke="#071D49"></path>
 		</svg></div>
-                    <div class="product__slider-next swiper-button-next" disabled=""><svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="product__slider-next product__slider-next--template--18368255033586__1663157710b8f4956f swiper-button-next" disabled=""><svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M1 25L13 13L1 0.999998" stroke="#071D49"></path>
 		</svg></div>
                 </div>
@@ -7592,307 +7070,8 @@ Quick Buy
     <div id="shopify-section-footer" class="shopify-section">
 
 <footer class="footer">
-  <div class="footer__container">
-    <div class="footer__main">
-      <div class="footer__content">
-        <div class="footer__info">
-          <div class="footer__subscribe subscribe">
-            <h2 class="subscribe__title heading4 font-secondary">SIGN UP to our Newsletter</h2>
-            <div class="subscribe__description"><p>Join for our latest news, exclusive launches & offers. 15% off your first order.</p></div>
-            
-              <div class="klaviyo-form-UeyEip"></div>
-            
-          </div>
-          <div class="footer__social">
-            
-              
-                <a href="https://www.instagram.com/aromatherapyassociates/" class="footer__social-item link" aria-label="Footer social icon" target="_blank">
-                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M13 2.34239C16.4711 2.34239 16.8823 2.3556 18.2531 2.41814C19.5205 2.47599 20.2089 2.68777 20.667 2.86575C21.2738 3.10158 21.7069 3.38334 22.1618 3.83822C22.6167 4.29311 22.8984 4.72622 23.1342 5.33297C23.3122 5.79111 23.524 6.47945 23.5819 7.74688C23.6444 9.11773 23.6576 9.52886 23.6576 13C23.6576 16.4712 23.6444 16.8823 23.5819 18.2531C23.524 19.5206 23.3122 20.2089 23.1342 20.6671C22.8984 21.2738 22.6167 21.7069 22.1618 22.1618C21.7069 22.6167 21.2738 22.8985 20.667 23.1342C20.2089 23.3123 19.5205 23.5241 18.2531 23.5819C16.8825 23.6445 16.4713 23.6577 13 23.6577C9.5286 23.6577 9.11748 23.6445 7.74688 23.5819C6.4794 23.5241 5.79106 23.3123 5.33297 23.1342C4.72617 22.8985 4.29306 22.6167 3.83817 22.1618C3.38329 21.7069 3.10153 21.2738 2.86575 20.6671C2.68772 20.2089 2.47594 19.5206 2.41809 18.2532C2.35555 16.8823 2.34234 16.4712 2.34234 13C2.34234 9.52886 2.35555 9.11773 2.41809 7.74694C2.47594 6.47945 2.68772 5.79111 2.86575 5.33297C3.10153 4.72622 3.38329 4.29311 3.83817 3.83822C4.29306 3.38334 4.72617 3.10158 5.33297 2.86575C5.79106 2.68777 6.4794 2.47599 7.74683 2.41814C9.11768 2.3556 9.52881 2.34239 13 2.34239ZM13 0C9.46936 0 9.0267 0.014965 7.64012 0.078231C6.25637 0.141394 5.3114 0.361122 4.48445 0.682509C3.62959 1.01473 2.90461 1.45925 2.1819 2.18195C1.45919 2.90466 1.01468 3.62964 0.682457 4.48451C0.36107 5.31145 0.141342 6.25642 0.0781794 7.64017C0.0149134 9.0267 0 9.46941 0 13C0 16.5306 0.0149134 16.9733 0.0781794 18.3599C0.141342 19.7436 0.36107 20.6886 0.682457 21.5155C1.01468 22.3704 1.45919 23.0954 2.1819 23.8181C2.90461 24.5408 3.62959 24.9853 4.48445 25.3175C5.3114 25.6389 6.25637 25.8587 7.64012 25.9218C9.0267 25.9851 9.46936 26 13 26C16.5306 26 16.9733 25.9851 18.3598 25.9218C19.7436 25.8587 20.6885 25.6389 21.5155 25.3175C22.3704 24.9853 23.0953 24.5408 23.818 23.8181C24.5408 23.0954 24.9853 22.3704 25.3175 21.5155C25.6389 20.6886 25.8586 19.7436 25.9218 18.3599C25.985 16.9733 26 16.5306 26 13C26 9.46941 25.985 9.0267 25.9218 7.64017C25.8586 6.25642 25.6389 5.31145 25.3175 4.48451C24.9853 3.62964 24.5408 2.90466 23.818 2.18195C23.0953 1.45925 22.3704 1.01473 21.5155 0.682509C20.6885 0.361122 19.7436 0.141394 18.3598 0.078231C16.9733 0.014965 16.5306 0 13 0ZM13 6.32433C9.3131 6.32433 6.32428 9.31316 6.32428 13C6.32428 16.6869 9.3131 19.6757 13 19.6757C16.6868 19.6757 19.6757 16.6869 19.6757 13C19.6757 9.31316 16.6868 6.32433 13 6.32433ZM13 17.3334C10.6068 17.3334 8.66661 15.3932 8.66661 13C8.66661 10.6068 10.6068 8.66667 13 8.66667C15.3932 8.66667 17.3333 10.6068 17.3333 13C17.3333 15.3932 15.3932 17.3334 13 17.3334ZM21.4994 6.06058C21.4994 6.92216 20.801 7.62061 19.9394 7.62061C19.0778 7.62061 18.3794 6.92216 18.3794 6.06058C18.3794 5.19901 19.0778 4.50061 19.9394 4.50061C20.801 4.50061 21.4994 5.19901 21.4994 6.06058Z" fill="#071D49"></path>
-		</svg>
-                </a>
-              
-            
-              
-                <a href="https://www.facebook.com/AromaAssoc" class="footer__social-item link" aria-label="Footer social icon" target="_blank">
-                  <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M12 12.21V8.03H8.33333V5.83C8.33333 5.28 8.55556 4.84 9.22222 4.84H11.8889V0H8.88889C5.77778 0 3.33333 2.53 3.33333 5.83V7.92H0V12.21H3.33333V22H8.33333V12.21H12Z" fill="#071D49"></path>
-		</svg>
-                </a>
-              
-            
-              
-                <a href="https://www.tiktok.com/@aromatherapyassociates" class="footer__social-item link" aria-label="Footer social icon" target="_blank">
-                  <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8286 0C14.1942 3.1219 15.949 4.98316 19 5.18117V8.69248C17.2319 8.86409 15.6831 8.28987 13.8818 7.20743V13.7746C13.8818 22.1173 4.72212 24.7244 1.03966 18.7446C-1.3267 14.8967 0.122363 8.14466 7.7133 7.87406V11.5768C7.13501 11.6692 6.51683 11.8144 5.95183 12.0058C4.26348 12.5734 3.3063 13.636 3.57218 15.5105C4.08401 19.101 10.7178 20.1637 10.1661 13.1476V0.00660021H13.8286V0Z" fill="#071D49"></path>
-		</svg>
-                </a>
-              
-            
-              
-                <a href="https://www.pinterest.co.uk/aromatherapyassociatesofficial/" class="footer__social-item link" aria-label="Footer social icon" target="_blank">
-                  <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.39651 14.5108C6.81949 17.5946 6.01166 20.4581 3.81897 22C3.24195 17.3743 4.85761 13.9602 5.66544 10.3257C4.28059 8.23314 5.78085 3.93788 8.55055 4.92909C12.0127 6.25071 5.55004 12.8588 9.82 13.6297C14.3208 14.5108 16.1672 6.14058 13.3975 3.49734C9.35838 -0.357379 1.7417 3.38721 2.66493 9.00408C2.89574 10.4358 4.396 10.8764 3.24195 12.7487C0.703056 12.198 -0.104775 10.2156 0.0106296 7.68247C0.241438 3.38721 4.04978 0.413565 7.85813 0.0831603C12.7051 -0.467514 17.2059 1.73518 17.8983 6.14058C18.5907 11.0966 15.7056 16.3831 10.5124 15.9426C9.12757 15.8324 8.55055 15.1716 7.39651 14.5108Z" fill="#071D49"></path>
-		</svg>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-          </div>
-        </div>
-        <div class="footer__links">
-            <div class="footer__block">
-              <h5 class="footer__links-title font-secondary text-uppercase">Về Russell Organics</h5>
-              <ul class="footer__links-list" style="list-style: none; ">
-                <li class="footer-desktop__item">
-                  <span class="footer-desktop__item-text">
-                    Thương hiệu tiên phong trong xu hướng mĩ phẩm sạch và thuần chay tại Mỹ
-                  </span>
-                </li>
+    <div class="footer__container">
 
-                <li class="footer-desktop__item">
-                  <p class="footer-desktop__item-text">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>CÔNG TY TNHH SHUEI TRADING VIỆT NAM</span><br>
-                    Địa chỉ: Phòng 911, tầng 9, tòa nhà Detech Tower 2, 
-                    Số 107 đường Nguyễn Phong Sắc, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Hà Nội.<br>
-                    ĐKKD số: 0110039828, ngày cấp 23/06/2022, tại Sở Kế hoạch và Đầu tư TP Hà Nội.
-                  </p>
-                </li>
-
-                <li class="footer-desktop__item">
-                  <p class="footer-desktop__item-text">
-                    <i class="fas fa-phone-alt"></i> 0944195346
-                  </p>
-                </li>
-
-                <li class="footer-desktop__item">
-                  <p class="footer-desktop__item-text">
-                    <i class="fas fa-envelope"></i> russellorganics.vietnam@gmail.com
-                  </p>
-                </li>
-              </ul>
-
-            </div>
-            <div class="footer__block">
-              <h5 class="footer__links-title font-secondary text-uppercase">Về chúng tôi</h5>
-              <ul class="footer__links-list">
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="/pages/our-story">Trang chủ</a>
-                </li>
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="/pages/our-responsibility">Sản phẩm</a>
-                </li>
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="/pages/our-community">Blog</a>
-                </li>
-               
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="/pages/our-blends">Liên hệ</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__block">
-              <h5 class="footer__links-title font-secondary text-uppercase">Dịch vụ khách hàng</h5>
-              <ul class="footer__links-list">
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="/pages/special-offers">Tìm kiếm</a>
-                </li>
-                
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="./chinh-sach-doi-tra.html">Chính sách đổi trả</a>
-                </li>
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="./chinh-sach-bao-mat.html">Chính sách bảo mật</a>
-                </li>
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="./dieu-khoan-dich-vu.html">Điều khoản dịch vụ</a>
-                </li>
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="./hinh-thuc-thanh-toan.html">Hình thức thanh toán</a>
-                </li>
-                <li class="footer-desktop__item">
-                  <a class="footer-desktop__item-link link" href="./chinh-sach-kiem-hang.html">Chính sách kiểm hàng</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-      </div>
-      <div class="footer__country country__footer">
-        <div class="country__footer-container" @click.prevent="showPopup =  'country-selector' ">
-          <p class="country__footer-text">
-            <a href="#" class="country__footer-link link">
-              NL | EUR
-            </a>
-          </p>
-          <div class="country__footer-icon"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M7 6L0.8167 12L-4.89896e-07 11.2075L5.3666 6L-3.46409e-08 0.79249L0.816701 -2.70281e-07L7 6Z" fill="#071D49"></path>
-		</svg></div>
-        </div>
-        <div class="country__footer-icons">
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-              <a href="/pages/b-corp-certification" class="footer__label-item" aria-label="Country Footer Icon">
-                <svg width="48" height="70" viewBox="0 0 48 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<g clip-path="url(#clip0_2153_132256)">
-	<path fill-rule="evenodd" clip-rule="evenodd" d="M6.32128 1.7795C6.46446 1.90405 6.58996 2.04763 6.6943 2.20625V2.2055C6.80247 2.36245 6.85469 2.54033 6.892 2.73614H8.54744C8.49223 2.2922 8.36988 1.90431 8.17442 1.55081C7.97598 1.21225 7.7283 0.911809 7.42541 0.683115C7.13968 0.452925 6.78457 0.275052 6.41155 0.152483C6.0348 0.0269252 5.62747 -0.0253906 5.19925 -0.0253906C4.61362 -0.0253906 4.07722 0.0792409 3.59603 0.293736C3.11782 0.506736 2.7075 0.789988 2.38671 1.16068C2.05965 1.54175 1.80571 1.9801 1.63769 2.45363C1.46014 2.94689 1.37285 3.47902 1.37285 4.06197C1.36672 4.59922 1.45641 5.13325 1.63769 5.63892C1.80268 6.10795 2.05735 6.54027 2.38746 6.91168C2.73042 7.27202 3.14117 7.56082 3.59603 7.76144C4.05931 7.95725 4.61362 8.06188 5.19925 8.06188C5.68044 8.06188 6.12582 7.99163 6.516 7.84888C6.92706 7.70838 7.26501 7.49538 7.5679 7.23006C7.86752 6.94979 8.10932 6.61335 8.27961 6.2398C8.46887 5.8266 8.5833 5.38299 8.61757 4.92966H6.96212C6.9099 5.4431 6.7316 5.8691 6.42871 6.18748C6.12582 6.50586 5.71476 6.66356 5.19925 6.66356C4.80908 6.66356 4.48828 6.57612 4.21971 6.43561C3.95487 6.29286 3.72136 6.09705 3.56096 5.84967C3.40057 5.60304 3.27822 5.32054 3.20585 5.02009C3.13573 4.69873 3.09768 4.38035 3.09768 4.06197C3.09718 3.72914 3.13346 3.39728 3.20585 3.07245C3.27822 2.75407 3.40057 2.47157 3.56096 2.22269C3.73927 1.97457 3.95487 1.76157 4.21971 1.62181C4.48828 1.46113 4.80833 1.39087 5.19925 1.39087C5.40575 1.3898 5.61081 1.42522 5.80503 1.4955C5.99064 1.56308 6.16476 1.65887 6.32128 1.7795ZM12.0359 6.85937C11.6099 6.85937 11.2719 6.75399 11.0392 6.52305C10.8087 6.29286 10.6833 5.93936 10.6483 5.42591H14.7082C14.7432 5.00216 14.7082 4.57616 14.6 4.18753C14.4926 3.79665 14.3322 3.44315 14.1016 3.12551C13.8759 2.80997 13.5768 2.55423 13.2303 2.38039C12.8722 2.18757 12.4641 2.09788 11.9829 2.09788C11.5554 2.09788 11.1645 2.17113 10.8094 2.32807C10.4642 2.46465 10.1534 2.67596 9.89925 2.94689C9.64695 3.22062 9.44851 3.5396 9.31436 3.88708C9.17112 4.24059 9.09801 4.62922 9.09801 5.05522C9.09801 5.47823 9.15322 5.88704 9.29347 6.2398C9.4126 6.59061 9.60775 6.91066 9.86493 7.177C10.1177 7.44341 10.4273 7.64909 10.7706 7.77863C11.1516 7.92601 11.5574 7.99833 11.9658 7.99163C12.6066 7.99163 13.1579 7.84888 13.6033 7.56563C14.0494 7.28238 14.3874 6.8063 14.6 6.13218H13.2474C13.193 6.31005 13.0699 6.47148 12.8371 6.62843C12.6245 6.78911 12.3567 6.85937 12.0359 6.85937ZM11.9658 3.28545C12.3388 3.28545 12.6245 3.39083 12.8021 3.58589V3.58664C12.9796 3.77946 13.1049 4.0799 13.1751 4.47153H10.6662C10.6662 4.37899 10.6917 4.27555 10.7206 4.15888C10.7255 4.13892 10.7305 4.11858 10.7356 4.09784C10.7902 3.95931 10.863 3.82863 10.9519 3.70921C11.0667 3.5904 11.1981 3.48895 11.3421 3.40802C11.5196 3.32058 11.7151 3.28545 11.9658 3.28545ZM16.8963 3.31983V2.27576L15.4363 2.27501V7.86906H16.9866V5.37285C16.9812 5.13422 17.0047 4.89581 17.0567 4.66285C17.0923 4.45697 17.1773 4.26283 17.3044 4.09709C17.4315 3.93098 17.5965 3.79773 17.7856 3.70846C17.9832 3.62027 18.2138 3.56796 18.4995 3.56796C18.5868 3.56796 18.6771 3.56796 18.7852 3.58589C18.8746 3.58662 18.9636 3.59842 19.0501 3.62102V2.18682C18.9247 2.15244 18.8196 2.1345 18.7121 2.1345C18.5167 2.1345 18.3212 2.17038 18.1436 2.22269L18.1388 2.22458C17.9628 2.29347 17.7841 2.36343 17.6252 2.47082C17.4648 2.57545 17.3252 2.70101 17.1999 2.84151C17.0845 2.98797 16.9885 3.14874 16.9142 3.31983H16.8963ZM23.1801 3.30339V2.27576L23.1794 2.24063H22.0432V0.559051H20.4929V2.24063H19.5484V3.26751H20.4929V6.57612C20.4871 6.80794 20.5359 7.03787 20.6354 7.24725C20.7428 7.42513 20.8659 7.56563 21.0263 7.65606C21.1867 7.76144 21.3814 7.81376 21.597 7.84888C21.8104 7.887 22.0432 7.90419 22.2729 7.90419C22.3425 7.90419 22.4162 7.89995 22.4919 7.8956C22.572 7.89099 22.6545 7.88625 22.737 7.88625C22.8787 7.88625 23.0399 7.86906 23.1622 7.84888V6.66356C23.0921 6.68075 23.0018 6.69868 22.9317 6.69868C22.8616 6.71886 22.7713 6.71886 22.681 6.71886C22.4341 6.71886 22.255 6.68075 22.1655 6.5933C22.0782 6.50586 22.0432 6.34518 22.0432 6.07986V3.30339H23.1801ZM25.5137 0.136041H23.9634V1.40881H25.5137V0.136041ZM23.9634 7.86906H25.5137V2.27576H23.9634V7.86906ZM26.1553 2.27576V3.30339L27.0789 3.30189V7.86832H28.6291V3.31983H29.6959V2.29369H28.6291V1.95738C28.6291 1.72644 28.6821 1.55156 28.7716 1.46113C28.8589 1.37294 29.0021 1.32062 29.2148 1.32062C29.4055 1.32323 29.5959 1.3352 29.7855 1.35649V0.205546C29.7161 0.197133 29.6505 0.192838 29.5848 0.188542C29.5164 0.18406 29.4479 0.179578 29.3752 0.17042C29.2356 0.15323 29.1096 0.15323 28.9671 0.15323C28.3262 0.15323 27.8622 0.310925 27.5414 0.629304C27.2393 0.947683 27.0789 1.35575 27.0789 1.852V2.27576H26.1553ZM32.1728 0.136041H30.6225V1.40881H32.1728V0.136041ZM30.6225 7.86906H32.1728V2.27576H30.6225V7.86906ZM35.6082 6.85937C35.18 6.85937 34.8421 6.75399 34.6115 6.52305C34.3788 6.29286 34.2535 5.93936 34.2184 5.42591H38.2783C38.3126 5.00216 38.2783 4.57616 38.1701 4.18753C38.0649 3.79665 37.9053 3.44315 37.6718 3.12551C37.442 2.80639 37.1563 2.55901 36.8004 2.38039C36.4445 2.18757 36.0342 2.09788 35.553 2.09788C35.1498 2.09123 34.7497 2.16966 34.3788 2.32807C34.035 2.4649 33.7257 2.67622 33.4731 2.94689C33.2217 3.21296 33.0262 3.53134 32.8837 3.88708C32.7412 4.24059 32.6711 4.62922 32.6711 5.05522C32.6711 5.47823 32.7233 5.88704 32.8666 6.2398C32.9856 6.58982 33.1793 6.90964 33.4343 7.177C33.6889 7.44295 33.9996 7.64851 34.3437 7.77863C34.6996 7.92138 35.0898 7.99163 35.5359 7.99163C36.1767 7.99163 36.7303 7.84888 37.1734 7.56563C37.6195 7.28238 37.9575 6.8063 38.1701 6.13218H36.8176C36.7653 6.31005 36.64 6.47148 36.4102 6.62843C36.1946 6.78911 35.929 6.85937 35.6082 6.85937ZM35.5187 3.28545C35.8917 3.28545 36.1767 3.39083 36.3543 3.58589V3.58664C36.5326 3.77946 36.6751 4.0799 36.7303 4.47153H34.2184C34.2184 4.36984 34.2493 4.25499 34.2845 4.12389C34.2868 4.11528 34.2892 4.1066 34.2915 4.09784C34.3437 3.95734 34.3959 3.83178 34.5041 3.70921C34.6153 3.58638 34.7474 3.48438 34.8943 3.40802C35.0726 3.32058 35.2703 3.28545 35.5187 3.28545ZM42.2643 7.79657C42.5616 7.65402 42.81 7.42647 42.9783 7.14262V7.15981H42.9962V7.86906H44.4733V0.136041H42.9231V2.94689H42.9059C42.7276 2.68158 42.4979 2.47157 42.195 2.32807C41.9092 2.18831 41.5884 2.11806 41.2505 2.11806C40.8424 2.11806 40.4865 2.20625 40.1658 2.3632C39.8457 2.52388 39.595 2.73688 39.3824 3.00295C39.1767 3.28061 39.02 3.59153 38.9191 3.92221C38.811 4.25778 38.7587 4.62847 38.7587 5.00216C38.7566 5.38467 38.8106 5.76542 38.9191 6.13218C39.0266 6.48867 39.1661 6.8063 39.3824 7.08956C39.5771 7.35487 39.8457 7.58656 40.1665 7.74351C40.4865 7.90419 40.8424 7.99163 41.2676 7.99163C41.6436 7.99163 41.9644 7.93857 42.2643 7.79657ZM42.6754 3.81384C42.7913 3.98424 42.8699 4.17732 42.9059 4.38035C42.9611 4.59335 42.9783 4.82428 42.9783 5.05522C42.9783 5.28541 42.9432 5.51336 42.9059 5.72636C42.8762 5.9337 42.8035 6.13252 42.6926 6.31005C42.5851 6.48793 42.4628 6.61124 42.2852 6.71961C42.1039 6.82424 41.8913 6.87656 41.6436 6.87656C41.393 6.87656 41.1983 6.82349 41.02 6.71886C40.8424 6.61124 40.6999 6.48867 40.5917 6.31005C40.4865 6.13218 40.3963 5.93936 40.3441 5.72636C40.2889 5.49542 40.2709 5.28541 40.2709 5.07241C40.2669 4.84552 40.2915 4.61902 40.3441 4.39828C40.3879 4.1976 40.4659 4.00596 40.5746 3.83178C40.682 3.65689 40.8252 3.53059 41.0021 3.42521C41.1811 3.32058 41.393 3.26826 41.6436 3.26826C41.8921 3.26826 42.1039 3.32058 42.2651 3.42521C42.4299 3.52144 42.5703 3.65442 42.6754 3.81384ZM22.6639 20.4316H13.6563V45.1351H25.6569C30.5875 45.1351 33.2045 41.6673 33.2045 38.0381C33.2045 34.9963 31.5319 32.7131 28.4687 32.0943V32.021C30.765 31.0846 32.1519 29.1018 32.1519 26.483C32.1519 24.0601 30.8732 22.309 29.2349 21.3337C27.7369 20.4316 24.8549 20.4316 22.6639 20.4316ZM23.5904 31.0494H16.9664V23.1939H23.5904C26.4373 23.1939 28.8768 23.6692 28.8768 27.1026C28.8768 29.7034 27.3467 31.0494 23.5904 31.0494ZM25.2466 42.3564H16.9664L16.9657 33.811H24.5185C27.2952 33.811 29.9123 34.713 29.9123 37.9335C29.9123 40.6225 28.0965 42.3564 25.2466 42.3564ZM22.7543 51.5568C33.2047 51.5568 41.6617 43.1519 41.6617 32.7822C41.6617 22.4124 33.2047 14.0075 22.7543 14.0075C12.3218 14.0075 3.86476 22.4124 3.86476 32.7829C3.86476 43.1519 12.3218 51.5568 22.7543 51.5568ZM1 32.7822C1 20.819 10.7536 11.1406 22.7722 11.1406H22.7714C34.79 11.1406 44.5436 20.8183 44.5436 32.7822C44.5436 44.7453 34.79 54.4237 22.7714 54.4237C10.7357 54.4237 1 44.7281 1 32.7822ZM3.81179 58.1224C4.41757 58.1224 4.95173 58.5283 5.02186 59.0776L6.17821 59.0604C6.03571 57.8048 5.02111 57.0948 3.81254 57.0948C2.10114 57.0948 1.10444 58.3534 1.10444 59.9826C1.10444 61.573 2.10114 62.8286 3.81179 62.8286C5.16435 62.8286 6.10808 61.9617 6.23341 60.6015H5.05617C4.96889 61.3077 4.55783 61.8219 3.81179 61.8219C2.72483 61.8219 2.31675 60.9019 2.31675 59.9998C2.31675 59.0417 2.72483 58.1224 3.81179 58.1224ZM10.8267 60.7412C10.8267 59.4864 10.0247 58.6538 8.76022 58.6538C7.51286 58.6538 6.7146 59.4685 6.69371 60.7412C6.69371 61.999 7.51286 62.8286 8.76022 62.8286C10.0247 62.8286 10.8267 61.9998 10.8267 60.7412ZM9.73976 60.7412C9.73976 61.36 9.50924 61.9998 8.76022 61.9998H8.76097C8.0321 61.9998 7.79859 61.36 7.79859 60.7412C7.79859 60.1052 8.01419 59.4685 8.76022 59.4685C9.50924 59.4685 9.73976 60.1052 9.73976 60.7412ZM12.4993 58.7585H11.4676L11.4504 58.7592V62.7232H12.5344V60.937C12.5344 60.2278 12.8194 59.6613 13.6214 59.6613C13.7523 59.6629 13.8828 59.6756 14.0115 59.6994V58.6889C13.9414 58.6718 13.8511 58.6538 13.7818 58.6538C13.2655 58.6538 12.712 59.0073 12.5165 59.5036H12.4993V58.7585ZM15.6491 58.7585H14.6181V64.1223H15.705V62.2277H15.7401C16.0079 62.6186 16.4511 62.8286 16.9315 62.8286C18.0886 62.8286 18.6772 61.8391 18.6772 60.7764C18.6772 59.6613 18.1058 58.6538 16.8614 58.6538C16.363 58.6538 15.9356 58.8496 15.667 59.2726H15.6491V58.7585ZM16.6115 59.4685C17.3254 59.4685 17.5723 60.1052 17.5723 60.7412H17.5731C17.5731 61.3952 17.3426 61.9998 16.6286 61.9998C15.9177 61.9998 15.667 61.378 15.667 60.7412C15.667 60.1052 15.8997 59.4685 16.6115 59.4685ZM23.3228 60.7412C23.3228 59.4864 22.5208 58.6538 21.2592 58.6538C20.0119 58.6538 19.1927 59.4685 19.1927 60.7412C19.1927 61.999 20.0119 62.8286 21.2592 62.8286C22.5036 62.8286 23.3228 61.9998 23.3228 60.7412ZM22.2388 60.7412C22.2388 61.36 22.0053 61.9998 21.2592 61.9998C20.5102 61.9998 20.2969 61.36 20.2969 60.7412C20.2969 60.1052 20.5102 59.4685 21.2592 59.4685C22.0053 59.4685 22.2388 60.1052 22.2388 60.7412ZM25.0856 58.7585H24.0539L24.0367 58.7592V62.7232H25.1207V60.937C25.1207 60.2278 25.4064 59.6613 26.2077 59.6613C26.3386 59.6629 26.4691 59.6756 26.5978 59.6994V58.6889C26.5456 58.6718 26.4374 58.6538 26.3681 58.6538C25.8518 58.6538 25.2983 59.0073 25.1028 59.5036H25.0856V58.7585ZM28.877 58.6538C27.9884 58.6538 27.079 58.955 27.0089 59.9826L28.113 59.9998C28.1481 59.5559 28.4338 59.396 28.8419 59.396C29.2351 59.396 29.5559 59.4685 29.5559 59.9266C29.5559 60.2839 29.1518 60.3309 28.6417 60.3902C28.518 60.4045 28.3881 60.4196 28.2563 60.44C27.5774 60.5282 26.9007 60.7412 26.9007 61.6433C26.9007 62.4579 27.5073 62.8286 28.2555 62.8286C28.7367 62.8286 29.253 62.6889 29.5909 62.3354C29.5957 62.4676 29.6193 62.5985 29.661 62.724H30.7652C30.6577 62.5633 30.6227 62.1926 30.6227 61.8391V59.7868C30.6227 58.8324 29.6782 58.6538 28.877 58.6538ZM28.8358 60.9784C29.1146 60.9416 29.393 60.905 29.5357 60.7764L29.5559 61.2024C29.5559 61.4333 29.5178 62.1052 28.6643 62.1052C28.3085 62.1052 27.9877 61.9998 27.9877 61.591C27.9877 61.1852 28.2913 61.0775 28.6293 61.0073C28.6968 60.9967 28.7663 60.9875 28.8358 60.9784ZM33.668 58.7585H32.8667V57.5739H31.7798V58.7592H31.121V59.4864H31.7798V61.8219C31.7798 62.6014 32.3505 62.7584 33.0264 62.7584H33.0265C33.2398 62.7584 33.4904 62.7584 33.668 62.724V61.8742C33.5606 61.9094 33.4524 61.9094 33.3293 61.9094C32.954 61.9094 32.8667 61.8219 32.8667 61.4512V59.4864H33.668V58.7585ZM34.2186 58.1404H35.3055V57.2383H34.2186V58.1404ZM35.3055 58.7592H34.2186V62.724H35.3055V58.7592ZM40.0242 60.7412C40.0242 59.4864 39.2222 58.6538 37.9577 58.6538C36.7103 58.6538 35.8912 59.4685 35.9091 60.7412C35.9091 61.999 36.7103 62.8286 37.9577 62.8286C39.205 62.8286 40.0242 61.9998 40.0242 60.7412ZM38.9365 60.7412C38.9365 61.36 38.7067 61.9998 37.9577 61.9998C37.2086 61.9998 36.9953 61.36 36.9953 60.7412C36.9953 60.1052 37.2086 59.4685 37.9577 59.4685C38.7238 59.4685 38.9365 60.1052 38.9365 60.7412ZM41.749 58.7585H40.7172V62.7232H41.8042V60.653C41.8042 59.8563 42.0698 59.5208 42.6577 59.5208C43.1568 59.5208 43.3515 59.8384 43.3515 60.4924V62.724H44.4384V60.2831C44.4384 59.3078 44.1356 58.6538 42.9785 58.6538C42.7377 58.6516 42.5003 58.7103 42.2884 58.8247C42.0764 58.939 41.8968 59.1052 41.7662 59.3078H41.749V58.7585ZM44.4735 66.0872H1.08729V68.8457H44.4735V66.0872ZM44.8465 57.0769H45.0972L45.1151 57.0776V56.973H44.4735V57.0776H44.7212V57.7697H44.8465V57.0769ZM46.0417 57.7697H46.164H46.1812V56.9722H45.9686L45.7388 57.5739L45.4881 56.9722H45.2747V57.7697H45.418V57.0948L45.6836 57.7697H45.7731L46.0417 57.0948V57.7697Z" fill="white"></path>
-	</g>
-	<defs>
-	<clipPath id="clip0_2153_132256">
-	<rect width="48" height="70" fill="white"></rect>
-	</clipPath>
-	</defs>
-</svg>
-
-
-
-              </a>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-        </div>
-      </div>
-    </div>
-    <div class="footer__payment-icons payment-icons">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/american_express-12858714bc10cdf384b62b8f41d20f56d8c32c1b8fed98b662f2bfc158dcbcf0.svg" alt="" srcset="images/american_express-12858714bc10cdf384b62b8f41d20f56d8c32c1b8fed98b662f2bfc158dcbcf0.svg 44w" width="44" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/206684_visa_method_card_payment_icon_1.svg" alt="" srcset="images/206684_visa_method_card_payment_icon_1.svg 45w" width="45" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/1156750_finance_mastercard_payment_icon_2509f595-30c4-4008-a4c6-044194b0442e.svg" alt="" srcset="images/1156750_finance_mastercard_payment_icon_2509f595-30c4-4008-a4c6-044194b0442e.svg 28w" width="28" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/4373195_card_credit_discover_logo_logos_icon_9362bcf8-4052-400f-a409-d9213bd63351.svg" alt="" srcset="images/4373195_card_credit_discover_logo_logos_icon_9362bcf8-4052-400f-a409-d9213bd63351.svg 28w" width="28" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/1156735_finance_logo_maestro_payment_icon_24283ed8-b56c-4ac3-96f1-d70ec12cfb78.svg" alt="" srcset="images/1156735_finance_logo_maestro_payment_icon_24283ed8-b56c-4ac3-96f1-d70ec12cfb78.svg 28w" width="28" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/Apple_Pay_Mark_RGB_041619.svg" alt="" srcset="images/Apple_Pay_Mark_RGB_041619.svg 44w" width="44" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <img src="images/google-pay-mark.png" alt="" srcset="images/google-pay-mark.png 53w" width="53" height="28" loading="lazy">
-            
-          </div>
-        
-      
-        
-          <div class="footer__payment-icon">
-            
-              <a href="/pages/what-is-klarna" target="_blank" class="footer__payment-link">
-                <img src="images/Klarna_Payment_Badge.svg" alt="" srcset="images/Klarna_Payment_Badge.svg 50w" width="50" height="28" loading="lazy">
-              </a>
-            
-          </div>
-        
-      
-    </div>
-    <div class="footer__down">
-      <div class="footer__down-links">
-        <ul class="footer__down-ul">
-          
-            <li class="footer__down-li">
-              <a class="footer__down-link link" href="/pages/terms-conditions">
-                TERMS
-              </a>
-            </li>
-          
-            <li class="footer__down-li">
-              <a class="footer__down-link link" href="/pages/privacy-policy">
-                PRIVACY
-              </a>
-            </li>
-          
-        </ul>
-      </div>
-      <div class="footer__down-richtext"><p>Proud to be part of The Boots Group.</p><p>© 2025 Aromatherapy Associates. All Rights Reserved.</p></div>
-    </div>
-  </div>
 </footer>
 
 

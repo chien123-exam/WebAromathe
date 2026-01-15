@@ -2589,6 +2589,27 @@ form#frmContact .form-group i {
   color: var(--color-disable-text);
 }
 
+/* Ẩn ảnh rollover mặc định */
+.product-card__image.rollover-img {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Hiển thị khi hover */
+.product-card__image-wrapper:hover .rollover-img {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ẩn ảnh chính khi hover */
+.product-card__image-wrapper:hover .base-img {
+  opacity: 0;
+}
+
+
 
 
 
