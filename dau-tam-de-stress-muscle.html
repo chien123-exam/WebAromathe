@@ -3183,7 +3183,7 @@ Shopify.routes.root = "/";</script>
 				<!-- <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.15493e-08 6L6.1833 7.37351e-08L7 0.79249L1.6334 6L7 11.2075L6.1833 12L7.15493e-08 6Z" fill="#071D49"/>
 		</svg> -->
-				<a class="breadcrumbs__link" href="/index.html" title="Return to home">Home</a>
+				<a class="breadcrumbs__link" href="/index.html" title="Return to home">Trang chủ</a>
 				</li>
 						
 					
@@ -3238,12 +3238,12 @@ Shopify.routes.root = "/";</script>
 							
 					
 						<li class="breadcrumbs__item">
-							<a title="View this product's collection" href="/san-pham-moi.html">
-Bath & Shower Oils</a>
+							<a title="View this product's collection" >
+Sản phẩm</a>
 						</li>
 					
 					<li class="breadcrumbs__item">
-						<a class="breadcrumbs__link" href="/dau-tam-de-stress-muscle.html" aria-current="page">De-Stress Muscle Bath & Shower Oil</a>
+						<a class="breadcrumbs__link" href="#" aria-current="page">Dầu tắm De-Stress Muscle Bath & Shower Oil</a>
 					</li></ol>
 	</nav>
     </div>
@@ -3694,53 +3694,71 @@ Bath & Shower Oils</a>
     
     
       
+<div class="product-buystack__option-wrapper" 
+     x-data="{
+       activeHandle: 'de-stress-muscle-bath-shower-oil-55ml',
+       
+       // Giá tự setup theo ý bạn (VND, dễ chỉnh sửa)
+       priceMap: {
+         'travel-de-stress-muscle-bath-shower-oil': 300000,          // Giá cho 9ml (travel) - chỉnh nếu cần
+         'de-stress-muscle-bath-shower-oil-55ml': 2193000           // Giữ nguyên 2,193,000
+       },
+       
+       get displayPrice() {
+         const price = this.priceMap[this.activeHandle] || 2193000;
+         return 'VND ' + new Intl.NumberFormat('vi-VN').format(price);
+       }
+     }"
+     x-init="() => {
+       parent_product_id = 'de-stress-muscle-bath-shower-oil';
+       collection_handle = 'all-products';
+       handle = 'de-stress-muscle-bath-shower-oil-55ml';
+     }">
 
-    <div class="product-buystack__option" ax-load="" x-data="productOptions" x-ignore="" x-init="() => { parent_product_id = " de-stress-muscle-bath-shower-oil";="" collection_handle="all-products" ;="" handle="de-stress-muscle-bath-shower-oil-55ml" }"="">
-      <label class="product-buystack__option-label" for="option-de-stress-muscle-bath-shower-oil-55ml"> Select Size </label>
-      <select x-model="activeHandle" class="product-buystack__option-selector" name="option" id="option-de-stress-muscle-bath-shower-oil-55ml">
-        <template x-for="product in products" :key="product.handle">
-          <option :selected="product.handle == &quot;de-stress-muscle-bath-shower-oil-55ml&quot;" class="product-buystack__option-value" :value="product.handle">
-            <span x-text="product.variants.edges[0].node.title"></span>
-            <template x-if="!product.availableForSale">
-              <span>&nbsp;Out of Stock</span>
-            </template>
-          </option>
-        </template><option :selected="product.handle == &quot;de-stress-muscle-bath-shower-oil-55ml&quot;" class="product-buystack__option-value" :value="product.handle" selected="selected" value="de-stress-muscle-bath-shower-oil-55ml">
-            <span x-text="product.variants.edges[0].node.title">55ml</span>
-            <template x-if="!product.availableForSale">
-              <span>&nbsp;55ml</span>
-            </template>
-          </option><option :selected="product.handle == &quot;de-stress-muscle-bath-shower-oil-55ml&quot;" class="product-buystack__option-value" :value="product.handle" value="travel-de-stress-muscle-bath-shower-oil">
-            <span x-text="product.variants.edges[0].node.title">9ml</span>
-            <template x-if="!product.availableForSale">
-              <span>&nbsp;9ml</span>
-            </template>
-          </option>
-      </select>
-    </div>
-    
-    
-    
-    
-    <div class="product-buystack__ROW"><form method="post" action="/cart/add" id="product-form-installment-template--18368255033586__main" accept-charset="UTF-8" class="installment caption-large" enctype="multipart/form-data" data-productid="{{ product.id }}"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="id" value="43712982352114">
-          
-          <div class="product-buystack__add-to-cart">
-            
-<button type="button" class="add-to-cart-btn btn primary" x-data="productAddToCart" x-init="await $nextTick(() => changeAddToCartButtonPrice())" @click="addToCart({
-			id: 43712982352114,
-			quantity: 1,
-			properties: {
-				_inventory: 408,
-				_compare_at_price: null
-			},
-		})" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-add-to-cart.js?v=40419312932251021511751385844" data-price="€77,00">
-		
-			<span>VND 2,193,000</span>
-		
-	</button>
+  <!-- Phần chọn kích thước -->
+  <div class="product-buystack__option" ax-load="">
+    <label class="product-buystack__option-label" for="option-de-stress-muscle-bath-shower-oil-55ml">Chọn kích thước</label>
+    <select x-model="activeHandle" class="product-buystack__option-selector" name="option" id="option-de-stress-muscle-bath-shower-oil-55ml">
+      <!-- Hardcode option đơn giản để đảm bảo hoạt động -->
+      <option value="travel-de-stress-muscle-bath-shower-oil">9ml</option>
+      <option value="de-stress-muscle-bath-shower-oil-55ml" selected>55ml</option>
+    </select>
+  </div>
 
+  <!-- Phần nút Add to Cart -->
+  <div class="product-buystack__ROW">
+    <form method="post" action="/cart/add" id="product-form-installment-template--18368255033586__main" accept-charset="UTF-8" class="installment caption-large" enctype="multipart/form-data">
+      <input type="hidden" name="form_type" value="product">
+      <input type="hidden" name="utf8" value="✓">
+      <!-- Giữ variant ID mặc định của 55ml (clone nên không thay đổi) -->
+      <input type="hidden" name="id" value="43712982352114">
 
-          </div><input type="hidden" name="product-id" value="7794506301682"><input type="hidden" name="section-id" value="template--18368255033586__main"></form></div>
+      <div class="product-buystack__add-to-cart">
+        <button type="button" class="add-to-cart-btn btn primary"
+                @click="addToCart({
+                  id: 43712982352114,
+                  quantity: 1,
+                  properties: {
+                    _inventory: 408,
+                    _compare_at_price: null,
+                    'Kích thước chọn': activeHandle.includes('9ml') ? '9ml' : '55ml'
+                  }
+                })"
+                ax-load=""
+                ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-add-to-cart.js?v=40419312932251021511751385844">
+
+          <!-- Giá động theo size chọn -->
+          <span x-text="displayPrice"></span>
+        </button>
+      </div>
+
+      <input type="hidden" name="product-id" value="7794506301682">
+      <input type="hidden" name="section-id" value="template--18368255033586__main">
+    </form>
+  </div>
+
+</div>
+    
     
 
     
@@ -4814,11 +4832,11 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
     <div class="product__carousel-container container__wide">
         
             
-                <h2 class="product__carousel-title product__carousel-title--template--18368255033586__1663157710b8f4956f billboard">Complete your Bath Oil Collection</h2>
+                <h2 class="product__carousel-title product__carousel-title--template--18368255033586__1663157710b8f4956f billboard">Các sản phẩm liên quan</h2>
             
         
-        <div class="product__carousel-block product__carousel-block--template--18368255033586__1663157710b8f4956f product__slider swiper" x-data="swiper" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.swiper.js?v=179099103901318819721726048083" x-init="settings = {
-            selector: '.product__carousel-block--template--18368255033586__1663157710b8f4956f',
+        <div class="product__carousel-block product__slider swiper" x-data="swiper" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.swiper.js?v=179099103901318819721726048083" x-init="settings = {
+            selector: '.product__carousel-block',
             speed: 700,
             preventClicks: true,
             a11y: false,
@@ -4829,8 +4847,8 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
             slidesPerView: 4,
             spaceBetween: 16,
             navigation: {
-                nextEl: '.product__slider-next--template--18368255033586__1663157710b8f4956f',
-                prevEl: '.product__slider-prev--template--18368255033586__1663157710b8f4956f',
+                nextEl: '.product__slider-next',
+                prevEl: '.product__slider-prev',
                 el: '.swiper-pagination-progressbar--template--18368255033586__1663157710b8f4956f',
                 type: 'progressbar',
             },
@@ -4840,11 +4858,11 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
             },
             breakpoints: {
                 320: {
-                    spaceBetween: 16,
-                    slidesPerView: 'auto',
+                    spaceBetween: 10,
+                    slidesPerView: 1.5,
                 },
                 375: {
-                    spaceBetween: 16,
+                    spaceBetween: 10,
                     slidesPerView: 'auto',
                 },
                 768: {
@@ -4856,40 +4874,65 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
         }">
             <div class="product__slider-container swiper-wrapper">
                 
-                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=119610661650981791711762268810" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'deep-relax-bath-shower-oil'; collection_handle = " diffusers";="" handle="deep-relax-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
+                    
+                
+                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=163396157502249773561726048083" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'forest-therapy-bath-shower-oil'; collection_handle = " diffusers";="" handle="forest-therapy-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
                         
-
-
-
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=65507231945812617721763567014" x-init="() => { parent_product_id = 'deep-relax-bath-shower-oil'; collection_handle = " diffusers";="" handle="deep-relax-bath-shower-oil-55ml" ;="" }"="">
+<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'forest-therapy-bath-shower-oil'; collection_handle = " diffusers";="" handle="forest-therapy-bath-shower-oil-55ml" ;="" }"="">
   
     
-  
   <div class="product-card__content">
-  <a href="./dau-tam-deep-relax-bath.html" data-item_position="" data-item_id="7794505515250" data-item_name="Deep Relax Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="74,95" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-    <div class="product-card__image-wrapper">
-      <div class="product-card__image base-img">
-        <img src="images/RN514055R_main_Award.png" alt="Deep Relax Bath & Shower Oil" srcset="images/RN514055R_main_Award_1.png 300w, images/RN514055R_main_Award_2.png 400w, images/RN514055R_main_Award_3.png 500w, images/RN514055R_main_Award_4.png 600w, images/RN514055R_main_Award_5.png 700w, images/RN514055R_main_Award_8.png 800w, images/RN514055R_main_Award_6.png 1000w, images/RN514055R_main_Award_7.png 1200w, images/RN514055R_main_Award_9.png 1400w, images/RN514055R_main_Award_10.png 1600w, images/RN514055R_main_Award_11.png 1800w, images/RN514055R_main_Award_12.png 2000w, images/RN514055R_main_Award_13.png 2400w, images/RN514055R_main_Award_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
+    <a href="/forest-therapy-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794508005618" data-item_name="Forest Therapy Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+      <div class="product-card__image-wrapper">
+        <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
+          
+
+	<img src="images/RN420055_main.png" alt="Forest Therapy Bath & Shower Oil 55ml Aromatherapy Associates" srcset="images/RN420055_main_2.png 300w, images/RN420055_main_6.png 400w, images/RN420055_main_3.png 500w, images/RN420055_main_1.png 600w, images/RN420055_main_7.png 700w, images/RN420055_main_4.png 800w, images/RN420055_main_9.png 1000w, images/RN420055_main_8.png 1200w, images/RN420055_main_5.png 1400w, images/RN420055_main_11.png 1600w, images/RN420055_main_10.png 1800w, images/RN420055_main_12.png 2000w, images/RN420055_main_13.png 2400w, images/RN420055_main_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 25vw, 50vw">
+
+        </div>
+        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
+          <img src="images/ForestTherapyBath_ShowerOil_Ingredients_1.png" width="600" height="600" loading="lazy" alt="Forest Therapy Bath & Shower Oil Rollover Image">
+        </div>
       </div>
-      <div class="product-card__image rollover-img" x-cloak="">
-        <img src="images/DeepRelaxBathOil_Ingredients.png" alt="Deep Relax Bath & Shower Oil" srcset="images/DeepRelaxBathOil_Ingredients_1.png 300w, images/DeepRelaxBathOil_Ingredients_2.png 400w, images/DeepRelaxBathOil_Ingredients_3.png 500w, images/DeepRelaxBathOil_Ingredients_4.png 600w, images/DeepRelaxBathOil_Ingredients_5.png 700w, images/DeepRelaxBathOil_Ingredients_6.png 800w, images/DeepRelaxBathOil_Ingredients_7.png 1000w, images/DeepRelaxBathOil_Ingredients_8.png 1200w, images/DeepRelaxBathOil_Ingredients_9.png 1400w, images/DeepRelaxBathOil_Ingredients_10.png 1600w, images/DeepRelaxBathOil_Ingredients_11.png 1800w, images/DeepRelaxBathOil_Ingredients_12.png 2000w, images/DeepRelaxBathOil_Ingredients_13.png 2400w, images/DeepRelaxBathOil_Ingredients_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
+    </a>
+    <div class="product-card__main">
+      
+      
+      
+      
+      
+      
+      
+        <div class="product-card__badge fake">
+          <span>xx</span>
+          SAVINGS
+          <span x-price="7700"></span>
+        </div>
+      
+      <div class="product-card__metafields eyebrow">
+       Thư giãn & Phục hồi
       </div>
-    </div>
-  </a>
-  <div class="product-card__main">
-    <div class="product-card__metafields eyebrow"> Sleep & Tranquility </div>
-    <h5 class="product-card__title">Deep Relax Bath & Shower Oil</h5>
-    <div class="product-card__ratings">
-      <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794505515250" data-product-models="7794505515250" data-name="Deep Relax Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/deep-relax-bath-shower-oil-55ml" data-image-url="files/RN514055R_main_Award.png" >
-      </div>
-    </div>
-    <div class="product-card__price-container font-secondary">
-      <span class="product-card__price" x-price="7495"></span>
-      <span class="product-card__size"> / 55ml </span>
-    </div>
-    <a href="./dau-tam-deep-relax-bath.html" class="product-card__main__link"></a>
+      <h5 class="product-card__title">Dầu tắm Forest Therapy Bath & Shower Oil</h5>
+      
+      <div class="product-card__ratings">
+  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794508005618" data-product-models="7794508005618" data-name="Forest Therapy Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/forest-therapy-bath-shower-oil-55ml" data-image-url="products/RN420055_main.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Daily Wellness;forest therapy;full size;full size bath & shower oil;subscription;">
   </div>
 </div>
+      
+      
+        
+          <div class="product-card__price-container font-secondary">
+            <span class="product-card__price">VND 2,193,000</span>
+            
+              <span class="product-card__size"> / 55ml </span>
+            
+          </div>
+        
+        <a href="/dau-tam-forest-therapy-bath.html" class="product-card__main__link"></a>
+      
+    </div>
+  </div>
+
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -4899,7 +4942,7 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 		</svg>
 			</div>
 			<h5 class="collection__quick-buy-popup--title">
-				Deep Relax Bath & Shower Oil
+				Forest Therapy Bath & Shower Oil
 			</h5>
 			<div class="collection__quick-buy-popup--list">
 				<template x-for="product in products"> 
@@ -4907,7 +4950,7 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 					
 				</button>
 				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€74,95' " @click="quickAddToCart" :disabled="disableQuick">
+			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€77,00' " @click="quickAddToCart" :disabled="disableQuick">
 				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
 			</button>
 		</div>
@@ -4916,145 +4959,59 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 
                     </div>
                 
-                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=119610661650981791711762268810" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'support-equilibrium-bath-shower-oil'; collection_handle = " diffusers";="" handle="support-equilibrium-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
+                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=163396157502249773561726048083" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'revive-morning-bath-shower-oil'; collection_handle = " diffusers";="" handle="revive-morning-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
                         
-
-
-
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=65507231945812617721763567014" x-init="() => { parent_product_id = 'support-equilibrium-bath-shower-oil'; collection_handle = " diffusers";="" handle="support-equilibrium-bath-shower-oil-55ml" ;="" }"="">
+<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'revive-morning-bath-shower-oil'; collection_handle = " diffusers";="" handle="revive-morning-bath-shower-oil-55ml" ;="" }"="">
   
     
-      
   <div class="product-card__content">
-    <a href="/support-equilibrium-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794508300530" data-item_name="Support Equilibrium Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="74,95" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/revive-morning-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794506498290" data-item_name="Revive Morning Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
-        <div class="product-card__image base-img">
+        <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
 
-	<img src="images/RN519055R_main.png" alt="Support Equilibrium Bath & Shower Oil 55ml Aromatherapy Associates" srcset="images/RN519055R_main_1.png 300w, images/RN519055R_main_2.png 400w, images/RN519055R_main_3.png 500w, images/RN519055R_main_4.png 600w, images/RN519055R_main_5.png 700w, images/RN519055R_main_6.png 800w, images/RN519055R_main_8.png 1000w, images/RN519055R_main_9.png 1200w, images/RN519055R_main_7.png 1400w, images/RN519055R_main_10.png 1600w, images/RN519055R_main_11.png 1800w, images/RN519055R_main_12.png 2000w, images/RN519055R_main_13.png 2400w, images/RN519055R_main_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
+	<img src="images/RN320200_main.png" alt="Revive Energising Exfoliator 200ml Aromatherapy Associates" srcset="images/RN320200_main_4.png 300w, images/RN320200_main_1.png 400w, images/RN320200_main_7.png 500w, images/RN320200_main_9.png 600w, images/RN320200_main_8.png 700w, images/RN320200_main_2.png 800w, images/RN320200_main_10.png 1000w, images/RN320200_main_12.png 1200w, images/RN320200_main_11.png 1400w, images/RN320200_main_5.png 1600w, images/RN320200_main_13.png 1800w, images/RN320200_main_3.png 2000w, images/RN320200_main_14.png 2400w, images/RN320200_main_6.png 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
 
         </div>
-        <div class="product-card__image rollover-img" x-cloak="">
-          
-
-	<img src="images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da.png" alt="Support Equilibrium Bath & Shower Oil" srcset="images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_1.png 300w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_2.png 400w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_3.png 500w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_4.png 600w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_5.png 700w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_6.png 800w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_7.png 1000w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_8.png 1200w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_9.png 1400w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_10.png 1600w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_11.png 1800w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_12.png 2000w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_13.png 2400w, images/SupportEquilibriumBathOil_Ingredients_3000x3000_4b36d21f-bc41-476a-a3a3-239091b817da_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-
-          </div>
+        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
+          <img src="images/ReviveBathOil_Ingredients.png" width="600" height="600" loading="lazy" alt="Revive Morning Bath & Shower Oil Rollover Image">
+        </div>
       </div>
     </a>
     <div class="product-card__main">
       
-        
-        
-
+      
+      
+      
+      
+      
+      
+        <div class="product-card__badge fake">
+          <span>xx</span>
+          SAVINGS
+          <span x-price="7700"></span>
+        </div>
+      
       <div class="product-card__metafields eyebrow">
-        Balance Hormones
+        Năng lượng & Tỉnh táo
       </div>
-      <h5 class="product-card__title">Support Equilibrium Bath & Shower Oil</h5>
+      <h5 class="product-card__title">Tẩy tế bào chết Revive Energising Exfoliator</h5>
+      
       
       <div class="product-card__ratings">
-        <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794508300530" data-product-models="7794508300530" data-name="Support Equilibrium Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/support-equilibrium-bath-shower-oil-55ml" data-image-url="products/RN519055R_main.png" data-description="<p>Seeking to harmonise mind and body?</p>
-<p> </p>
-<p><span>Enjoy 20% Off Bath & Shower Oils (55ml and 100ml), when you buy 3 or more with code </span><strong>BATH20</strong><span>.</span></p>
-<p>During moments of hormonal imbalance, comfort mind and body with the scents of uplifting Damask Rose, balancing Geranium, grounding Frankincense and mood-boosting Orange essential oils. All blended together to elevate your daily baths or showers.</p>
-<p><em>Please note: May contain naturally occurring sediment.</em></p>" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 20% Off when you buy 3 +;bath and shower oil;bath oil;Emotional Wellness;full size;full size bath & shower oil;spring sale;subscription;support equilibrium;"></div>
-      </div>
-      
-      
-        
-          <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="7495"></span>
-            
-              <span class="product-card__size"> / 55ml </span>
-            
-          </div>
-        
-        <a href="/support-equilibrium-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
-      
-    </div>
+  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794506498290" data-product-models="7794506498290" data-name="Revive Morning Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/revive-morning-bath-shower-oil-55ml" data-image-url="products/RN612055R_main.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;full size;full size bath & shower oil;revive morning;subscription;">
   </div>
-  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
-		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
-		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
-			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
-				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-			</div>
-			<h5 class="collection__quick-buy-popup--title">
-				Support Equilibrium Bath & Shower Oil
-			</h5>
-			<div class="collection__quick-buy-popup--list">
-				<template x-for="product in products"> 
-					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
-					
-				</button>
-				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€74,95' " @click="quickAddToCart" :disabled="disableQuick">
-				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
-			</button>
-		</div>
-	</div>
 </div>
-
-                    </div>
-                
-                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=119610661650981791711762268810" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'revive-morning-bath-shower-oil'; collection_handle = " diffusers";="" handle="revive-morning-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
-                        
-
-
-
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=65507231945812617721763567014" x-init="() => { parent_product_id = 'revive-morning-bath-shower-oil'; collection_handle = " diffusers";="" handle="revive-morning-bath-shower-oil-55ml" ;="" }"="">
-  
-    
-  
-  <div class="product-card__content">
-    <a href="/revive-morning-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794506498290" data-item_name="Revive Morning Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="74,95" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-      <div class="product-card__image-wrapper">
-        <div class="product-card__image base-img">
-          
-
-	<img src="images/RN612055R_main.png" alt="Revive Morning Bath & Shower Oil 55ml Aromatherapy Associates" srcset="images/RN612055R_main_1.png 300w, images/RN612055R_main_2.png 400w, images/RN612055R_main_3.png 500w, images/RN612055R_main_4.png 600w, images/RN612055R_main_5.png 700w, images/RN612055R_main_6.png 800w, images/RN612055R_main_7.png 1000w, images/RN612055R_main_8.png 1200w, images/RN612055R_main_9.png 1400w, images/RN612055R_main_10.png 1600w, images/RN612055R_main_11.png 1800w, images/RN612055R_main_12.png 2000w, images/RN612055R_main_14.png 2400w, images/RN612055R_main_13.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-
-        </div>
-        <div class="product-card__image rollover-img" x-cloak="">
-          
-
-	<img src="images/ReviveBathOil_Ingredients.png" alt="Revive Morning Bath & Shower Oil" srcset="images/ReviveBathOil_Ingredients_1.png 300w, images/ReviveBathOil_Ingredients_2.png 400w, images/ReviveBathOil_Ingredients_3.png 500w, images/ReviveBathOil_Ingredients_4.png 600w, images/ReviveBathOil_Ingredients_5.png 700w, images/ReviveBathOil_Ingredients_6.png 800w, images/ReviveBathOil_Ingredients_7.png 1000w, images/ReviveBathOil_Ingredients_12.png 1200w, images/ReviveBathOil_Ingredients_8.png 1400w, images/ReviveBathOil_Ingredients_9.png 1600w, images/ReviveBathOil_Ingredients_10.png 1800w, images/ReviveBathOil_Ingredients_11.png 2000w, images/ReviveBathOil_Ingredients_13.png 2400w, images/ReviveBathOil_Ingredients_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-
-          </div>
-      </div>
-    </a>
-    <div class="product-card__main">
-      
-
-      <div class="product-card__metafields eyebrow">
-        Energise & Awaken
-      </div>
-      <h5 class="product-card__title">Revive Morning Bath & Shower Oil</h5>
-      
-      <div class="product-card__ratings">
-        <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794506498290" data-product-models="7794506498290" data-name="Revive Morning Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/revive-morning-bath-shower-oil-55ml" data-image-url="products/RN612055R_main.png" data-description="<p>Elevate and transform your morning rituals</p>
-<p> </p>
-<p><span>Enjoy 20% Off Bath & Shower Oils (55ml), when you buy 3 or more with code </span><strong>BATH20</strong><span>.</span></p>
-<p> </p>
-<p>Start your morning with an invigorating bath or shower to awaken the senses, putting a pep in your step and leaving you ready to tackle the day ahead.</p>
-<p> </p>
-<p>A blend of detoxing Grapefruit, Rosemary and refreshing Juniper Berry essential oils are thoughtfully chosen in this treatment to energise your senses. While leaving your skin smooth, soft and smelling citrussy all day long.</p>
-<p> </p>
-<p><em>Please note: May contain naturally occurring sediment.</em></p>" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 20% Off when you buy 3 +;bath and shower oil;bath oil;Emotional Wellness;full size;full size bath & shower oil;revive morning;subscription;"></div>
-      </div>
-      
       
         
           <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="7495"></span>
+            <span class="product-card__price">VND 1,843,000</span>
             
-              <span class="product-card__size"> / 55ml </span>
+              <span class="product-card__size"> / 200ml </span>
             
           </div>
         
-        <a href="/revive-morning-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
+        <a href="/tay-te-bao-chet.html" class="product-card__main__link"></a>
       
     </div>
   </div>
@@ -5075,7 +5032,7 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 					
 				</button>
 				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€74,95' " @click="quickAddToCart" :disabled="disableQuick">
+			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€77,00' " @click="quickAddToCart" :disabled="disableQuick">
 				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
 			</button>
 		</div>
@@ -5084,39 +5041,62 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 
                     </div>
                 
-                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=119610661650981791711762268810" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'Ultimate-bath-and-shower-collection'; collection_handle = " diffusers";="" handle="ultimate-bath-shower-oil-collection" ;id="template--18368255033586__1663157710b8f4956f" }"="">
+                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=163396157502249773561726048083" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'Ultimate-bath-and-shower-collection'; collection_handle = " diffusers";="" handle="ultimate-bath-shower-oil-collection" ;id="template--18368255033586__1663157710b8f4956f" }"="">
                         
-
-
-
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=65507231945812617721763567014" x-init="() => { parent_product_id = 'Ultimate-bath-and-shower-collection'; collection_handle = " diffusers";="" handle="ultimate-bath-shower-oil-collection" ;="" }"="">
+<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'Ultimate-bath-and-shower-collection'; collection_handle = " diffusers";="" handle="ultimate-bath-shower-oil-collection" ;="" }"="">
   
     
-      
+    
   <div class="product-card__content">
-  <a href="/ultimate-bath-shower-oil-collection.html" data-item_position="" data-item_id="8568955896050" data-item_name="Ultimate Bath & Shower Oil Collection" data-item_brand="Aromatherapy Associates" data-item_category="Gifting" data-item_variant="" data-price="99,95" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-    <div class="product-card__image-wrapper">
-      <div class="product-card__image base-img">
-        <img src="images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868.png" alt="Ultimate Bath and Shower Oil Collection product image" srcset="images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_1.png 300w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_2.png 400w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_3.png 500w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_4.png 600w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_5.png 700w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_6.png 800w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_7.png 1000w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_11.png 1200w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_8.png 1400w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_13.png 1600w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_14.png 1800w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_9.png 2000w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_10.png 2400w, images/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868_12.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
+    <a href="/ultimate-bath-shower-oil-collection.html" data-item_position="" data-item_id="8568955896050" data-item_name="Ultimate Bath & Shower Oil Collection" data-item_brand="Aromatherapy Associates" data-item_category="Gifting" data-item_variant="" data-price="101,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+      <div class="product-card__image-wrapper">
+        <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
+          
+
+	<img src="images/RN650100R_main.png" alt="Inner Strength Body Oil Aromatherapy Associates" srcset="images/RN650100R_main_3.png 300w, images/RN650100R_main_2.png 400w, images/RN650100R_main_1.png 500w, images/RN650100R_main_9.png 600w, images/RN650100R_main_6.png 700w, images/RN650100R_main_4.png 800w, images/RN650100R_main_11.png 1000w, images/RN650100R_main_8.png 1200w, images/RN650100R_main_5.png 1400w, images/RN650100R_main_7.png 1600w, images/RN650100R_main_12.png 1800w, images/RN650100R_main_10.png 2000w, images/RN650100R_main_14.png 2400w, images/RN650100R_main_13.png 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
+
+        </div>
+        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
+          <img src="images/RN291009_3_54ab8f1d-bca9-41b5-9809-c5927fb6304d.png" width="600" height="600" loading="lazy" alt="Ultimate Bath & Shower Oil Collection Rollover Image">
+        </div>
       </div>
-      <div class="product-card__image rollover-img" x-cloak="">
-        <img src="images/ultimate_bath_shower_oil_collection.png" alt="Ultimate Bath and Shower Oil Collection open showing Essential Oil Products" srcset="images/ultimate_bath_shower_oil_collection_5.png 300w, images/ultimate_bath_shower_oil_collection_1.png 400w, images/ultimate_bath_shower_oil_collection_6.png 500w, images/ultimate_bath_shower_oil_collection_2.png 600w, images/ultimate_bath_shower_oil_collection_3.png 700w, images/ultimate_bath_shower_oil_collection_4.png 800w, images/ultimate_bath_shower_oil_collection.png 1000w" width="1000" height="1000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
+    </a>
+    <div class="product-card__main">
+      
+      
+      
+      
+      
+      
+      
+        <div class="product-card__badge fake">
+          <span>xx</span>
+          SAVINGS
+          <span x-price="10100"></span>
+        </div>
+      
+      <div class="product-card__metafields eyebrow">
+        Tự tin & Mạnh mẽ
       </div>
-    </div>
-  </a>
-  <div class="product-card__main">
-    <div class="product-card__metafields eyebrow"> gifting </div>
-    <h5 class="product-card__title">Ultimate Bath & Shower Oil Collection</h5>
-    <div class="product-card__ratings">
-      <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="8568955896050" data-product-models="8568955896050" data-name="Ultimate Bath & Shower Oil Collection" data-url="https://www.aromatherapyassociates.com/products/ultimate-bath-shower-oil-collection" data-image-url="files/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868.png">
-      </div>
-    </div>
-    <div class="product-card__price-container font-secondary">
-      <span class="product-card__price" x-price="9995"></span>
-    </div>
-    <a href="/ultimate-bath-shower-oil-collection.html" class="product-card__main__link"></a>
+      <h5 class="product-card__title">Dầu dưỡng thể Inner Strength Body Oil</h5>
+      
+      
+      
+      <div class="product-card__ratings">
+  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="8568955896050" data-product-models="8568955896050" data-name="Ultimate Bath & Shower Oil Collection" data-url="https://www.aromatherapyassociates.com/products/ultimate-bath-shower-oil-collection" data-image-url="files/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868.png" data-bread-crumbs="AYR gift;badge_bg: #071D49;badge_colour: #f9f6f4;bath;bath oil;discovery;gifting;">
   </div>
 </div>
+        
+          <div class="product-card__price-container font-secondary">
+            <span class="product-card__price">VND 2,218,000</span>
+            <span class="product-card__size"> / 100ml </span>
+          </div>
+        
+        <a href="./dau-duong-the-inner.html" class="product-card__main__link"></a>
+      
+    </div>
+  </div>
+
   <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
 		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
 		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
@@ -5134,7 +5114,7 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 					
 				</button>
 				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€99,95' " @click="quickAddToCart" :disabled="disableQuick">
+			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€101,00' " @click="quickAddToCart" :disabled="disableQuick">
 				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
 			</button>
 		</div>
@@ -5143,505 +5123,59 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 
                     </div>
                 
-                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=119610661650981791711762268810" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'support-breathe-bath-shower-oil'; collection_handle = " diffusers";="" handle="support-breathe-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
+                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=163396157502249773561726048083" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'de-stress-mind-bath-shower-oil'; collection_handle = " diffusers";="" handle="de-stress-mind-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
                         
-
-
-
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=65507231945812617721763567014" x-init="() => { parent_product_id = 'support-breathe-bath-shower-oil'; collection_handle = " diffusers";="" handle="support-breathe-bath-shower-oil-55ml" ;="" }"="">
-  
-    
-     
-  <div class="product-card__content">
-  <a href="/support-breathe-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794508267762" data-item_name="Support Breathe Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="74,95" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-    <div class="product-card__image-wrapper">
-      <div class="product-card__image base-img">
-        <img src="images/RN521055R_main.png" alt="Support Breathe Bath & Shower Oil" srcset="images/RN521055R_main_6.png 300w, images/RN521055R_main_2.png 400w, images/RN521055R_main_1.png 500w, images/RN521055R_main_3.png 600w, images/RN521055R_main_7.png 700w, images/RN521055R_main_8.png 800w, images/RN521055R_main_10.png 1000w, images/RN521055R_main_9.png 1200w, images/RN521055R_main_5.png 1400w, images/RN521055R_main_12.png 1600w, images/RN521055R_main_4.png 1800w, images/RN521055R_main_13.png 2000w, images/RN521055R_main_11.png 2400w, images/RN521055R_main_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-      </div>
-      <div class="product-card__image rollover-img" x-cloak="">
-        <img src="images/SupportBreatheBathOil_Ingredients.jpg" alt="Support Breathe Bath & Shower Oil" srcset="images/SupportBreatheBathOil_Ingredients_1.jpg 300w, images/SupportBreatheBathOil_Ingredients_4.jpg 400w, images/SupportBreatheBathOil_Ingredients_5.jpg 500w, images/SupportBreatheBathOil_Ingredients_2.jpg 600w, images/SupportBreatheBathOil_Ingredients_6.jpg 700w, images/SupportBreatheBathOil_Ingredients_7.jpg 800w, images/SupportBreatheBathOil_Ingredients_3.jpg 1000w" width="1080" height="807" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-      </div>
-    </div>
-  </a>
-  <div class="product-card__main">
-    <div class="product-card__metafields eyebrow"> Clear & Protect </div>
-    <h5 class="product-card__title">Support Breathe Bath & Shower Oil</h5>
-    <div class="product-card__ratings">
-      <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794508267762" data-product-models="7794508267762" data-name="Support Breathe Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/support-breathe-bath-shower-oil-55ml" data-image-url="products/RN521055R_main.png" >
-      </div>
-    </div>
-    <div class="product-card__price-container font-secondary">
-      <span class="product-card__price" x-price="7495"></span>
-      <span class="product-card__size"> / 55ml </span>
-    </div>
-    <a href="/support-breathe-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
-  </div>
-</div>
-  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
-		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
-		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
-			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
-				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-			</div>
-			<h5 class="collection__quick-buy-popup--title">
-				Support Breathe Bath & Shower Oil
-			</h5>
-			<div class="collection__quick-buy-popup--list">
-				<template x-for="product in products"> 
-					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
-					
-				</button>
-				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€74,95' " @click="quickAddToCart" :disabled="disableQuick">
-				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
-			</button>
-		</div>
-	</div>
-</div>
-
-                    </div>
-                
-                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=119610661650981791711762268810" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'de-stress-muscle-bath-shower-oil'; collection_handle = " diffusers";="" handle="de-stress-muscle-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
-                        
-
-
-
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=65507231945812617721763567014" x-init="() => { parent_product_id = 'de-stress-muscle-bath-shower-oil'; collection_handle = " diffusers";="" handle="de-stress-muscle-bath-shower-oil-55ml" ;="" }"="">
-  
-    
-     
-  <div class="product-card__content">
-  <a href="/de-stress-muscle-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794506301682" data-item_name="De-Stress Muscle Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="74,95" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-    <div class="product-card__image-wrapper">
-      <div class="product-card__image base-img">
-        <img src="images/RN511055R_main.png" alt="De-Stress Muscle Bath & Shower Oil 55ml Aromatherapy Associates" srcset="images/RN511055R_main_6.png 300w, images/RN511055R_main_10.png 400w, images/RN511055R_main_11.png 500w, images/RN511055R_main_1.png 600w, images/RN511055R_main_5.png 700w, images/RN511055R_main_12.png 800w, images/RN511055R_main_4.png 1000w, images/RN511055R_main_2.png 1200w, images/RN511055R_main_8.png 1400w, images/RN511055R_main_3.png 1600w, images/RN511055R_main_7.png 1800w, images/RN511055R_main_9.png 2000w, images/RN511055R_main_13.png 2400w, images/RN511055R_main_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-      </div>
-      <div class="product-card__image rollover-img" x-cloak="">
-        <img src="images/RN511055R_10.png" alt="De-Stress Muscle Bath & Shower Oil 55ml Aromatherapy Associates" srcset="images/RN511055R_10_1.png 300w, images/RN511055R_10_3.png 400w, images/RN511055R_10_5.png 500w, images/RN511055R_10_6.png 600w, images/RN511055R_10_2.png 700w, images/RN511055R_10_4.png 800w, images/RN511055R_10_7.png 1000w, images/RN511055R_10_9.png 1200w, images/RN511055R_10_10.png 1400w, images/RN511055R_10_8.png 1600w, images/RN511055R_10_11.png 1800w, images/RN511055R_10_12.png 2000w, images/RN511055R_10_13.png 2400w, images/RN511055R_10_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-      </div>
-    </div>
-  </a>
-  <div class="product-card__main">
-    <div class="product-card__metafields eyebrow"> Ease & Recover </div>
-    <h5 class="product-card__title">De-Stress Muscle Bath & Shower Oil</h5>
-    <div class="product-card__ratings">
-      <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794506301682" data-product-models="7794506301682" data-name="De-Stress Muscle Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/de-stress-muscle-bath-shower-oil-55ml" data-image-url="products/RN511055R_main.png" >
-      </div>
-    </div>
-    <div class="product-card__price-container font-secondary">
-      <span class="product-card__price" x-price="7495"></span>
-      <span class="product-card__size"> / 55ml </span>
-    </div>
-    <a href="/de-stress-muscle-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
-  </div>
-</div>
-  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
-		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
-		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
-			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
-				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-			</div>
-			<h5 class="collection__quick-buy-popup--title">
-				De-Stress Muscle Bath & Shower Oil
-			</h5>
-			<div class="collection__quick-buy-popup--list">
-				<template x-for="product in products"> 
-					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
-					
-				</button>
-				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€74,95' " @click="quickAddToCart" :disabled="disableQuick">
-				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
-			</button>
-		</div>
-	</div>
-</div>
-
-                    </div>
-                
-                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=119610661650981791711762268810" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'rose-bath-shower-oil'; collection_handle = " diffusers";="" handle="rose-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
-                        
-
-
-
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=65507231945812617721763567014" x-init="() => { parent_product_id = 'rose-bath-shower-oil'; collection_handle = " diffusers";="" handle="rose-bath-shower-oil-55ml" ;="" }"="">
+<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'de-stress-mind-bath-shower-oil'; collection_handle = " diffusers";="" handle="de-stress-mind-bath-shower-oil-55ml" ;="" }"="">
   
     
     
   <div class="product-card__content">
-  <a href="/discovery-bath-shower-oil-collection.html" data-item_position="" data-item_id="7794507546866" data-item_name="Rose Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="74,95" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-    <div class="product-card__image-wrapper">
-      <div class="product-card__image base-img">
-        <img src="//www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=3000" alt="" srcset="//www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=300 300w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=400 400w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=500 500w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=600 600w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=700 700w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=800 800w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=1000 1000w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=1200 1200w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=1400 1400w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=1600 1600w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=1800 1800w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=2000 2000w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=2400 2400w, //www.aromatherapyassociates.com/cdn/shop/products/RN880310_main_1.png?v=1681214119&amp;width=2800 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
-      </div>
-      <div class="product-card__image rollover-img" x-cloak="">
-        <img src="images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d.png" alt="Rose Bath & Shower Oil" srcset="images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_1.png 300w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_3.png 400w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_2.png 500w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_6.png 600w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_4.png 700w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_7.png 800w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_5.png 1000w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_9.png 1200w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_8.png 1400w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_12.png 1600w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_11.png 1800w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_10.png 2000w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_14.png 2400w, images/Rose_Bath_Shower_Oil_Ingredients_3000x3000_d51c277f-5880-430c-90ed-636f6debb09d_13.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-      </div>
-    </div>
-  </a>
-  <div class="product-card__main">
-    <div class="product-card__metafields eyebrow"> Gifting </div>
-    <h5 class="product-card__title">Discovery Bath & Shower Oil Collection</h5>
-    <div class="product-card__ratings">
-      <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794507546866" data-product-models="7794507546866" data-name="Rose Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/rose-bath-shower-oil-55ml" data-image-url="files/Rose_Bath_Shower_Oil_GENM_3000x3000_9d619832-633a-4a5c-acd5-5a05723423e9.png" >
-      </div>
-    </div>
-    <div class="product-card__price-container font-secondary">
-      <span class="product-card__price" x-price="7495"></span>
-      <span class="product-card__size"> / 55ml </span>
-    </div>
-    <a href="/discovery-bath-shower-oil-collection.html" class="product-card__main__link"></a>
-  </div>
-</div>
-
-  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
-		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
-		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
-			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
-				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-			</div>
-			<h5 class="collection__quick-buy-popup--title">
-				Rose Bath & Shower Oil
-			</h5>
-			<div class="collection__quick-buy-popup--list">
-				<template x-for="product in products"> 
-					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
-					
-				</button>
-				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€74,95' " @click="quickAddToCart" :disabled="disableQuick">
-				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
-			</button>
-		</div>
-	</div>
-</div>
-
-                    </div>
-                
-                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=119610661650981791711762268810" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'forest-therapy-bath-shower-oil'; collection_handle = " diffusers";="" handle="forest-therapy-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
-                        
-
-
-
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=65507231945812617721763567014" x-init="() => { parent_product_id = 'forest-therapy-bath-shower-oil'; collection_handle = " diffusers";="" handle="forest-therapy-bath-shower-oil-55ml" ;="" }"="">
-  
-    
-      
-  <div class="product-card__content">
-    <a href="/forest-therapy-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794508005618" data-item_name="Forest Therapy Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="74,95" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/de-stress-mind-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794506039538" data-item_name="De-Stress Mind Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
-        <div class="product-card__image base-img">
+        <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
 
-	<img src="images/RN420055_main.png" alt="Forest Therapy Bath & Shower Oil 55ml Aromatherapy Associates" srcset="images/RN420055_main_3.png 300w, images/RN420055_main_4.png 400w, images/RN420055_main_6.png 500w, images/RN420055_main_1.png 600w, images/RN420055_main_2.png 700w, images/RN420055_main_5.png 800w, images/RN420055_main_7.png 1000w, images/RN420055_main_8.png 1200w, images/RN420055_main_9.png 1400w, images/RN420055_main_10.png 1600w, images/RN420055_main_11.png 1800w, images/RN420055_main_12.png 2000w, images/RN420055_main_14.png 2400w, images/RN420055_main_13.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
+	<img src="images/RN200050N_Main.png" alt="" srcset="images/RN200050N_Main_1.png 300w, images/RN200050N_Main_5.png 400w, images/RN200050N_Main_3.png 500w, images/RN200050N_Main_2.png 600w, images/RN200050N_Main_4.png 700w, images/RN200050N_Main_11.png 800w, images/RN200050N_Main_7.png 1000w, images/RN200050N_Main_10.png 1200w, images/RN200050N_Main_9.png 1400w, images/RN200050N_Main_6.png 1600w, images/RN200050N_Main_12.png 1800w, images/RN200050N_Main_8.png 2000w, images/RN200050N_Main_13.png 2400w, images/RN200050N_Main_14.png 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
 
         </div>
-        <div class="product-card__image rollover-img" x-cloak="">
-          
-
-	<img src="images/ForestTherapyBath_ShowerOil_Ingredients_1.png" alt="Forest Therapy Bath & Shower Oil" srcset="images/ForestTherapyBath_ShowerOil_Ingredients_1_2.png 300w, images/ForestTherapyBath_ShowerOil_Ingredients_1_1.png 400w, images/ForestTherapyBath_ShowerOil_Ingredients_1_3.png 500w, images/ForestTherapyBath_ShowerOil_Ingredients_1_4.png 600w, images/ForestTherapyBath_ShowerOil_Ingredients_1_5.png 700w, images/ForestTherapyBath_ShowerOil_Ingredients_1_6.png 800w, images/ForestTherapyBath_ShowerOil_Ingredients_1_7.png 1000w, images/ForestTherapyBath_ShowerOil_Ingredients_1_8.png 1200w, images/ForestTherapyBath_ShowerOil_Ingredients_1_9.png 1400w, images/ForestTherapyBath_ShowerOil_Ingredients_1_10.png 1600w, images/ForestTherapyBath_ShowerOil_Ingredients_1_11.png 1800w, images/ForestTherapyBath_ShowerOil_Ingredients_1_12.png 2000w, images/ForestTherapyBath_ShowerOil_Ingredients_1_13.png 2400w, images/ForestTherapyBath_ShowerOil_Ingredients_1_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-
-          </div>
+        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
+          <img src="images/RN517055R_10.png" width="600" height="600" loading="lazy" alt="De-Stress Mind Bath & Shower Oil Rollover Image">
+        </div>
       </div>
     </a>
     <div class="product-card__main">
       
-      <div class="product-card__metafields eyebrow">
-        Ground & Restore
-      </div>
-      <h5 class="product-card__title">Forest Therapy Bath & Shower Oil</h5>
-      
-      <div class="product-card__ratings">
-        <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794508005618" data-product-models="7794508005618" data-name="Forest Therapy Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/forest-therapy-bath-shower-oil-55ml" data-image-url="products/RN420055_main.png" data-description="<p>Voted Best Bath Oil in Bazaar's Beauty Best of the Best Awards 2024</p>
-<p> </p>
-<p><span>Enjoy 20% Off Bath & Shower Oils (55ml and 100ml), when you buy 3 or more with code <strong>BATH20</strong>.</span></p>
-<p> </p>
-<p>This blend was created to help you escape a crowded mind, with restorative ingredients chosen to promote the transformative powers of nature.</p>
-<p> </p>
-<p>Cleansing and restorative oils of Ho Wood (a beautifully fragrant wood oil that’s similar to rosewood) and uplifting Pink Pepper, as well as Cypress helps to ground your mind, and feel more relaxed.</p>
-<p> </p>
-<p>The perfect pre or post-meditation to help you visualise sitting on a tranquil forest floor.</p>
-<p> </p>
-<p><em>Please note, this product can not be shipped to Germany, and may contain naturally occurring sediment.</em></p>" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 20% Off when you buy 3 +;bath and shower oil;bath oil;Daily Wellness;forest therapy;full size;full size bath & shower oil;subscription;"></div>
-      </div>
       
       
-        
-          <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="7495"></span>
-            
-              <span class="product-card__size"> / 55ml </span>
-            
-          </div>
-        
-        <a href="/forest-therapy-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
       
-    </div>
-  </div>
-  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
-		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
-		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
-			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
-				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-			</div>
-			<h5 class="collection__quick-buy-popup--title">
-				Forest Therapy Bath & Shower Oil
-			</h5>
-			<div class="collection__quick-buy-popup--list">
-				<template x-for="product in products"> 
-					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
-					
-				</button>
-				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€74,95' " @click="quickAddToCart" :disabled="disableQuick">
-				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
-			</button>
-		</div>
-	</div>
-</div>
-
-                    </div>
-                
-                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=119610661650981791711762268810" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'inner-strength-bath-shower-oil'; collection_handle = " diffusers";="" handle="inner-strength-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
-                        
-
-
-
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=65507231945812617721763567014" x-init="() => { parent_product_id = 'inner-strength-bath-shower-oil'; collection_handle = " diffusers";="" handle="inner-strength-bath-shower-oil-55ml" ;="" }"="">
-  
-    
-     
-  <div class="product-card__content">
-    <a href="/support-breathe-bath-shower-oil-9ml.html" data-item_position="" data-item_id="7794507317490" data-item_name="Inner Strength Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="74,95" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-      <div class="product-card__image-wrapper">
-        <div class="product-card__image base-img">
-          
-
-	<img src="//www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=3000" alt="Support Breathe Bath &amp; Shower Oil 9ml Aromatherapy Associates" srcset="//www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=300 300w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=400 400w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=500 500w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=600 600w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=700 700w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=800 800w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=1000 1000w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=1200 1200w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=1400 1400w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=1600 1600w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=1800 1800w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=2000 2000w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=2400 2400w, //www.aromatherapyassociates.com/cdn/shop/products/MN210009_main.png?v=1665080759&amp;width=2800 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
-
+      
+      <div class="product-card__badge fake">
+          <span>xx</span>
+          SAVINGS
+          <span x-price="10100"></span>
         </div>
-        <div class="product-card__image rollover-img" x-cloak="">
-          
-
-	<img src="images/RN522055R_10.png" alt="Inner Strength Bath & Shower Oil 55ml Aromatherapy Associates" srcset="images/RN522055R_10_1.png 300w, images/RN522055R_10_2.png 400w, images/RN522055R_10_9.png 500w, images/RN522055R_10_3.png 600w, images/RN522055R_10_5.png 700w, images/RN522055R_10_4.png 800w, images/RN522055R_10_6.png 1000w, images/RN522055R_10_10.png 1200w, images/RN522055R_10_7.png 1400w, images/RN522055R_10_8.png 1600w, images/RN522055R_10_11.png 1800w, images/RN522055R_10_12.png 2000w, images/RN522055R_10_13.png 2400w, images/RN522055R_10_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-
-          </div>
-      </div>
-    </a>
-    <div class="product-card__main">
+      
       
       <div class="product-card__metafields eyebrow">
-        Clear & Protect
+        Giấc ngủ & Sự yên tĩnh
       </div>
-      <h5 class="product-card__title">Travel Support Breathe Bath & Shower Oil</h5>
+      <h5 class="product-card__title">Deep Relax Sleep Mist</h5>
+      
       
       <div class="product-card__ratings">
-        <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794507317490" data-product-models="7794507317490" data-name="Inner Strength Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/inner-strength-bath-shower-oil-55ml" data-image-url="files/Look_Good_Feel_Better_pack_shots_3000x3000_81ff704b-aacb-4168-b801-9f25d88d6339.png" data-description="<p><span>10% of profits from the sale of this product will be donated to Look Good Feel Better</span></p>
-<p> </p>
-<p><span>Enjoy 20% Off Bath & Shower Oils (55ml), when you buy 3 or more with code </span><strong>BATH20</strong><span>.</span></p>
-<p> </p>
-<p>Sink into a cocooning bath with this comforting treatment, blended with essential oils of grounding Frankincense, clarifying Clary Sage that offers balance to your mind and senses, as well as Cardamom to lift your spirits when you're feeling run down or worn out.</p>
-<p> </p>
-<p><span>This luxurious formula has been developed to help deliver resilience and positivity every day. It was created when our co-founder Geraldine Howard was undergoing cancer treatment, drawing on her extensive studies in aromatherapy to find the most potent oils that would deliver the comfort she needed.</span></p>
-<p> </p>
-<p><em>Please note: May contain naturally occurring sediment.</em></p>" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 20% Off when you buy 3 +;bath and shower oil;bath oil;Emotional Wellness;full size;full size bath & shower oil;inner strength;subscription;"></div>
-      </div>
-      
-      
-        
-          <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="7495"></span>
-            
-              <span class="product-card__size"> / 55ml </span>
-            
-          </div>
-        
-        <a href="/support-breathe-bath-shower-oil-9ml.html" class="product-card__main__link"></a>
-      
-    </div>
+  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794506039538" data-product-models="7794506039538" data-name="De-Stress Mind Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/de-stress-mind-bath-shower-oil-55ml" data-image-url="files/RN517055R_main_de-stress_mind_bath_shower_oil.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 20% OFF WITH CODE DESTRESS20;bath and shower oil;bath oil;de-stress mind;Emotional Wellness;full size;full size bath & shower oil;subscription;">
   </div>
-  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
-		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
-		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
-			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
-				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-			</div>
-			<h5 class="collection__quick-buy-popup--title">
-				Inner Strength Bath & Shower Oil
-			</h5>
-			<div class="collection__quick-buy-popup--list">
-				<template x-for="product in products"> 
-					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
-					
-				</button>
-				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€74,95' " @click="quickAddToCart" :disabled="disableQuick">
-				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
-			</button>
-		</div>
-	</div>
 </div>
-
-                    </div>
-                
-                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=119610661650981791711762268810" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'spring-reset-bath-shower-oil-duo'; collection_handle = " diffusers";="" handle="reset-bath-shower-oil-duo" ;id="template--18368255033586__1663157710b8f4956f" }"="">
-                        
-
-
-
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=65507231945812617721763567014" x-init="() => { parent_product_id = 'spring-reset-bath-shower-oil-duo'; collection_handle = " diffusers";="" handle="reset-bath-shower-oil-duo" ;="" }"="">
-  
-    
-    
-  <div class="product-card__content">
-    <a href="./revive-evening-bath-shower-oil-9ml.html" data-item_position="" data-item_id="8359324156146" data-item_name="Spring Reset Bathing Duo" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="34,95" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-      <div class="product-card__image-wrapper">
-        <div class="product-card__image base-img">
-          
-
-	<img src="//www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=3000" alt="Revive Evening Bath &amp; Shower Oil 9ml Aromatherapy Associates" srcset="//www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=300 300w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=400 400w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=500 500w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=600 600w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=700 700w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=800 800w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=1000 1000w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=1200 1200w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=1400 1400w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=1600 1600w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=1800 1800w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=2000 2000w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=2400 2400w, //www.aromatherapyassociates.com/cdn/shop/products/MN250009_main.png?v=1665079800&amp;width=2800 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
-
-        </div>
-        <div class="product-card__image rollover-img" x-cloak="">
-          
-
-	<img src="images/SUPPORT_BREATHE_ingredient_blend_circle_1000x1000_a1fe3d97-eceb-4e14-95e4-66efb331dac7.png" alt="Spring Reset Bathing Duo" srcset="images/SUPPORT_BREATHE_ingredient_blend_circle_1000x1000_a1fe3d97-eceb-4e14-95e4-66efb331dac7_1.png 300w, images/SUPPORT_BREATHE_ingredient_blend_circle_1000x1000_a1fe3d97-eceb-4e14-95e4-66efb331dac7_2.png 400w, images/SUPPORT_BREATHE_ingredient_blend_circle_1000x1000_a1fe3d97-eceb-4e14-95e4-66efb331dac7_4.png 500w, images/SUPPORT_BREATHE_ingredient_blend_circle_1000x1000_a1fe3d97-eceb-4e14-95e4-66efb331dac7_6.png 600w, images/SUPPORT_BREATHE_ingredient_blend_circle_1000x1000_a1fe3d97-eceb-4e14-95e4-66efb331dac7_3.png 700w, images/SUPPORT_BREATHE_ingredient_blend_circle_1000x1000_a1fe3d97-eceb-4e14-95e4-66efb331dac7_5.png 800w" width="999" height="999" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-
-          </div>
-      </div>
-    </a>
-    <div class="product-card__main">
-      
-        
-        
-        
-        
-        
-        
-        
-
-      <div class="product-card__metafields eyebrow">
-        Energise & Awaken
-      </div>
-      <h5 class="product-card__title">Travel Revive Evening Bath & Shower Oil</h5>
-      
-      <div class="product-card__ratings">
-        <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="8359324156146" data-product-models="8359324156146" data-name="Spring Reset Bathing Duo" data-url="https://www.aromatherapyassociates.com/products/reset-bath-shower-oil-duo" data-image-url="files/May_Minis_GWP_1000x1000_fe247e64-074c-4cf7-97a5-db6b4633fb75.png" data-description="<p>Embrace transformative bathing moments</p>
-<p> <br></p>
-<p>Discover our super-heroes to conquer seasonal sniffles. Clear congested airways and find relief for your senses with our fresh and sharp Support Breathe Bath & Shower Oil, blended with clarifying Tea Tree, boosting Pine and Eucalyptus essential oils.<br></p>
-<p> </p>
-<p>Feeling run down with Spring festivities? Enjoy a little extra boost of resilience and positivity with our Inner Strength Bath & Shower Oil. Formulated with focusing Frankincense, Cardamom to support you when you feel worn out, while balancing Clary Sage offers clarity. <br></p>
-<p> </p>
-<p>A luxurious treatment to apply after cleansing, each bottle delivers up to three bath or shower experiences to treat your senses and super-nourish your skin. </p>
-<p> </p>
-<p>This edit does not arrive in a gift bag or box, and contains:</p>
-<p>1 x Support Breathe Bath & Shower Oil 9ml</p>
-<p>1 x Inner Strength Bath & Shower Oil 9ml</p>
-<p> </p>
-<p><em>Please note: May contain naturally occurring sediment.</em></p>" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;inner strength;Physical Wellness;travel;"></div>
-      </div>
-      
       
         
           <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="3495"></span>
+            <span class="product-card__price">VND 1,236,000</span>
+            
+              <span class="product-card__size"> / 50ml </span>
             
           </div>
         
-        <a href="./revive-evening-bath-shower-oil-9ml.html" class="product-card__main__link"></a>
-      
-    </div>
-  </div>
-  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
-		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
-		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
-			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
-				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
-		</svg>
-			</div>
-			<h5 class="collection__quick-buy-popup--title">
-				Spring Reset Bathing Duo
-			</h5>
-			<div class="collection__quick-buy-popup--list">
-				<template x-for="product in products"> 
-					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
-					
-				</button>
-				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€34,95' " @click="quickAddToCart" :disabled="disableQuick">
-				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
-			</button>
-		</div>
-	</div>
-</div>
-
-                    </div>
-                
-                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=119610661650981791711762268810" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'de-stress-mind-bath-shower-oil'; collection_handle = " diffusers";="" handle="de-stress-mind-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
-                        
-
-
-
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=65507231945812617721763567014" x-init="() => { parent_product_id = 'de-stress-mind-bath-shower-oil'; collection_handle = " diffusers";="" handle="de-stress-mind-bath-shower-oil-55ml" ;="" }"="">
-  
-    
-    
-  <div class="product-card__content">
-    <a href="/de-stress-mind-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794506039538" data-item_name="De-Stress Mind Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="74,95" onclick="rxTrackProductClick(this)" class="header__product-card--link">
-      <div class="product-card__image-wrapper">
-        <div class="product-card__image base-img">
-          
-
-	<img src="images/RN517055R_main_de-stress_mind_bath_shower_oil.png" alt="De-Stress Mind Bath & Shower Oil" srcset="images/RN517055R_main_de-stress_mind_bath_shower_oil_1.png 300w, images/RN517055R_main_de-stress_mind_bath_shower_oil_2.png 400w, images/RN517055R_main_de-stress_mind_bath_shower_oil_5.png 500w, images/RN517055R_main_de-stress_mind_bath_shower_oil_8.png 600w, images/RN517055R_main_de-stress_mind_bath_shower_oil_9.png 700w, images/RN517055R_main_de-stress_mind_bath_shower_oil_3.png 800w, images/RN517055R_main_de-stress_mind_bath_shower_oil_4.png 1000w, images/RN517055R_main_de-stress_mind_bath_shower_oil_6.png 1200w, images/RN517055R_main_de-stress_mind_bath_shower_oil_11.png 1400w, images/RN517055R_main_de-stress_mind_bath_shower_oil_13.png 1600w, images/RN517055R_main_de-stress_mind_bath_shower_oil_7.png 1800w, images/RN517055R_main_de-stress_mind_bath_shower_oil_14.png 2000w, images/RN517055R_main_de-stress_mind_bath_shower_oil_10.png 2400w, images/RN517055R_main_de-stress_mind_bath_shower_oil_12.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-
-        </div>
-        <div class="product-card__image rollover-img" x-cloak="">
-          
-
-	<img src="images/RN517055R_10.png" alt="De-Stress Mind Bath & Shower Oil 55ml Aromatherapy Associates" srcset="images/RN517055R_10_2.png 300w, images/RN517055R_10_4.png 400w, images/RN517055R_10_1.png 500w, images/RN517055R_10_8.png 600w, images/RN517055R_10_3.png 700w, images/RN517055R_10_7.png 800w, images/RN517055R_10_5.png 1000w, images/RN517055R_10_6.png 1200w, images/RN517055R_10_11.png 1400w, images/RN517055R_10_10.png 1600w, images/RN517055R_10_9.png 1800w, images/RN517055R_10_12.png 2000w, images/RN517055R_10_13.png 2400w, images/RN517055R_10_14.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-
-          </div>
-      </div>
-    </a>
-    <div class="product-card__main">
-      
-        
-      <div class="product-card__metafields eyebrow">
-        Calm & Focus
-      </div>
-      <h5 class="product-card__title">De-Stress Mind Bath & Shower Oil</h5>
-      
-      <div class="product-card__ratings">
-        <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794506039538" data-product-models="7794506039538" data-name="De-Stress Mind Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/de-stress-mind-bath-shower-oil-55ml" data-image-url="files/RN517055R_main_de-stress_mind_bath_shower_oil.png" data-description="<p>Enjoy 20% off full size Bath & Shower Oils (55ml) when you buy 3 or more. Use code <strong>BATH20</strong> at checkout.</p>
-<p> </p>
-<p>Awarded Best in Wellness in the Tatler Beauty Awards 2025, soothe mind and body during moments of disquiet with our De-Stress Mind Bath & Shower Oil. Enhance the unwinding benefits of your daily bath or shower with Petitgrain for clarity, Chamomile to inspire a sense of calm, and focusing Frankincense.</p>
-<p> </p>
-<p>This is the perfect tonic to help you mentally stay afloat and avoid overwhelm.</p>
-<p> </p>
-<p><em>Please note: May contain naturally occurring sediment.</em></p>" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 20% Off when you buy 3 +;bath and shower oil;bath oil;de-stress mind;Emotional Wellness;full size;full size bath & shower oil;subscription;"></div>
-      </div>
-      
-      
-        
-          <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="7495"></span>
-            
-              <span class="product-card__size"> / 55ml </span>
-            
-          </div>
-        
-        <a href="/de-stress-mind-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
+        <a href="./deep-relax-sleep-mist.html" class="product-card__main__link"></a>
       
     </div>
   </div>
@@ -5662,7 +5196,7 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 					
 				</button>
 				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€74,95' " @click="quickAddToCart" :disabled="disableQuick">
+			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€77,00' " @click="quickAddToCart" :disabled="disableQuick">
 				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
 			</button>
 		</div>
@@ -5671,60 +5205,60 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 
                     </div>
                 
-                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=119610661650981791711762268810" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'support-lavender-peppermint-bath-shower-oil'; collection_handle = " diffusers";="" handle="support-lavender-peppermint-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
+                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=163396157502249773561726048083" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'support-equilibrium-bath-shower-oil'; collection_handle = " diffusers";="" handle="support-equilibrium-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
                         
-
-
-
-<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=65507231945812617721763567014" x-init="() => { parent_product_id = 'support-lavender-peppermint-bath-shower-oil'; collection_handle = " diffusers";="" handle="support-lavender-peppermint-bath-shower-oil-55ml" ;="" }"="">
+<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'support-equilibrium-bath-shower-oil'; collection_handle = " diffusers";="" handle="support-equilibrium-bath-shower-oil-55ml" ;="" }"="">
   
+    
+      
   <div class="product-card__content">
-    <a href="/support-lavender-peppermint-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794508398834" data-item_name="Support Lavender & Peppermint Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="74,95" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+    <a href="/support-equilibrium-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794508300530" data-item_name="Support Equilibrium Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
       <div class="product-card__image-wrapper">
-        <div class="product-card__image base-img">
+        <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
           
 
-	<img src="images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282.png" alt="Support Lavender & Peppermint Bath & Shower Oil 55ml by Aromatherapy Associates" srcset="images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_1.png 300w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_3.png 400w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_6.png 500w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_4.png 600w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_5.png 700w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_8.png 800w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_9.png 1000w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_2.png 1200w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_10.png 1400w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_13.png 1600w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_7.png 1800w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_11.png 2000w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_14.png 2400w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_12.png 2800w" width="3000" height="3000" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
+	<img src="images/RN390010N_main_NEW.png" alt="" srcset="images/RN390010N_main_NEW_3.png 300w, images/RN390010N_main_NEW_5.png 400w, images/RN390010N_main_NEW_4.png 500w, images/RN390010N_main_NEW_9.png 600w, images/RN390010N_main_NEW_13.png 700w, images/RN390010N_main_NEW_1.png 800w, images/RN390010N_main_NEW_2.png 1000w, images/RN390010N_main_NEW_10.png 1200w, images/RN390010N_main_NEW_14.png 1400w, images/RN390010N_main_NEW_7.png 1600w, images/RN390010N_main_NEW_6.png 1800w, images/RN390010N_main_NEW_8.png 2000w, images/RN390010N_main_NEW_12.png 2400w, images/RN390010N_main_NEW_11.png 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
 
         </div>
-        <div class="product-card__image rollover-img" x-cloak="">
-          
-
-	<img src="images/SupportLavenderPeppermintBathOil_Ingredients.jpg" alt="Support Lavender & Peppermint Bath & Shower Oil 55ml by Aromatherapy Associates" srcset="images/SupportLavenderPeppermintBathOil_Ingredients_1.jpg 300w, images/SupportLavenderPeppermintBathOil_Ingredients_2.jpg 400w, images/SupportLavenderPeppermintBathOil_Ingredients_5.jpg 500w, images/SupportLavenderPeppermintBathOil_Ingredients_3.jpg 600w, images/SupportLavenderPeppermintBathOil_Ingredients_4.jpg 700w, images/SupportLavenderPeppermintBathOil_Ingredients_7.jpg 800w, images/SupportLavenderPeppermintBathOil_Ingredients_6.jpg 1000w" width="1080" height="807" loading="lazy" sizes="(min-width: 768px) 270px, 300px">
-
-          </div>
+        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
+          <img src="images/SupportEquilibriumBathOil_Ingredients_2.jpg" width="600" height="600" loading="lazy" alt="Support Equilibrium Bath & Shower Oil Rollover Image">
+        </div>
       </div>
     </a>
     <div class="product-card__main">
       
-        
+      
+      
+      
+      
+      
+      
+        <div class="product-card__badge fake">
+          <span>xx</span>
+          SAVINGS
+          <span x-price="7700"></span>
+        </div>
+      
       <div class="product-card__metafields eyebrow">
-        Soothe & Relieve
+        Giấc ngủ & Sự yên tĩnh
       </div>
-      <h5 class="product-card__title">Support Lavender & Peppermint Bath & Shower Oil</h5>
+      <h5 class="product-card__title">Travel Deep Relax Sleep Mist</h5>
+      
       
       <div class="product-card__ratings">
-        <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794508398834" data-product-models="7794508398834" data-name="Support Lavender & Peppermint Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/support-lavender-peppermint-bath-shower-oil-55ml" data-image-url="products/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282.png" data-description="<p>Soothe your skin and senses after a day of travel or during a busy social season</p>
-<p> </p>
-<p><span>Enjoy 20% Off Bath & Shower Oils (55ml and 100ml), when you buy 3 or more with code </span><strong>BATH20</strong><span>.</span></p>
-<p> </p>
-<p>Lavender essential oils was hand-blended into this treatment to calm your senses and enhance sleep quality, providing the ultimate reset after a fatiguing day of travel or busy social calendar.</p>
-<p> </p>
-<p>Whilst the pairing with Peppermint essential oils offers insect-repellent and naturally cooling properties, perfect for transitioning your skin to changing climates, and renowned in aromatherapy to soothe indigestion. Plus, it's invigorating aromas can help alleviate nausea and headaches, to support you after air or water travel.</p>
-<p> </p>
-<p><em>Please note: May contain naturally occurring sediment.</em></p>" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 20% Off when you buy 3 +;bath and shower oil;bath oil;full size;full size bath & shower oil;Physical Wellness;spring sale;subscription;support lavender & peppermint;"></div>
-      </div>
-      
+  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794508300530" data-product-models="7794508300530" data-name="Support Equilibrium Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/support-equilibrium-bath-shower-oil-55ml" data-image-url="products/RN519055R_main.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;full size;full size bath & shower oil;spring sale;subscription;support equilibrium;">
+  </div>
+</div>
       
         
           <div class="product-card__price-container font-secondary">
-            <span class="product-card__price" x-price="7495"></span>
+            <span class="product-card__price">VND 967,000</span>
             
-              <span class="product-card__size"> / 55ml </span>
+              <span class="product-card__size"> / 50ml </span>
             
           </div>
         
-        <a href="/support-lavender-peppermint-bath-shower-oil-55ml.html" class="product-card__main__link"></a>
+        <a href="/relax-sleep-mist-travel-size.html" class="product-card__main__link"></a>
       
     </div>
   </div>
@@ -5737,7 +5271,7 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 		</svg>
 			</div>
 			<h5 class="collection__quick-buy-popup--title">
-				Support Lavender & Peppermint Bath & Shower Oil
+				Support Equilibrium Bath & Shower Oil
 			</h5>
 			<div class="collection__quick-buy-popup--list">
 				<template x-for="product in products"> 
@@ -5745,7 +5279,338 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 					
 				</button>
 				</template></div>
-			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€74,95' " @click="quickAddToCart" :disabled="disableQuick">
+			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€77,00' " @click="quickAddToCart" :disabled="disableQuick">
+				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
+			</button>
+		</div>
+	</div>
+</div>
+
+                    </div>
+                
+                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=163396157502249773561726048083" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'Discovery Bath and Shower Oil Collection'; collection_handle = " diffusers";="" handle="discovery-bath-shower-oil-collection" ;id="template--18368255033586__1663157710b8f4956f" }"="">
+                        
+<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'Discovery Bath and Shower Oil Collection'; collection_handle = " diffusers";="" handle="discovery-bath-shower-oil-collection" ;="" }"="">
+  
+    
+     
+  <div class="product-card__content">
+    <a href="/discovery-bath-shower-oil-collection.html" data-item_position="" data-item_id="8568955830514" data-item_name="Discovery Bath & Shower Oil Collection" data-item_brand="Aromatherapy Associates" data-item_category="Gifting" data-item_variant="" data-price="63,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+      <div class="product-card__image-wrapper">
+        <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
+          
+
+	<img src="images/RN580055_main.png" alt="Rose Bath &amp; Shower Oil 55ml by Aromatherapy Associates" srcset="images/RN580055_main_7.png 300w, images/RN580055_main_3.png 400w, images/RN580055_main_9.png 500w, images/RN580055_main_4.png 600w, images/RN580055_main_11.png 700w, images/RN580055_main_10.png 800w, images/RN580055_main_1.png 1000w, images/RN580055_main_2.png 1200w, images/RN580055_main_5.png 1400w, images/RN580055_main_12.png 1600w, images/RN580055_main_8.png 1800w, images/RN580055_main_6.png 2000w, images/RN580055_main_13.png 2400w, images/RN580055_main_14.png 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
+        </div>
+        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
+          <img src="images/RN880310_4B.png" width="600" height="600" loading="lazy" alt="Discovery Bath & Shower Oil Collection Rollover Image">
+        </div>
+      </div>
+    </a>
+    <div class="product-card__main">
+      
+      
+      
+      
+      
+      
+      
+        <div class="product-card__badge fake">
+          <span>xx</span>
+          SAVINGS
+          <span x-price="6300"></span>
+        </div>
+      
+      <div class="product-card__metafields eyebrow">
+        Tươi mới & Hứng khởi
+      </div>
+      <h5 class="product-card__title">Dầu tắm Rose Bath & Shower Oil</h5>
+      
+      
+      <div class="product-card__ratings">
+  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="8568955830514" data-product-models="8568955830514" data-name="Discovery Bath & Shower Oil Collection" data-url="https://www.aromatherapyassociates.com/products/discovery-bath-shower-oil-collection" data-image-url="products/RN880310_main_1.png" data-bread-crumbs="AYR gift;badge_bg: #071D49;badge_colour: #f9f6f4;bath;bath oil;discovery;gifting;">
+  </div>
+</div>
+      
+        
+          <div class="product-card__price-container font-secondary">
+            <span class="product-card__price">VND 2,193,000</span>
+            <span class="product-card__size"> / 55ml </span>
+            
+          </div>
+        
+        <a href="./dau-tam-rose-bath-and-shower.html" class="product-card__main__link"></a>
+      
+    </div>
+  </div>
+  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
+		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
+		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
+			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
+				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
+		</svg>
+			</div>
+			<h5 class="collection__quick-buy-popup--title">
+				Discovery Bath & Shower Oil Collection
+			</h5>
+			<div class="collection__quick-buy-popup--list">
+				<template x-for="product in products"> 
+					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
+					
+				</button>
+				</template></div>
+			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€63,00' " @click="quickAddToCart" :disabled="disableQuick">
+				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
+			</button>
+		</div>
+	</div>
+</div>
+
+                    </div>
+                
+                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=163396157502249773561726048083" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'light-relax-bath-shower-oil'; collection_handle = " diffusers";="" handle="light-relax-bath-shower-oil-9ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
+                        
+<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'light-relax-bath-shower-oil'; collection_handle = " diffusers";="" handle="light-relax-bath-shower-oil-9ml" ;="" }"="">
+  
+    
+     
+  <div class="product-card__content">
+    <a href="/support-breathe-bath-shower-oil-9ml.html" data-item_position="" data-item_id="7794505810162" data-item_name="Travel Light Relax Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="19,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+      <div class="product-card__image-wrapper">
+        <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
+          
+
+	<img src="images/RN640100R_main.png" alt="De-Stress Body Oil Aromatherapy Associates" srcset="images/RN640100R_main_3.png 300w, images/RN640100R_main_10.png 400w, images/RN640100R_main_2.png 500w, images/RN640100R_main_12.png 600w, images/RN640100R_main_5.png 700w, images/RN640100R_main_1.png 800w, images/RN640100R_main_14.png 1000w, images/RN640100R_main_13.png 1200w, images/RN640100R_main_4.png 1400w, images/RN640100R_main_6.png 1600w, images/RN640100R_main_8.png 1800w, images/RN640100R_main_11.png 2000w, images/RN640100R_main_7.png 2400w, images/RN640100R_main_9.png 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
+
+        </div>
+        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
+          <img src="images/MN230009_10.png" width="600" height="600" loading="lazy" alt="Travel Light Relax Bath & Shower Oil Rollover Image">
+        </div>
+      </div>
+    </a>
+    <div class="product-card__main">
+      
+      
+      
+      
+      
+      
+      
+        <div class="product-card__badge fake">
+          <span>xx</span>
+          SAVINGS
+          <span x-price="1900"></span>
+        </div>
+      
+      <div class="product-card__metafields eyebrow">
+        Phục hồi & Thoải mái
+      </div>
+      <h5 class="product-card__title">Dầu dưỡng thể massage De-Stress Body Oil</h5>
+      
+      
+      <div class="product-card__ratings">
+  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794505810162" data-product-models="7794505810162" data-name="Travel Light Relax Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/support-breathe-bath-shower-oil-9ml" data-image-url="products/MN230009_main.png"  data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;light relax;travel;">
+  </div>
+</div>
+      
+        
+          <div class="product-card__price-container font-secondary">
+            <span class="product-card__price">VND 2,218,000</span>
+            <span class="product-card__size"> / 200ml </span>
+        
+            
+          </div>
+        
+        <a href="/dau-duong-the-massage-De-stress.html" class="product-card__main__link"></a>
+      
+    </div>
+  </div>
+  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
+		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
+		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
+			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
+				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
+		</svg>
+			</div>
+			<h5 class="collection__quick-buy-popup--title">
+				Travel Light Relax Bath & Shower Oil
+			</h5>
+			<div class="collection__quick-buy-popup--list">
+				<template x-for="product in products"> 
+					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
+					
+				</button>
+				</template></div>
+			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€19,00' " @click="quickAddToCart" :disabled="disableQuick">
+				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
+			</button>
+		</div>
+	</div>
+</div>
+
+                    </div>
+                
+                
+                
+                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=163396157502249773561726048083" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'revive-morning-bath-shower-oil'; collection_handle = " diffusers";="" handle="revive-morning-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
+                        
+<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'revive-morning-bath-shower-oil'; collection_handle = " diffusers";="" handle="revive-morning-bath-shower-oil-55ml" ;="" }"="">
+  
+    
+  <div class="product-card__content">
+    <a href="/revive-morning-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794506498290" data-item_name="Revive Morning Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+      <div class="product-card__image-wrapper">
+        <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
+          
+
+	<img src="images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b.png" alt="" srcset="images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_6.png 300w, images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_4.png 400w, images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_3.png 500w, images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_1.png 600w, images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_8.png 700w, images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_2.png 800w, images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_5.png 1000w, images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_7.png 1200w, images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_10.png 1400w, images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_13.png 1600w, images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_9.png 1800w, images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_11.png 2000w, images/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b_12.png 2400w, //www.aromatherapyassociates.com/cdn/shop/files/DEEP_RELAX_BATH_SHOWER_OIL_GET_THE_GLOSS_3000x3000_6ab78662-4852-4de4-ade4-b3ac869e889b.png?v=1748852937&amp;width=2800 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
+
+        </div>
+        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
+          <img src="images/ReviveBathOil_Ingredients.png" width="600" height="600" loading="lazy" alt="Revive Morning Bath & Shower Oil Rollover Image">
+        </div>
+      </div>
+    </a>
+    <div class="product-card__main">
+      
+      
+      
+      
+      
+      
+      
+        <div class="product-card__badge fake">
+          <span>xx</span>
+          SAVINGS
+          <span x-price="7700"></span>
+        </div>
+      
+      <div class="product-card__metafields eyebrow">
+       Giấc ngủ & Sự yên tĩnh
+      </div>
+      <h5 class="product-card__title"> Dầu tắm Deep Relax Bath & Shower Oil</h5>
+      
+      
+      <div class="product-card__ratings">
+  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794506498290" data-product-models="7794506498290" data-name="Revive Morning Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/revive-morning-bath-shower-oil-55ml" data-image-url="products/RN612055R_main.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;full size;full size bath & shower oil;revive morning;subscription;">
+  </div>
+</div>
+      
+        
+          <div class="product-card__price-container font-secondary">
+            <span class="product-card__price">VND 1,843,000</span>
+            
+              <span class="product-card__size"> / 200ml </span>
+            
+          </div>
+        
+        <a href="/tay-te-bao-chet.html" class="product-card__main__link"></a>
+      
+    </div>
+  </div>
+  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
+		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
+		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
+			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
+				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
+		</svg>
+			</div>
+			<h5 class="collection__quick-buy-popup--title">
+				Revive Morning Bath & Shower Oil
+			</h5>
+			<div class="collection__quick-buy-popup--list">
+				<template x-for="product in products"> 
+					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
+					
+				</button>
+				</template></div>
+			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€77,00' " @click="quickAddToCart" :disabled="disableQuick">
+				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
+			</button>
+		</div>
+	</div>
+</div>
+
+                    </div>
+                
+                    <div class="product__slider-column swiper-slide" x-data="productCarouselQuickBuy" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-carousel-quick-buy.js?v=163396157502249773561726048083" @hide-all-popup.window="quickBuyPopup = false" x-init="() => { parent_product_id = 'light-relax-bath-shower-oil'; collection_handle = " diffusers";="" handle="light-relax-bath-shower-oil-55ml" ;id="template--18368255033586__1663157710b8f4956f" }"="">
+                        
+<div class="product-card" x-data="product" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-card.js?v=7144419561630486371757673465" @mouseenter.stop="addHover" @mouseleave.stop="removeHover" x-init="() => { parent_product_id = 'light-relax-bath-shower-oil'; collection_handle = " diffusers";="" handle="light-relax-bath-shower-oil-55ml" ;="" }"="">
+  
+    
+   
+  <div class="product-card__content">
+    <a href="/support-lavender-peppermint-bath-shower-oil-55ml.html" data-item_position="" data-item_id="7794505580786" data-item_name="Light Relax Bath & Shower Oil" data-item_brand="Aromatherapy Associates" data-item_category="Bath & Shower Oil" data-item_variant="" data-price="77,00" onclick="rxTrackProductClick(this)" class="header__product-card--link">
+      <div class="product-card__image-wrapper">
+        <div class="product-card__image base-img" x-data="{ baseImage: true }" x-show="baseImage" x-transition.duration.500ms="">
+          
+
+	<img src="images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282.png" alt="Support Lavender &amp; Peppermint Bath &amp; Shower Oil 55ml by Aromatherapy Associates" srcset="images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_1.png 300w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_6.png 400w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_2.png 500w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_4.png 600w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_5.png 700w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_3.png 800w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_9.png 1000w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_7.png 1200w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_8.png 1400w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_10.png 1600w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_11.png 1800w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_12.png 2000w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_13.png 2400w, images/RN513055R_main_0778919e-a27c-4c96-b924-664f4b6bb282_14.png 2800w" width="3000" height="3000" loading="eager" sizes="(min-width: 768px) 50vw, 50vw">
+        </div>
+        <div class="product-card__image rollover-img" x-cloak="" x-show="rollOverImage === true" x-transition.duration.500ms="">
+          <img src="images/LightRelaxBathOil_Ingredients.png" width="600" height="600" loading="lazy" alt="Light Relax Bath & Shower Oil Rollover Image">
+        </div>
+      </div>
+    </a>
+    <div class="product-card__main">
+      
+      
+      
+      
+      
+      
+      
+        <div class="product-card__badge fake">
+          <span>xx</span>
+          SAVINGS
+          <span x-price="7700"></span>
+        </div>
+      
+      <div class="product-card__metafields eyebrow">
+        Làm dịu & Thư thái
+      </div>
+      <h5 class="product-card__title">Dầu tắm Support Lavender & Peppermint Bath & Shower Oil</h5>
+      
+      
+      <div class="product-card__ratings">
+  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794505580786" data-product-models="7794505580786" data-name="Light Relax Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/light-relax-bath-shower-oil-55ml" data-image-url="products/RN515055R_main.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;full size;full size bath & shower oil;light relax;">
+  </div>
+</div>
+      
+        
+          <div class="product-card__price-container font-secondary">
+            <span class="product-card__price">VND 2,193,000</span>
+            
+              <span class="product-card__size"> / 55ml </span>
+            
+          </div>
+        
+        <a href="./dau-tam-support.html" class="product-card__main__link"></a>
+      
+    </div>
+  </div>
+
+  <div class="collection__quick-buy-popup carousel__desktop" :class="{active: quickBuyPopup === true  && loading === false }">
+		<div class="collection__quick-buy-popup--overlay" @click="closeQuickBuyPopup" :class="{active: quickBuyPopup === true }"></div>
+		<div class="collection__quick-buy-popup--inner" :class="{active: quickBuyPopup === true }">
+			<div class="collection__quick-buy-popup--close" @click="closeQuickBuyPopup">
+				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12 0.649755L11.3502 0L6 5.35025L0.649755 0L0 0.649754L5.35025 6L0 11.3502L0.649755 12L6 6.64976L11.3502 12L12 11.3502L6.64976 6L12 0.649755Z" fill="#071D49"></path>
+		</svg>
+			</div>
+			<h5 class="collection__quick-buy-popup--title">
+				Light Relax Bath & Shower Oil
+			</h5>
+			<div class="collection__quick-buy-popup--list">
+				<template x-for="product in products"> 
+					<button class="collection__quick-buy-popup--list-item btn" x-text="product.variants.edges[0].node.title" @click="getOptionData(product)" :class="{active: variantId === Number(product.variants.edges[0].node.id.split('/').pop())}">
+					
+				</button>
+				</template></div>
+			<button class="collection__quick-buy-popup--add-to-bag btn primary" x-init="quickBuyPrice = '€77,00' " @click="quickAddToCart" :disabled="disableQuick">
 				Add to bag -<span class="collection__quick-buy-popup--price" x-text="quickBuyPrice"></span>
 			</button>
 		</div>
@@ -7043,6 +6908,201 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
 
 <footer class="footer">
     <div class="footer__container">
+    <div class="footer__main">
+      <div class="footer__content">
+        <div class="footer__info">
+          <div class="footer__subscribe subscribe">
+            <h2 class="subscribe__title heading4 font-secondary">SIGN UP to our Newsletter</h2>
+            <div class="subscribe__description"><p>Join for our latest news, exclusive launches & offers. 15% off your first order.</p></div>
+            
+              <div class="klaviyo-form-UeyEip"></div>
+            
+          </div>
+          <div class="footer__social">
+            
+              
+                <a href="https://www.instagram.com/aromatherapyassociates/" class="footer__social-item link" aria-label="Footer social icon" target="_blank">
+                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M13 2.34239C16.4711 2.34239 16.8823 2.3556 18.2531 2.41814C19.5205 2.47599 20.2089 2.68777 20.667 2.86575C21.2738 3.10158 21.7069 3.38334 22.1618 3.83822C22.6167 4.29311 22.8984 4.72622 23.1342 5.33297C23.3122 5.79111 23.524 6.47945 23.5819 7.74688C23.6444 9.11773 23.6576 9.52886 23.6576 13C23.6576 16.4712 23.6444 16.8823 23.5819 18.2531C23.524 19.5206 23.3122 20.2089 23.1342 20.6671C22.8984 21.2738 22.6167 21.7069 22.1618 22.1618C21.7069 22.6167 21.2738 22.8985 20.667 23.1342C20.2089 23.3123 19.5205 23.5241 18.2531 23.5819C16.8825 23.6445 16.4713 23.6577 13 23.6577C9.5286 23.6577 9.11748 23.6445 7.74688 23.5819C6.4794 23.5241 5.79106 23.3123 5.33297 23.1342C4.72617 22.8985 4.29306 22.6167 3.83817 22.1618C3.38329 21.7069 3.10153 21.2738 2.86575 20.6671C2.68772 20.2089 2.47594 19.5206 2.41809 18.2532C2.35555 16.8823 2.34234 16.4712 2.34234 13C2.34234 9.52886 2.35555 9.11773 2.41809 7.74694C2.47594 6.47945 2.68772 5.79111 2.86575 5.33297C3.10153 4.72622 3.38329 4.29311 3.83817 3.83822C4.29306 3.38334 4.72617 3.10158 5.33297 2.86575C5.79106 2.68777 6.4794 2.47599 7.74683 2.41814C9.11768 2.3556 9.52881 2.34239 13 2.34239ZM13 0C9.46936 0 9.0267 0.014965 7.64012 0.078231C6.25637 0.141394 5.3114 0.361122 4.48445 0.682509C3.62959 1.01473 2.90461 1.45925 2.1819 2.18195C1.45919 2.90466 1.01468 3.62964 0.682457 4.48451C0.36107 5.31145 0.141342 6.25642 0.0781794 7.64017C0.0149134 9.0267 0 9.46941 0 13C0 16.5306 0.0149134 16.9733 0.0781794 18.3599C0.141342 19.7436 0.36107 20.6886 0.682457 21.5155C1.01468 22.3704 1.45919 23.0954 2.1819 23.8181C2.90461 24.5408 3.62959 24.9853 4.48445 25.3175C5.3114 25.6389 6.25637 25.8587 7.64012 25.9218C9.0267 25.9851 9.46936 26 13 26C16.5306 26 16.9733 25.9851 18.3598 25.9218C19.7436 25.8587 20.6885 25.6389 21.5155 25.3175C22.3704 24.9853 23.0953 24.5408 23.818 23.8181C24.5408 23.0954 24.9853 22.3704 25.3175 21.5155C25.6389 20.6886 25.8586 19.7436 25.9218 18.3599C25.985 16.9733 26 16.5306 26 13C26 9.46941 25.985 9.0267 25.9218 7.64017C25.8586 6.25642 25.6389 5.31145 25.3175 4.48451C24.9853 3.62964 24.5408 2.90466 23.818 2.18195C23.0953 1.45925 22.3704 1.01473 21.5155 0.682509C20.6885 0.361122 19.7436 0.141394 18.3598 0.078231C16.9733 0.014965 16.5306 0 13 0ZM13 6.32433C9.3131 6.32433 6.32428 9.31316 6.32428 13C6.32428 16.6869 9.3131 19.6757 13 19.6757C16.6868 19.6757 19.6757 16.6869 19.6757 13C19.6757 9.31316 16.6868 6.32433 13 6.32433ZM13 17.3334C10.6068 17.3334 8.66661 15.3932 8.66661 13C8.66661 10.6068 10.6068 8.66667 13 8.66667C15.3932 8.66667 17.3333 10.6068 17.3333 13C17.3333 15.3932 15.3932 17.3334 13 17.3334ZM21.4994 6.06058C21.4994 6.92216 20.801 7.62061 19.9394 7.62061C19.0778 7.62061 18.3794 6.92216 18.3794 6.06058C18.3794 5.19901 19.0778 4.50061 19.9394 4.50061C20.801 4.50061 21.4994 5.19901 21.4994 6.06058Z" fill="#071D49"></path>
+		</svg>
+                </a>
+              
+            
+              
+                <a href="https://www.facebook.com/AromaAssoc" class="footer__social-item link" aria-label="Footer social icon" target="_blank">
+                  <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M12 12.21V8.03H8.33333V5.83C8.33333 5.28 8.55556 4.84 9.22222 4.84H11.8889V0H8.88889C5.77778 0 3.33333 2.53 3.33333 5.83V7.92H0V12.21H3.33333V22H8.33333V12.21H12Z" fill="#071D49"></path>
+		</svg>
+                </a>
+              
+            
+              
+                <a href="https://www.tiktok.com/@aromatherapyassociates" class="footer__social-item link" aria-label="Footer social icon" target="_blank">
+                  <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8286 0C14.1942 3.1219 15.949 4.98316 19 5.18117V8.69248C17.2319 8.86409 15.6831 8.28987 13.8818 7.20743V13.7746C13.8818 22.1173 4.72212 24.7244 1.03966 18.7446C-1.3267 14.8967 0.122363 8.14466 7.7133 7.87406V11.5768C7.13501 11.6692 6.51683 11.8144 5.95183 12.0058C4.26348 12.5734 3.3063 13.636 3.57218 15.5105C4.08401 19.101 10.7178 20.1637 10.1661 13.1476V0.00660021H13.8286V0Z" fill="#071D49"></path>
+		</svg>
+                </a>
+              
+            
+              
+                <a href="https://www.pinterest.co.uk/aromatherapyassociatesofficial/" class="footer__social-item link" aria-label="Footer social icon" target="_blank">
+                  <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.39651 14.5108C6.81949 17.5946 6.01166 20.4581 3.81897 22C3.24195 17.3743 4.85761 13.9602 5.66544 10.3257C4.28059 8.23314 5.78085 3.93788 8.55055 4.92909C12.0127 6.25071 5.55004 12.8588 9.82 13.6297C14.3208 14.5108 16.1672 6.14058 13.3975 3.49734C9.35838 -0.357379 1.7417 3.38721 2.66493 9.00408C2.89574 10.4358 4.396 10.8764 3.24195 12.7487C0.703056 12.198 -0.104775 10.2156 0.0106296 7.68247C0.241438 3.38721 4.04978 0.413565 7.85813 0.0831603C12.7051 -0.467514 17.2059 1.73518 17.8983 6.14058C18.5907 11.0966 15.7056 16.3831 10.5124 15.9426C9.12757 15.8324 8.55055 15.1716 7.39651 14.5108Z" fill="#071D49"></path>
+		</svg>
+                </a>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          </div>
+        </div>
+        <div class="footer__links">
+            <div class="footer__block">
+              <h5 class="footer__links-title font-secondary text-uppercase">Về Aromatherpy Asociates Vietnam</h5>
+              <ul class="footer__links-list" style="list-style: none; ">
+                <li class="footer-desktop__item">
+                  <span class="footer-desktop__item-text">
+                    40 năm kinh nghiệm tiên phong trong lĩnh vực spa và chăm sóc sức khỏe
+                  </span>
+                </li>
+
+                <li class="footer-desktop__item">
+                  <p class="footer-desktop__item-text">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>CÔNG TY TNHH SHUEI TRADING VIỆT NAM</span><br>
+                    Địa chỉ: Phòng 911, tầng 9, tòa nhà Detech Tower 2, 
+                    Số 107 đường Nguyễn Phong Sắc, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Hà Nội.<br>
+                    ĐKKD số: 0110039828, ngày cấp 23/06/2022, tại Sở Kế hoạch và Đầu tư TP Hà Nội.
+                  </p>
+                </li>
+
+                <li class="footer-desktop__item">
+                  <p class="footer-desktop__item-text">
+                    <i class="fas fa-phone-alt"></i> 0906626092
+                  </p>
+                </li>
+
+                <li class="footer-desktop__item">
+                  <p class="footer-desktop__item-text">
+                    <i class="fas fa-envelope"></i> nguyen_tuan_linh@shuei-infotech.net
+                  </p>
+                </li>
+              </ul>
+
+            </div>
+            <div class="footer__block">
+              <h5 class="footer__links-title font-secondary text-uppercase">Về chúng tôi</h5>
+              <ul class="footer__links-list">
+                <li class="footer-desktop__item">
+                  <a class="footer-desktop__item-link link" href="./cau-chuyen-cua-chung-toi.html">Trang chủ</a>
+                </li>
+                <li class="footer-desktop__item">
+                  <a class="footer-desktop__item-link link" href="./our-responsibility.html">Sản phẩm</a>
+                </li>
+                <li class="footer-desktop__item">
+                  <a class="footer-desktop__item-link link" href="./lien-he.html">Liên hệ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__block">
+              <h5 class="footer__links-title font-secondary text-uppercase">Dịch vụ khách hàng</h5>
+              <ul class="footer__links-list">
+                <li class="footer-desktop__item">
+                  <a class="footer-desktop__item-link link" href="./chinh-sach-doi-tra.html">Chính sách đổi trả</a>
+                </li>
+                <li class="footer-desktop__item">
+                  <a class="footer-desktop__item-link link" href="./chinh-sach-bao-mat.html">Chính sách bảo mật</a>
+                </li>
+                <li class="footer-desktop__item">
+                  <a class="footer-desktop__item-link link" href="./dieu-khoan-dich-vu.html">Điều khoản dịch vụ</a>
+                </li>
+                <li class="footer-desktop__item">
+                  <a class="footer-desktop__item-link link" href="./chinh-sach-kiem-hang.html">Chính sách kiểm hàng</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      <div class="footer__country country__footer">
+        <div class="country__footer-container" @click.prevent="showPopup =  'country-selector' ">
+          <p class="country__footer-text">
+            
+          </p>
+          <div class="country__footer-icon">
+            
+    </div>
+        </div>
+        <div class="country__footer-icons">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <a href="/b-corp-certification.html" class="footer__label-item" aria-label="Country Footer Icon">
+                <svg width="48" height="70" viewBox="0 0 48 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<g clip-path="url(#clip0_2153_132256)">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M6.32128 1.7795C6.46446 1.90405 6.58996 2.04763 6.6943 2.20625V2.2055C6.80247 2.36245 6.85469 2.54033 6.892 2.73614H8.54744C8.49223 2.2922 8.36988 1.90431 8.17442 1.55081C7.97598 1.21225 7.7283 0.911809 7.42541 0.683115C7.13968 0.452925 6.78457 0.275052 6.41155 0.152483C6.0348 0.0269252 5.62747 -0.0253906 5.19925 -0.0253906C4.61362 -0.0253906 4.07722 0.0792409 3.59603 0.293736C3.11782 0.506736 2.7075 0.789988 2.38671 1.16068C2.05965 1.54175 1.80571 1.9801 1.63769 2.45363C1.46014 2.94689 1.37285 3.47902 1.37285 4.06197C1.36672 4.59922 1.45641 5.13325 1.63769 5.63892C1.80268 6.10795 2.05735 6.54027 2.38746 6.91168C2.73042 7.27202 3.14117 7.56082 3.59603 7.76144C4.05931 7.95725 4.61362 8.06188 5.19925 8.06188C5.68044 8.06188 6.12582 7.99163 6.516 7.84888C6.92706 7.70838 7.26501 7.49538 7.5679 7.23006C7.86752 6.94979 8.10932 6.61335 8.27961 6.2398C8.46887 5.8266 8.5833 5.38299 8.61757 4.92966H6.96212C6.9099 5.4431 6.7316 5.8691 6.42871 6.18748C6.12582 6.50586 5.71476 6.66356 5.19925 6.66356C4.80908 6.66356 4.48828 6.57612 4.21971 6.43561C3.95487 6.29286 3.72136 6.09705 3.56096 5.84967C3.40057 5.60304 3.27822 5.32054 3.20585 5.02009C3.13573 4.69873 3.09768 4.38035 3.09768 4.06197C3.09718 3.72914 3.13346 3.39728 3.20585 3.07245C3.27822 2.75407 3.40057 2.47157 3.56096 2.22269C3.73927 1.97457 3.95487 1.76157 4.21971 1.62181C4.48828 1.46113 4.80833 1.39087 5.19925 1.39087C5.40575 1.3898 5.61081 1.42522 5.80503 1.4955C5.99064 1.56308 6.16476 1.65887 6.32128 1.7795ZM12.0359 6.85937C11.6099 6.85937 11.2719 6.75399 11.0392 6.52305C10.8087 6.29286 10.6833 5.93936 10.6483 5.42591H14.7082C14.7432 5.00216 14.7082 4.57616 14.6 4.18753C14.4926 3.79665 14.3322 3.44315 14.1016 3.12551C13.8759 2.80997 13.5768 2.55423 13.2303 2.38039C12.8722 2.18757 12.4641 2.09788 11.9829 2.09788C11.5554 2.09788 11.1645 2.17113 10.8094 2.32807C10.4642 2.46465 10.1534 2.67596 9.89925 2.94689C9.64695 3.22062 9.44851 3.5396 9.31436 3.88708C9.17112 4.24059 9.09801 4.62922 9.09801 5.05522C9.09801 5.47823 9.15322 5.88704 9.29347 6.2398C9.4126 6.59061 9.60775 6.91066 9.86493 7.177C10.1177 7.44341 10.4273 7.64909 10.7706 7.77863C11.1516 7.92601 11.5574 7.99833 11.9658 7.99163C12.6066 7.99163 13.1579 7.84888 13.6033 7.56563C14.0494 7.28238 14.3874 6.8063 14.6 6.13218H13.2474C13.193 6.31005 13.0699 6.47148 12.8371 6.62843C12.6245 6.78911 12.3567 6.85937 12.0359 6.85937ZM11.9658 3.28545C12.3388 3.28545 12.6245 3.39083 12.8021 3.58589V3.58664C12.9796 3.77946 13.1049 4.0799 13.1751 4.47153H10.6662C10.6662 4.37899 10.6917 4.27555 10.7206 4.15888C10.7255 4.13892 10.7305 4.11858 10.7356 4.09784C10.7902 3.95931 10.863 3.82863 10.9519 3.70921C11.0667 3.5904 11.1981 3.48895 11.3421 3.40802C11.5196 3.32058 11.7151 3.28545 11.9658 3.28545ZM16.8963 3.31983V2.27576L15.4363 2.27501V7.86906H16.9866V5.37285C16.9812 5.13422 17.0047 4.89581 17.0567 4.66285C17.0923 4.45697 17.1773 4.26283 17.3044 4.09709C17.4315 3.93098 17.5965 3.79773 17.7856 3.70846C17.9832 3.62027 18.2138 3.56796 18.4995 3.56796C18.5868 3.56796 18.6771 3.56796 18.7852 3.58589C18.8746 3.58662 18.9636 3.59842 19.0501 3.62102V2.18682C18.9247 2.15244 18.8196 2.1345 18.7121 2.1345C18.5167 2.1345 18.3212 2.17038 18.1436 2.22269L18.1388 2.22458C17.9628 2.29347 17.7841 2.36343 17.6252 2.47082C17.4648 2.57545 17.3252 2.70101 17.1999 2.84151C17.0845 2.98797 16.9885 3.14874 16.9142 3.31983H16.8963ZM23.1801 3.30339V2.27576L23.1794 2.24063H22.0432V0.559051H20.4929V2.24063H19.5484V3.26751H20.4929V6.57612C20.4871 6.80794 20.5359 7.03787 20.6354 7.24725C20.7428 7.42513 20.8659 7.56563 21.0263 7.65606C21.1867 7.76144 21.3814 7.81376 21.597 7.84888C21.8104 7.887 22.0432 7.90419 22.2729 7.90419C22.3425 7.90419 22.4162 7.89995 22.4919 7.8956C22.572 7.89099 22.6545 7.88625 22.737 7.88625C22.8787 7.88625 23.0399 7.86906 23.1622 7.84888V6.66356C23.0921 6.68075 23.0018 6.69868 22.9317 6.69868C22.8616 6.71886 22.7713 6.71886 22.681 6.71886C22.4341 6.71886 22.255 6.68075 22.1655 6.5933C22.0782 6.50586 22.0432 6.34518 22.0432 6.07986V3.30339H23.1801ZM25.5137 0.136041H23.9634V1.40881H25.5137V0.136041ZM23.9634 7.86906H25.5137V2.27576H23.9634V7.86906ZM26.1553 2.27576V3.30339L27.0789 3.30189V7.86832H28.6291V3.31983H29.6959V2.29369H28.6291V1.95738C28.6291 1.72644 28.6821 1.55156 28.7716 1.46113C28.8589 1.37294 29.0021 1.32062 29.2148 1.32062C29.4055 1.32323 29.5959 1.3352 29.7855 1.35649V0.205546C29.7161 0.197133 29.6505 0.192838 29.5848 0.188542C29.5164 0.18406 29.4479 0.179578 29.3752 0.17042C29.2356 0.15323 29.1096 0.15323 28.9671 0.15323C28.3262 0.15323 27.8622 0.310925 27.5414 0.629304C27.2393 0.947683 27.0789 1.35575 27.0789 1.852V2.27576H26.1553ZM32.1728 0.136041H30.6225V1.40881H32.1728V0.136041ZM30.6225 7.86906H32.1728V2.27576H30.6225V7.86906ZM35.6082 6.85937C35.18 6.85937 34.8421 6.75399 34.6115 6.52305C34.3788 6.29286 34.2535 5.93936 34.2184 5.42591H38.2783C38.3126 5.00216 38.2783 4.57616 38.1701 4.18753C38.0649 3.79665 37.9053 3.44315 37.6718 3.12551C37.442 2.80639 37.1563 2.55901 36.8004 2.38039C36.4445 2.18757 36.0342 2.09788 35.553 2.09788C35.1498 2.09123 34.7497 2.16966 34.3788 2.32807C34.035 2.4649 33.7257 2.67622 33.4731 2.94689C33.2217 3.21296 33.0262 3.53134 32.8837 3.88708C32.7412 4.24059 32.6711 4.62922 32.6711 5.05522C32.6711 5.47823 32.7233 5.88704 32.8666 6.2398C32.9856 6.58982 33.1793 6.90964 33.4343 7.177C33.6889 7.44295 33.9996 7.64851 34.3437 7.77863C34.6996 7.92138 35.0898 7.99163 35.5359 7.99163C36.1767 7.99163 36.7303 7.84888 37.1734 7.56563C37.6195 7.28238 37.9575 6.8063 38.1701 6.13218H36.8176C36.7653 6.31005 36.64 6.47148 36.4102 6.62843C36.1946 6.78911 35.929 6.85937 35.6082 6.85937ZM35.5187 3.28545C35.8917 3.28545 36.1767 3.39083 36.3543 3.58589V3.58664C36.5326 3.77946 36.6751 4.0799 36.7303 4.47153H34.2184C34.2184 4.36984 34.2493 4.25499 34.2845 4.12389C34.2868 4.11528 34.2892 4.1066 34.2915 4.09784C34.3437 3.95734 34.3959 3.83178 34.5041 3.70921C34.6153 3.58638 34.7474 3.48438 34.8943 3.40802C35.0726 3.32058 35.2703 3.28545 35.5187 3.28545ZM42.2643 7.79657C42.5616 7.65402 42.81 7.42647 42.9783 7.14262V7.15981H42.9962V7.86906H44.4733V0.136041H42.9231V2.94689H42.9059C42.7276 2.68158 42.4979 2.47157 42.195 2.32807C41.9092 2.18831 41.5884 2.11806 41.2505 2.11806C40.8424 2.11806 40.4865 2.20625 40.1658 2.3632C39.8457 2.52388 39.595 2.73688 39.3824 3.00295C39.1767 3.28061 39.02 3.59153 38.9191 3.92221C38.811 4.25778 38.7587 4.62847 38.7587 5.00216C38.7566 5.38467 38.8106 5.76542 38.9191 6.13218C39.0266 6.48867 39.1661 6.8063 39.3824 7.08956C39.5771 7.35487 39.8457 7.58656 40.1665 7.74351C40.4865 7.90419 40.8424 7.99163 41.2676 7.99163C41.6436 7.99163 41.9644 7.93857 42.2643 7.79657ZM42.6754 3.81384C42.7913 3.98424 42.8699 4.17732 42.9059 4.38035C42.9611 4.59335 42.9783 4.82428 42.9783 5.05522C42.9783 5.28541 42.9432 5.51336 42.9059 5.72636C42.8762 5.9337 42.8035 6.13252 42.6926 6.31005C42.5851 6.48793 42.4628 6.61124 42.2852 6.71961C42.1039 6.82424 41.8913 6.87656 41.6436 6.87656C41.393 6.87656 41.1983 6.82349 41.02 6.71886C40.8424 6.61124 40.6999 6.48867 40.5917 6.31005C40.4865 6.13218 40.3963 5.93936 40.3441 5.72636C40.2889 5.49542 40.2709 5.28541 40.2709 5.07241C40.2669 4.84552 40.2915 4.61902 40.3441 4.39828C40.3879 4.1976 40.4659 4.00596 40.5746 3.83178C40.682 3.65689 40.8252 3.53059 41.0021 3.42521C41.1811 3.32058 41.393 3.26826 41.6436 3.26826C41.8921 3.26826 42.1039 3.32058 42.2651 3.42521C42.4299 3.52144 42.5703 3.65442 42.6754 3.81384ZM22.6639 20.4316H13.6563V45.1351H25.6569C30.5875 45.1351 33.2045 41.6673 33.2045 38.0381C33.2045 34.9963 31.5319 32.7131 28.4687 32.0943V32.021C30.765 31.0846 32.1519 29.1018 32.1519 26.483C32.1519 24.0601 30.8732 22.309 29.2349 21.3337C27.7369 20.4316 24.8549 20.4316 22.6639 20.4316ZM23.5904 31.0494H16.9664V23.1939H23.5904C26.4373 23.1939 28.8768 23.6692 28.8768 27.1026C28.8768 29.7034 27.3467 31.0494 23.5904 31.0494ZM25.2466 42.3564H16.9664L16.9657 33.811H24.5185C27.2952 33.811 29.9123 34.713 29.9123 37.9335C29.9123 40.6225 28.0965 42.3564 25.2466 42.3564ZM22.7543 51.5568C33.2047 51.5568 41.6617 43.1519 41.6617 32.7822C41.6617 22.4124 33.2047 14.0075 22.7543 14.0075C12.3218 14.0075 3.86476 22.4124 3.86476 32.7829C3.86476 43.1519 12.3218 51.5568 22.7543 51.5568ZM1 32.7822C1 20.819 10.7536 11.1406 22.7722 11.1406H22.7714C34.79 11.1406 44.5436 20.8183 44.5436 32.7822C44.5436 44.7453 34.79 54.4237 22.7714 54.4237C10.7357 54.4237 1 44.7281 1 32.7822ZM3.81179 58.1224C4.41757 58.1224 4.95173 58.5283 5.02186 59.0776L6.17821 59.0604C6.03571 57.8048 5.02111 57.0948 3.81254 57.0948C2.10114 57.0948 1.10444 58.3534 1.10444 59.9826C1.10444 61.573 2.10114 62.8286 3.81179 62.8286C5.16435 62.8286 6.10808 61.9617 6.23341 60.6015H5.05617C4.96889 61.3077 4.55783 61.8219 3.81179 61.8219C2.72483 61.8219 2.31675 60.9019 2.31675 59.9998C2.31675 59.0417 2.72483 58.1224 3.81179 58.1224ZM10.8267 60.7412C10.8267 59.4864 10.0247 58.6538 8.76022 58.6538C7.51286 58.6538 6.7146 59.4685 6.69371 60.7412C6.69371 61.999 7.51286 62.8286 8.76022 62.8286C10.0247 62.8286 10.8267 61.9998 10.8267 60.7412ZM9.73976 60.7412C9.73976 61.36 9.50924 61.9998 8.76022 61.9998H8.76097C8.0321 61.9998 7.79859 61.36 7.79859 60.7412C7.79859 60.1052 8.01419 59.4685 8.76022 59.4685C9.50924 59.4685 9.73976 60.1052 9.73976 60.7412ZM12.4993 58.7585H11.4676L11.4504 58.7592V62.7232H12.5344V60.937C12.5344 60.2278 12.8194 59.6613 13.6214 59.6613C13.7523 59.6629 13.8828 59.6756 14.0115 59.6994V58.6889C13.9414 58.6718 13.8511 58.6538 13.7818 58.6538C13.2655 58.6538 12.712 59.0073 12.5165 59.5036H12.4993V58.7585ZM15.6491 58.7585H14.6181V64.1223H15.705V62.2277H15.7401C16.0079 62.6186 16.4511 62.8286 16.9315 62.8286C18.0886 62.8286 18.6772 61.8391 18.6772 60.7764C18.6772 59.6613 18.1058 58.6538 16.8614 58.6538C16.363 58.6538 15.9356 58.8496 15.667 59.2726H15.6491V58.7585ZM16.6115 59.4685C17.3254 59.4685 17.5723 60.1052 17.5723 60.7412H17.5731C17.5731 61.3952 17.3426 61.9998 16.6286 61.9998C15.9177 61.9998 15.667 61.378 15.667 60.7412C15.667 60.1052 15.8997 59.4685 16.6115 59.4685ZM23.3228 60.7412C23.3228 59.4864 22.5208 58.6538 21.2592 58.6538C20.0119 58.6538 19.1927 59.4685 19.1927 60.7412C19.1927 61.999 20.0119 62.8286 21.2592 62.8286C22.5036 62.8286 23.3228 61.9998 23.3228 60.7412ZM22.2388 60.7412C22.2388 61.36 22.0053 61.9998 21.2592 61.9998C20.5102 61.9998 20.2969 61.36 20.2969 60.7412C20.2969 60.1052 20.5102 59.4685 21.2592 59.4685C22.0053 59.4685 22.2388 60.1052 22.2388 60.7412ZM25.0856 58.7585H24.0539L24.0367 58.7592V62.7232H25.1207V60.937C25.1207 60.2278 25.4064 59.6613 26.2077 59.6613C26.3386 59.6629 26.4691 59.6756 26.5978 59.6994V58.6889C26.5456 58.6718 26.4374 58.6538 26.3681 58.6538C25.8518 58.6538 25.2983 59.0073 25.1028 59.5036H25.0856V58.7585ZM28.877 58.6538C27.9884 58.6538 27.079 58.955 27.0089 59.9826L28.113 59.9998C28.1481 59.5559 28.4338 59.396 28.8419 59.396C29.2351 59.396 29.5559 59.4685 29.5559 59.9266C29.5559 60.2839 29.1518 60.3309 28.6417 60.3902C28.518 60.4045 28.3881 60.4196 28.2563 60.44C27.5774 60.5282 26.9007 60.7412 26.9007 61.6433C26.9007 62.4579 27.5073 62.8286 28.2555 62.8286C28.7367 62.8286 29.253 62.6889 29.5909 62.3354C29.5957 62.4676 29.6193 62.5985 29.661 62.724H30.7652C30.6577 62.5633 30.6227 62.1926 30.6227 61.8391V59.7868C30.6227 58.8324 29.6782 58.6538 28.877 58.6538ZM28.8358 60.9784C29.1146 60.9416 29.393 60.905 29.5357 60.7764L29.5559 61.2024C29.5559 61.4333 29.5178 62.1052 28.6643 62.1052C28.3085 62.1052 27.9877 61.9998 27.9877 61.591C27.9877 61.1852 28.2913 61.0775 28.6293 61.0073C28.6968 60.9967 28.7663 60.9875 28.8358 60.9784ZM33.668 58.7585H32.8667V57.5739H31.7798V58.7592H31.121V59.4864H31.7798V61.8219C31.7798 62.6014 32.3505 62.7584 33.0264 62.7584H33.0265C33.2398 62.7584 33.4904 62.7584 33.668 62.724V61.8742C33.5606 61.9094 33.4524 61.9094 33.3293 61.9094C32.954 61.9094 32.8667 61.8219 32.8667 61.4512V59.4864H33.668V58.7585ZM34.2186 58.1404H35.3055V57.2383H34.2186V58.1404ZM35.3055 58.7592H34.2186V62.724H35.3055V58.7592ZM40.0242 60.7412C40.0242 59.4864 39.2222 58.6538 37.9577 58.6538C36.7103 58.6538 35.8912 59.4685 35.9091 60.7412C35.9091 61.999 36.7103 62.8286 37.9577 62.8286C39.205 62.8286 40.0242 61.9998 40.0242 60.7412ZM38.9365 60.7412C38.9365 61.36 38.7067 61.9998 37.9577 61.9998C37.2086 61.9998 36.9953 61.36 36.9953 60.7412C36.9953 60.1052 37.2086 59.4685 37.9577 59.4685C38.7238 59.4685 38.9365 60.1052 38.9365 60.7412ZM41.749 58.7585H40.7172V62.7232H41.8042V60.653C41.8042 59.8563 42.0698 59.5208 42.6577 59.5208C43.1568 59.5208 43.3515 59.8384 43.3515 60.4924V62.724H44.4384V60.2831C44.4384 59.3078 44.1356 58.6538 42.9785 58.6538C42.7377 58.6516 42.5003 58.7103 42.2884 58.8247C42.0764 58.939 41.8968 59.1052 41.7662 59.3078H41.749V58.7585ZM44.4735 66.0872H1.08729V68.8457H44.4735V66.0872ZM44.8465 57.0769H45.0972L45.1151 57.0776V56.973H44.4735V57.0776H44.7212V57.7697H44.8465V57.0769ZM46.0417 57.7697H46.164H46.1812V56.9722H45.9686L45.7388 57.5739L45.4881 56.9722H45.2747V57.7697H45.418V57.0948L45.6836 57.7697H45.7731L46.0417 57.0948V57.7697Z" fill="white"></path>
+	</g>
+	<defs>
+	<clipPath id="clip0_2153_132256">
+	<rect width="48" height="70" fill="white"></rect>
+	</clipPath>
+	</defs>
+</svg>
+
+
+
+              </a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer__down">
+      <div class="footer__down-links">
+
+      </div>
+      <div class="footer__down-richtext"><p>© 2025 Shuei Trading Vietnam. All Rights Reserved.</p></div>
+    </div>
+  </div>
 
 </footer>
 
