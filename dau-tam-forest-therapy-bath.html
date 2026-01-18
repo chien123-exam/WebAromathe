@@ -31,6 +31,7 @@
     
     <link rel="canonical" href="https://www.aromatherapyassociates.com/products/forest-therapy-bath-shower-oil-55ml">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin="">
+    <link rel="stylesheet" href="css/storefront-layout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="js/ahv8cta.js" async=""></script>
     <script>
@@ -1529,13 +1530,7 @@ Shopify.routes.root = "/";</script>
     },
   }">
   <div class="header__container">
-    <div class="header__left">
-      <div class="header__left-search" @click="$dispatch('open-search')">
-        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M12.6272 6.81464C12.6272 10.0261 10.0243 12.6293 6.81362 12.6293C3.60299 12.6293 1 10.0261 1 6.81464C1 3.60316 3.60299 1 6.81362 1C10.0243 1 12.6272 3.60316 12.6272 6.81464ZM11.2652 11.9739C10.0712 13.0054 8.51525 13.6293 6.81362 13.6293C3.05056 13.6293 0 10.5783 0 6.81464C0 3.05102 3.05056 0 6.81362 0C10.5767 0 13.6272 3.05102 13.6272 6.81464C13.6272 8.51643 13.0035 10.0725 11.9723 11.2667L15.9998 15.2949L15.2927 16.0019L11.2652 11.9739Z" fill="#071D49"></path>
-		</svg>
-      </div>
-    </div>
+    
     <nav class="header__nav" role="navigation" aria-label="main menu" id="navigation">
         <div class="header__burger" @click="$dispatch('open-mobile-navigation')">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2435,13 +2430,7 @@ Shopify.routes.root = "/";</script>
         </ul>
 
         
-	<div class="header__recommendation">
-		<h4 class="header__recommendation-title"><p>Find your Mind + Skin Match</p></h4>
-		<div class="header__recommendation-description basetext small"><p>Not sure which skincare product is right for you? Take our quiz</p></div>
-		<div class="header__recommendation-btn-wrapper">
-			<a href="/pages/skincare-quiz" class="btn primary">TAKE THE SKINCARE QUIZ</a>
-		</div>
-	</div>
+	
 	
       </div>
     </div>
@@ -3071,50 +3060,21 @@ Shopify.routes.root = "/";</script>
       <div class="header-mobile-menu__divider"></div>
 
       
-	<div class="header__recommendation">
-		<h4 class="header__recommendation-title"><p>Find your Mind + Skin Match</p></h4>
-		<div class="header__recommendation-description basetext small"><p>Not sure which skincare product is right for you? Take our quiz</p></div>
-		<div class="header__recommendation-btn-wrapper">
-			<a href="/pages/skincare-quiz" class="btn primary">TAKE THE SKINCARE QUIZ</a>
-		</div>
-	</div>
+	
 	
     </div>
   </div>
   <div class="header-mobile-menu__sticky-bar">
     <div class="header-mobile-menu__account">
       
-        <a href="/account/register" class="header-mobile-menu__icon-account">
+        <a href="index.html" class="header-mobile-menu__icon-account">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M11.4992 4.5C11.4992 6.433 9.9322 8 7.99921 8C6.06621 8 4.49921 6.433 4.49921 4.5C4.49921 2.567 6.06621 1 7.99921 1C9.9322 1 11.4992 2.567 11.4992 4.5ZM9.71496 8.66135C11.3491 7.98683 12.4992 6.37772 12.4992 4.5C12.4992 2.01472 10.4845 0 7.99921 0C5.51393 0 3.49921 2.01472 3.49921 4.5C3.49921 6.37791 4.64952 7.98716 6.28396 8.66156C4.01229 9.11176 2.55999 10.4408 1.66322 11.8576C0.578782 13.5709 0.299988 15.4156 0.299988 16H1.29999C1.29999 15.5844 1.53548 13.9291 2.50818 12.3924C3.46058 10.8878 5.11274 9.5 7.99999 9.5C10.8872 9.5 12.5394 10.8878 13.4918 12.3924C14.4645 13.9291 14.7 15.5844 14.7 16H15.7C15.7 15.4156 15.4212 13.5709 14.3368 11.8576C13.4398 10.4406 11.9872 9.11135 9.71496 8.66135Z" fill="#071D49"></path>
 		</svg>
         </a>
       
     </div>
-    <div class="header-mobile-menu__icons">
-      
-        <div class="header-mobile-menu__icon wishlist-i" :class="{ full: wishlistCount > 0 }" @wishlist-update-count.window="swymUpdate" @wishlist-update-counts.window="swymUpdate" @update-wishlist.window="wishlistUpdate">
-          <a href="#swym-wishlist" class="wishlist-empty" x-show="wishlistCount == 0">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path fill-rule="evenodd" clip-rule="evenodd" d="M19.4146 5.28806C17.7009 3.57054 14.9222 3.57055 13.2084 5.28806L11.95 6.54927L10.6915 5.28811C8.97775 3.5706 6.19913 3.5706 4.48534 5.28811C2.77154 7.00563 2.77154 9.79027 4.48534 11.5078L5.74377 12.7689L5.73248 12.7803L11.9387 18.9999L19.4146 11.5077C21.1284 9.79022 21.1284 7.00557 19.4146 5.28806Z"></path>
-		</svg>
-          </a>
-          <a href="#swym-wishlist" class="wishlist-full" x-show="wishlistCount > 0">
-            <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M16.4152 1.28814C14.7013 -0.429378 11.9226 -0.42938 10.2088 1.28814L8.95026 2.54935L7.6918 1.28819C5.97795 -0.429321 3.19924 -0.429321 1.48539 1.28819C-0.228467 3.00571 -0.228466 5.79035 1.48539 7.50787L2.74385 8.76902L2.73256 8.78033L8.93897 15L16.4152 7.50781C18.129 5.79029 18.129 3.00565 16.4152 1.28814Z" fill="#071D49"></path>
-		</svg>
-          </a>
-          <span class="header-mobile-menu__icon--count" x-text="wishlistCount" x-show="wishlistCount > 0"></span>
-        </div>
-      
-      <!-- ADD CODE WHEN WISHLIST HAS ITEM -->
-      <a href="/cart" class="header-mobile-menu__icon">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M4.22855 3.7002H11.7714C11.146 1.9718 9.71488 1 8 1C6.28512 1 4.85397 1.9718 4.22855 3.7002ZM12.8234 3.7002H15H16V4.7002V12.7002C16 14.357 14.6569 15.7002 13 15.7002H3C1.34315 15.7002 0 14.357 0 12.7002V4.7002V3.7002H1H3.17659C3.86153 1.39999 5.71642 0 8 0C10.2836 0 12.1385 1.39999 12.8234 3.7002ZM1 12.7002V4.7002H15V12.7002C15 13.8048 14.1046 14.7002 13 14.7002H3C1.89543 14.7002 1 13.8048 1 12.7002Z" fill="#071D49"></path>
-		</svg>
-      </a>
-      <!-- ADD CODE WHEN CART HAS ITEM -->
-    </div>
+    
   </div>
 </div>
 
@@ -4654,7 +4614,7 @@ if (typeof klevuSendCategoryData == 'function') {
 
                 <div class="video-with-cta__text-wrapper" data-content="content">
                     <button @click.stop="play(true)" class="video-with-cta__btn">
-                        WATCH THE Ritual
+                        XEM VIDEO
                     </button>
                 </div>
 
@@ -8351,7 +8311,7 @@ Lưu ý: Có thể chứa cặn tự nhiên.</span></p>
         window.SwymCallbacks.push(swymStorefrontLayoutCallback);
     })();
 </script>
-<link rel="stylesheet" href="css/storefront-layout.css">
+
 <script src="js/async-wishlist-apis.js" defer="defer"></script>
 <script src="js/storefront-layout.js" defer="defer"></script>
 <script src="js/storefront-layout-components.js" defer="defer"></script>
