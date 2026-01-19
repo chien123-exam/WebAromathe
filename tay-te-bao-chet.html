@@ -3683,7 +3683,6 @@ Shopify.routes.root = "/";</script>
        
        // Giá tự setup theo ý bạn (VND, dễ chỉnh sửa)
        priceMap: {
-         'revive-exfoliator-50ml': 1200000,          // Giá cho 50ml - chỉnh nếu cần
          'revive-energising-exfoliator-200ml': 1843000  // Giữ nguyên giá hiện tại
        },
        
@@ -3703,7 +3702,6 @@ Shopify.routes.root = "/";</script>
     <label class="product-buystack__option-label" for="option-revive-energising-exfoliator-200ml">Chọn kích cỡ</label>
     <select x-model="activeHandle" class="product-buystack__option-selector" name="option" id="option-revive-energising-exfoliator-200ml">
       <!-- Hardcode option đơn giản để chắc ăn, bỏ template nếu không cần động từ products -->
-      <option value="revive-exfoliator-50ml">50ml</option>
       <option value="revive-energising-exfoliator-200ml" selected>200ml</option>
     </select>
   </div>
@@ -3832,67 +3830,6 @@ Shopify.routes.root = "/";</script>
 </button>
   </div>
 
-  
-    <template x-teleport="#main-content">
-      <div :class="{ active: stickyBottom }" class="product__sticky-bottom product__sticky-bottom--mobile">
-        
-<button type="button" class="add-to-cart-btn btn primary" x-data="productAddToCart" x-init="await $nextTick(() => changeAddToCartButtonPrice())" @click="addToCart({
-			id: 43712983367922,
-			quantity: 1,
-			properties: {
-				_inventory: 1,
-				_compare_at_price: null
-			},
-		})" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-add-to-cart.js?v=40419312932251021511751385844" data-price="€65,00">
-		
-			Thêm vào giỏ hàng - <span>VND 1,843,000</span>
-		
-	</button>
-
-
-      </div>
-    </template>
-
-    <template x-teleport="#main-content">
-      <div :class="{ active: stickyBottom }" class="product__sticky-bottom product__sticky-bottom--desktop">
-        <div class="product__sticky-bottom-inner">
-          <div class="product__sticky-bottom-data">
-            <div class="product__sticky-bottom-img img-wrapper">
-              <img :src="useImage(" \="" www.aromatherapyassociates.com\="" cdn\="" shop\="" products\="" rn320200_main.png?v="1665079735" ,"="" 60)"="" alt="Revive Energising Exfoliator" width="60" height="60" loading="lazy" src="//www.aromatherapyassociates.com/cdn/shop/products/RN320200_main_60x.png?v=1665079735">
-            </div>
-            <div class="product__sticky-bottom-text">
-              
-                <div class="product__sticky-bottom-subtitle eyebrow small">
-                  Năng lượng & Tỉnh táo
-                </div>
-              
-
-              <h5 class="product__sticky-bottom-title">
-                Tẩy tế bào chết Revive Energising Exfoliator
-              </h5>
-            </div>
-          </div>
-          <div class="product__sticky-bottom-btn">
-            
-<button type="button" class="add-to-cart-btn btn primary" x-data="productAddToCart" x-init="await $nextTick(() => changeAddToCartButtonPrice())" @click="addToCart({
-			id: 43712983367922,
-			quantity: 1,
-			properties: {
-				_inventory: 1,
-				_compare_at_price: null
-			},
-		})" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-add-to-cart.js?v=40419312932251021511751385844" data-price="€65,00">
-		
-			<span>VND 1,843,000</span>
-		
-	</button>
-
-
-          </div>
-        </div>
-      </div>
-    </template>
-  
 </div>
 <div class="product-popup product-share-popup" style="display: none;" @show-share-popup.window="show = true" @click="show = false" x-data="productPopup" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-popup.js?v=12067066475875616101726048084" data-share-title="" revive="" energising="" exfoliator""="">
 	<div class="product-popup__inner product-share-popup__inner" @click.stop="">
@@ -4722,7 +4659,90 @@ if (typeof klevuSendCategoryData == 'function') {
       
       
       <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794506498290" data-product-models="7794506498290" data-name="Revive Morning Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/revive-morning-bath-shower-oil-55ml" data-image-url="products/RN612055R_main.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;full size;full size bath & shower oil;revive morning;subscription;">
+  <div class="yotpo bottomLine"> <!-- Giữ class gốc để theme CSS áp dụng nếu có -->
+
+    <div class="yotpo-bottom-line-scroll-panel" style="display: flex; align-items: flex-start; flex-flow: column wrap;">
+      <div class="yotpo-sr-bottom-line-summary" style="display: flex; flex-direction: row; align-items: flex-start; direction: ltr; cursor: pointer;">
+
+        <div style="display: flex; flex-direction: row; margin-left: 0px; margin-right: 10px; align-items: center; height: 28px;">
+
+          <!-- Sao 1 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 1 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full1">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full1')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 2 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 2 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full2">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full2')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 3 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 3 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full3">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full3')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 4 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 4 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full4">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full4')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 5 full (giống các sao trước) -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 5 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full5">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full5')"></path>
+            </svg>
+          </div>
+
+        </div>
+
+        <!-- Số review -->
+        <div class="yotpo-sr-bottom-line-right-panel" style="display: flex;">
+          <div class="yotpo-sr-bottom-line-text yotpo-sr-bottom-line-text--right-panel" tabindex="0" aria-label="(200)" style="white-space: nowrap; font-size: 16px; text-align: start; font-family: &quot;Nunito Sans&quot;; font-style: normal; font-weight: 300; color: rgb(7, 29, 73); padding-top: 2px; line-height: 28px;">
+            (281)
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </div>
       
@@ -4734,7 +4754,7 @@ if (typeof klevuSendCategoryData == 'function') {
             
           </div>
         
-        <a href="/tay-te-bao-chet.html" class="product-card__main__link"></a>
+        <a href="/dau-tam-deep-relax-bath.html" class="product-card__main__link"></a>
       
     </div>
   </div>
@@ -4806,7 +4826,90 @@ if (typeof klevuSendCategoryData == 'function') {
       
       
       <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="8568955896050" data-product-models="8568955896050" data-name="Ultimate Bath & Shower Oil Collection" data-url="https://www.aromatherapyassociates.com/products/ultimate-bath-shower-oil-collection" data-image-url="files/RN291009_main_aee688d0-57a7-446d-b50c-c65522d06868.png" data-bread-crumbs="AYR gift;badge_bg: #071D49;badge_colour: #f9f6f4;bath;bath oil;discovery;gifting;">
+  <div class="yotpo bottomLine"> <!-- Giữ class gốc để theme CSS áp dụng nếu có -->
+
+    <div class="yotpo-bottom-line-scroll-panel" style="display: flex; align-items: flex-start; flex-flow: column wrap;">
+      <div class="yotpo-sr-bottom-line-summary" style="display: flex; flex-direction: row; align-items: flex-start; direction: ltr; cursor: pointer;">
+
+        <div style="display: flex; flex-direction: row; margin-left: 0px; margin-right: 10px; align-items: center; height: 28px;">
+
+          <!-- Sao 1 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 1 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full1">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full1')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 2 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 2 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full2">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full2')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 3 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 3 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full3">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full3')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 4 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 4 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full4">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full4')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 5 full (giống các sao trước) -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 5 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full5">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full5')"></path>
+            </svg>
+          </div>
+
+        </div>
+
+        <!-- Số review -->
+        <div class="yotpo-sr-bottom-line-right-panel" style="display: flex;">
+          <div class="yotpo-sr-bottom-line-text yotpo-sr-bottom-line-text--right-panel" tabindex="0" aria-label="(200)" style="white-space: nowrap; font-size: 16px; text-align: start; font-family: &quot;Nunito Sans&quot;; font-style: normal; font-weight: 300; color: rgb(7, 29, 73); padding-top: 2px; line-height: 28px;">
+            (57)
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </div>
         
@@ -4886,7 +4989,90 @@ if (typeof klevuSendCategoryData == 'function') {
       
       
       <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794506039538" data-product-models="7794506039538" data-name="De-Stress Mind Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/de-stress-mind-bath-shower-oil-55ml" data-image-url="files/RN517055R_main_de-stress_mind_bath_shower_oil.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;badge_text: 20% OFF WITH CODE DESTRESS20;bath and shower oil;bath oil;de-stress mind;Emotional Wellness;full size;full size bath & shower oil;subscription;">
+  <div class="yotpo bottomLine"> <!-- Giữ class gốc để theme CSS áp dụng nếu có -->
+
+    <div class="yotpo-bottom-line-scroll-panel" style="display: flex; align-items: flex-start; flex-flow: column wrap;">
+      <div class="yotpo-sr-bottom-line-summary" style="display: flex; flex-direction: row; align-items: flex-start; direction: ltr; cursor: pointer;">
+
+        <div style="display: flex; flex-direction: row; margin-left: 0px; margin-right: 10px; align-items: center; height: 28px;">
+
+          <!-- Sao 1 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 1 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full1">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full1')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 2 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 2 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full2">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full2')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 3 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 3 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full3">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full3')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 4 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 4 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full4">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full4')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 5 full (giống các sao trước) -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 5 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full5">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full5')"></path>
+            </svg>
+          </div>
+
+        </div>
+
+        <!-- Số review -->
+        <div class="yotpo-sr-bottom-line-right-panel" style="display: flex;">
+          <div class="yotpo-sr-bottom-line-text yotpo-sr-bottom-line-text--right-panel" tabindex="0" aria-label="(200)" style="white-space: nowrap; font-size: 16px; text-align: start; font-family: &quot;Nunito Sans&quot;; font-style: normal; font-weight: 300; color: rgb(7, 29, 73); padding-top: 2px; line-height: 28px;">
+            (847)
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </div>
       
@@ -4969,7 +5155,90 @@ if (typeof klevuSendCategoryData == 'function') {
       
       
       <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794508300530" data-product-models="7794508300530" data-name="Support Equilibrium Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/support-equilibrium-bath-shower-oil-55ml" data-image-url="products/RN519055R_main.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;full size;full size bath & shower oil;spring sale;subscription;support equilibrium;">
+  <div class="yotpo bottomLine"> <!-- Giữ class gốc để CSS theme vẫn áp dụng nếu có -->
+
+    <div class="yotpo-bottom-line-scroll-panel" style="display: flex; align-items: flex-start; flex-flow: column wrap;">
+      <div class="yotpo-sr-bottom-line-summary" style="display: flex; flex-direction: row; align-items: flex-start; direction: ltr; cursor: pointer;">
+
+        <div style="display: flex; flex-direction: row; margin-left: 0px; margin-right: 10px; align-items: center; height: 28px;">
+
+          <!-- Sao 1 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 1 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full1">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full1')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 2 full (copy paste, đổi ID gradient) -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 2 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full2">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full2')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 3 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 3 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full3">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full3')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 4 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 4 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full4">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full4')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 5 half (offset 50%) -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 5 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-half">
+                  <stop offset="50%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop offset="50%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-half')"></path>
+            </svg>
+          </div>
+
+        </div>
+
+        <!-- Số review -->
+        <div class="yotpo-sr-bottom-line-right-panel" style="display: flex;">
+          <div class="yotpo-sr-bottom-line-text yotpo-sr-bottom-line-text--right-panel" tabindex="0" aria-label="(200)" style="white-space: nowrap; font-size: 16px; text-align: start; font-family: &quot;Nunito Sans&quot;; font-style: normal; font-weight: 300; color: rgb(7, 29, 73); padding-top: 2px; line-height: 28px;">
+            (3)
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </div>
       
@@ -5051,7 +5320,90 @@ if (typeof klevuSendCategoryData == 'function') {
       
       
       <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="8568955830514" data-product-models="8568955830514" data-name="Discovery Bath & Shower Oil Collection" data-url="https://www.aromatherapyassociates.com/products/discovery-bath-shower-oil-collection" data-image-url="products/RN880310_main_1.png" data-bread-crumbs="AYR gift;badge_bg: #071D49;badge_colour: #f9f6f4;bath;bath oil;discovery;gifting;">
+  <div class="yotpo bottomLine"> <!-- Giữ class gốc để theme CSS áp dụng nếu có -->
+
+    <div class="yotpo-bottom-line-scroll-panel" style="display: flex; align-items: flex-start; flex-flow: column wrap;">
+      <div class="yotpo-sr-bottom-line-summary" style="display: flex; flex-direction: row; align-items: flex-start; direction: ltr; cursor: pointer;">
+
+        <div style="display: flex; flex-direction: row; margin-left: 0px; margin-right: 10px; align-items: center; height: 28px;">
+
+          <!-- Sao 1 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 1 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full1">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full1')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 2 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 2 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full2">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full2')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 3 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 3 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full3">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full3')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 4 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 4 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full4">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full4')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 5 full (giống các sao trước) -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 5 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full5">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full5')"></path>
+            </svg>
+          </div>
+
+        </div>
+
+        <!-- Số review -->
+        <div class="yotpo-sr-bottom-line-right-panel" style="display: flex;">
+          <div class="yotpo-sr-bottom-line-text yotpo-sr-bottom-line-text--right-panel" tabindex="0" aria-label="(200)" style="white-space: nowrap; font-size: 16px; text-align: start; font-family: &quot;Nunito Sans&quot;; font-style: normal; font-weight: 300; color: rgb(7, 29, 73); padding-top: 2px; line-height: 28px;">
+            (117)
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </div>
       
@@ -5133,7 +5485,90 @@ if (typeof klevuSendCategoryData == 'function') {
       
       
       <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794505810162" data-product-models="7794505810162" data-name="Travel Light Relax Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/support-breathe-bath-shower-oil-9ml" data-image-url="products/MN230009_main.png"  data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;light relax;travel;">
+  <div class="yotpo bottomLine"> <!-- Giữ class gốc để CSS theme vẫn áp dụng nếu có -->
+
+    <div class="yotpo-bottom-line-scroll-panel" style="display: flex; align-items: flex-start; flex-flow: column wrap;">
+      <div class="yotpo-sr-bottom-line-summary" style="display: flex; flex-direction: row; align-items: flex-start; direction: ltr; cursor: pointer;">
+
+        <div style="display: flex; flex-direction: row; margin-left: 0px; margin-right: 10px; align-items: center; height: 28px;">
+
+          <!-- Sao 1 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 1 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full1">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full1')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 2 full (copy paste, đổi ID gradient) -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 2 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full2">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full2')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 3 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 3 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full3">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full3')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 4 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 4 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full4">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full4')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 5 half (offset 50%) -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 5 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-half">
+                  <stop offset="50%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop offset="50%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-half')"></path>
+            </svg>
+          </div>
+
+        </div>
+
+        <!-- Số review -->
+        <div class="yotpo-sr-bottom-line-right-panel" style="display: flex;">
+          <div class="yotpo-sr-bottom-line-text yotpo-sr-bottom-line-text--right-panel" tabindex="0" aria-label="(200)" style="white-space: nowrap; font-size: 16px; text-align: start; font-family: &quot;Nunito Sans&quot;; font-style: normal; font-weight: 300; color: rgb(7, 29, 73); padding-top: 2px; line-height: 28px;">
+            (82)
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </div>
       
@@ -5216,12 +5651,95 @@ if (typeof klevuSendCategoryData == 'function') {
       </div>
       <h5 class="product-card__title">Dầu tắm De-Stress Muscle Bath & Shower Oil</h5>
       
+      
+      
       <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794507317490" data-product-models="7794507317490" data-name="Inner Strength Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/inner-strength-bath-shower-oil-55ml" data-image-url="products/RN522055R_main.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;full size;full size bath & shower oil;inner strength;subscription;">
+  <div class="yotpo bottomLine"> <!-- Giữ class gốc để theme CSS áp dụng nếu có -->
+
+    <div class="yotpo-bottom-line-scroll-panel" style="display: flex; align-items: flex-start; flex-flow: column wrap;">
+      <div class="yotpo-sr-bottom-line-summary" style="display: flex; flex-direction: row; align-items: flex-start; direction: ltr; cursor: pointer;">
+
+        <div style="display: flex; flex-direction: row; margin-left: 0px; margin-right: 10px; align-items: center; height: 28px;">
+
+          <!-- Sao 1 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 1 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full1">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full1')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 2 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 2 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full2">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full2')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 3 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 3 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full3">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full3')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 4 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 4 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full4">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full4')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 5 full (giống các sao trước) -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 5 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full5">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full5')"></path>
+            </svg>
+          </div>
+
+        </div>
+
+        <!-- Số review -->
+        <div class="yotpo-sr-bottom-line-right-panel" style="display: flex;">
+          <div class="yotpo-sr-bottom-line-text yotpo-sr-bottom-line-text--right-panel" tabindex="0" aria-label="(200)" style="white-space: nowrap; font-size: 16px; text-align: start; font-family: &quot;Nunito Sans&quot;; font-style: normal; font-weight: 300; color: rgb(7, 29, 73); padding-top: 2px; line-height: 28px;">
+            (82)
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </div>
-      
-      
         
           <div class="product-card__price-container font-secondary">
             <span class="product-card__price">VND 2,193,000</span>
@@ -5300,7 +5818,90 @@ if (typeof klevuSendCategoryData == 'function') {
       
       
       <div class="product-card__ratings">
-  <div class="yotpo bottomLine" data-appkey="v6myo2ta2yIYdE7uz944DA9N91sTw02E7GP2OW5Z" data-domain="aromatherapy-associates.myshopify.com" data-product-id="7794505580786" data-product-models="7794505580786" data-name="Light Relax Bath & Shower Oil" data-url="https://www.aromatherapyassociates.com/products/light-relax-bath-shower-oil-55ml" data-image-url="products/RN515055R_main.png" data-bread-crumbs="badge_bg: #071D49;badge_colour: #f9f6f4;bath and shower oil;bath oil;Emotional Wellness;full size;full size bath & shower oil;light relax;">
+  <div class="yotpo bottomLine"> <!-- Giữ class gốc để theme CSS áp dụng nếu có -->
+
+    <div class="yotpo-bottom-line-scroll-panel" style="display: flex; align-items: flex-start; flex-flow: column wrap;">
+      <div class="yotpo-sr-bottom-line-summary" style="display: flex; flex-direction: row; align-items: flex-start; direction: ltr; cursor: pointer;">
+
+        <div style="display: flex; flex-direction: row; margin-left: 0px; margin-right: 10px; align-items: center; height: 28px;">
+
+          <!-- Sao 1 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 1 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full1">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full1')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 2 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 2 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full2">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full2')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 3 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 3 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full3">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full3')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 4 full -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row; margin-right: 3.5px;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 4 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full4">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full4')"></path>
+            </svg>
+          </div>
+
+          <!-- Sao 5 full (giống các sao trước) -->
+          <div class="star-container yotpo-sr-star-full" style="display: flex; flex-direction: row;">
+            <svg viewBox="0 0 18 18" tabindex="0" xmlns="http://www.w3.org/2000/svg" role="img" width="15" height="15" aria-label="Star 5 out of 5">
+              <defs>
+                <linearGradient aria-hidden="true" id="fake-grad-full5">
+                  <stop offset="100%" stop-color="rgba(163,145,97,1)"></stop>
+                  <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                </linearGradient>
+              </defs>
+              <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="rgba(163,145,97,1)" fill="url('#fake-grad-full5')"></path>
+            </svg>
+          </div>
+
+        </div>
+
+        <!-- Số review -->
+        <div class="yotpo-sr-bottom-line-right-panel" style="display: flex;">
+          <div class="yotpo-sr-bottom-line-text yotpo-sr-bottom-line-text--right-panel" tabindex="0" aria-label="(200)" style="white-space: nowrap; font-size: 16px; text-align: start; font-family: &quot;Nunito Sans&quot;; font-style: normal; font-weight: 300; color: rgb(7, 29, 73); padding-top: 2px; line-height: 28px;">
+            (45)
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </div>
       
@@ -5390,10 +5991,7 @@ if (typeof klevuSendCategoryData == 'function') {
 
 
 </div>
-<section id="shopify-section-template--18368257491186__166365416897233c9b" class="shopify-section section apps"><div class="page-width"></div>
 
-
-</section>
 
     </main>
 

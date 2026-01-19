@@ -460,7 +460,7 @@ p.micro {
     font-size: 4rem;
   }
   @media screen and (min-width: 1024px) {
-    font-size: 5rem;
+    font-size: 60px;
   }
 }
 .color-gold {
@@ -2012,7 +2012,7 @@ button.swiper-pagination-bullet {
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.11;
+  line-height: 1.6;
   text-transform: none;
   transition: all 0.3s ease;
 }
@@ -27032,3 +27032,5 @@ button.swiper-pagination-bullet {
     }
   }
 }
+
+
