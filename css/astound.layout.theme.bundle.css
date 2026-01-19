@@ -7223,7 +7223,7 @@ button.swiper-pagination-bullet {
   }
 }
 .page-banner__text {
-  max-width: 900px;
+  /* max-width: 900px; */
   padding: 150px 40px 50px;
   position: absolute;
   width: 100%;
