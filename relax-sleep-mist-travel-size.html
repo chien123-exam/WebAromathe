@@ -3585,23 +3585,10 @@ Shopify.routes.root = "/";</script>
       <input type="hidden" name="id" value="44676389961970">
 
       <div class="product-buystack__add-to-cart">
-        <button type="button" class="add-to-cart-btn btn primary"
-                @click="addToCart({
-                  id: 44676389961970,
-                  quantity: 1,
-                  properties: {
-                    _inventory: 354,
-                    _compare_at_price: null,
-                    'Kích thước chọn': activeHandle.includes('10ml') ? '10ml' : '50ml'
-                  }
-                })"
-                ax-load=""
-                ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-add-to-cart.js?v=40419312932251021511751385844">
-
-          <!-- Giá động theo size chọn -->
-          <span x-text="displayPrice"></span>
-        </button>
-      </div>
+    <button type="button" class="add-button btn primary" style="width: 100%; cursor: default;">
+      <span x-text="displayPrice"></span>
+    </button>
+  </div>
 
       <input type="hidden" name="product-id" value="7948848759026">
       <input type="hidden" name="section-id" value="template--18368256114930__main">
@@ -3743,16 +3730,7 @@ Shopify.routes.root = "/";</script>
     </div>
   </div>
 
-  <div class="product__footer">
-    <button class="product-share-btn" @click="$dispatch('show-share-popup')">
-	<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path d="M19.5 12.5015V16.5015C19.5 18.1583 18.1569 19.5015 16.5 19.5015H7.5C5.84315 19.5015 4.5 18.1583 4.5 16.5015V12.5015M12 14.0015V4.00146M12 4.00146L16 8.00146M12 4.00146L8 8.00146" stroke="#071D49" stroke-linecap="round"></path>
-	</svg>
-	Chia sẻ
-</button>
-  </div>
-
-
+  
 </div>
 <div class="product-popup product-share-popup" style="display: none;" @show-share-popup.window="show = true" @click="show = false" x-data="productPopup" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-popup.js?v=12067066475875616101726048084" data-share-title="" travel="" deep="" relax="" sleep="" mist""="">
 	<div class="product-popup__inner product-share-popup__inner" @click.stop="">

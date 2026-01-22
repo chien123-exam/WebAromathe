@@ -2933,6 +2933,8 @@ Shopify.routes.root = "/";</script>
 
                           
                           
+                          
+                            
 
                             <li class="header-mobile-menu__list-item">
                               <a href="./cau-chuyen-cua-chung-toi.html" class="header-mobile-menu__list-item--link">
@@ -2958,7 +2960,13 @@ Shopify.routes.root = "/";</script>
                               </a>
                             </li>
 
-            
+                            <li class="header-mobile-menu__list-item">
+                              <a href="./hanh-trinh-chung-toi.html" class="header-mobile-menu__list-item--link">
+                                <div class="header-mobile-menu__list-item--title heading1">
+                                  Hành trình của chúng tôi  
+                                </div>
+                              </a>
+                            </li>
                           
                         
                       </div>
@@ -2979,7 +2987,7 @@ Shopify.routes.root = "/";</script>
           
             
               <li class="header-mobile-menu__main-navigation-item">
-                <a href="/collections/new-arrivals" class="header-mobile-menu__main-navigation-link">New Arrivals</a>
+                <a href="/collections/de-stress" class="header-mobile-menu__main-navigation-link">De-Stress Collection</a>
               </li>
             
           
@@ -3012,6 +3020,14 @@ Shopify.routes.root = "/";</script>
             
               <li class="header-mobile-menu__main-navigation-item">
                 <a href="/collections/last-chance" class="header-mobile-menu__main-navigation-link">Last Chance</a>
+              </li>
+            
+          
+        
+          
+            
+              <li class="header-mobile-menu__main-navigation-item">
+                <a href="/pages/referral" class="header-mobile-menu__main-navigation-link">Refer A Friend</a>
               </li>
             
           
@@ -3706,37 +3722,13 @@ Shopify.routes.root = "/";</script>
     </div>
   </div>
 
-  <!-- Phần nút Add to Cart – override giá hiển thị -->
   <div class="product-buystack__recharge">
-    <form method="post" action="/cart/add" id="product-form-installment-template--18368255033586__main" accept-charset="UTF-8" class="installment caption-large" enctype="multipart/form-data">
-      <input type="hidden" name="form_type" value="product">
-      <input type="hidden" name="utf8" value="✓">
-      <!-- Giữ variant ID mặc định của 55ml (vì clone, không thay đổi) -->
-      <input type="hidden" name="id" value="43712989757682">
-
-      <div class="product-buystack__add-to-cart">
-        <button type="button" class="add-to-cart-btn btn primary"
-                @click="addToCart({
-                  id: 43712989757682,
-                  quantity: 1,
-                  properties: {
-                    _inventory: 534,
-                    _compare_at_price: null,
-                    'Kích thước chọn': activeHandle.includes('9ml') ? '9ml' : '55ml'  // ghi chú size nếu cần
-                  }
-                })"
-                ax-load=""
-                ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-add-to-cart.js?v=40419312932251021511751385844">
-
-          <!-- Giá động theo size chọn -->
-          <span x-text="displayPrice"></span>
-        </button>
-      </div>
-
-      <input type="hidden" name="product-id" value="7794508005618">
-      <input type="hidden" name="section-id" value="template--18368255033586__main">
-    </form>
+  <div class="product-buystack__add-to-cart">
+    <button type="button" class="add-button btn primary" style="width: 100%; cursor: default;">
+      <span x-text="displayPrice"></span>
+    </button>
   </div>
+</div>
 
 </div>
 
@@ -3820,17 +3812,7 @@ Shopify.routes.root = "/";</script>
     </div>
   </div>
 
-  <div class="product__footer">
-    <button class="product-share-btn" @click="$dispatch('show-share-popup')">
-	<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path d="M19.5 12.5015V16.5015C19.5 18.1583 18.1569 19.5015 16.5 19.5015H7.5C5.84315 19.5015 4.5 18.1583 4.5 16.5015V12.5015M12 14.0015V4.00146M12 4.00146L16 8.00146M12 4.00146L8 8.00146" stroke="#071D49" stroke-linecap="round"></path>
-	</svg>
-	Chia sẻ
-</button>
-  </div>
-
   
-    
 </div>
 <div class="product-popup product-share-popup" style="display: none;" @show-share-popup.window="show = true" @click="show = false" x-data="productPopup" x-ignore="" ax-load="" ax-load-src="//www.aromatherapyassociates.com/cdn/shop/t/179/assets/astound.alpine.product-popup.js?v=12067066475875616101726048084" data-share-title="" forest="" therapy="" bath="" \u0026="" shower="" oil""="">
 	<div class="product-popup__inner product-share-popup__inner" @click.stop="">
